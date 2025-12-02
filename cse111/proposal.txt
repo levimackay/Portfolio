@@ -1,0 +1,53 @@
+CSE 111 Proposal for a Student Chosen Program
+
+    (This is a proposal. All proposals are written with our best
+    knowledge at the beginning of a project. As we progress from the
+    beginning to the end of a project, we gain more knowledge, and we
+    change some of our proposed ideas. This is part of completing any
+    project and is fine.  However, we still must write a proposal so
+    that our teachers or supervisors know what we intend to do. Please
+    answer each of the following questions to the best of your
+    knowledge.)
+
+1. What is the title of your program?
+	- Password Tracker
+
+2. What real-world problem will your program address or help to solve?
+	- This program helps users keep track of their login credentials for various websites and services in one secure place. It allows users to easily save, view, and search for their usernames and passwords instead of writing them down on paper or forgetting them entirely.
+
+3. What will you learn from developing this program?
+	- I will learn how to design a functional GUI using tkinter, how to organize code into clean, testable functions, how to write to and read from text files, and how to create and run test cases using pytest. I’ll also get more practice building programs that solve real-world problems.
+
+4. What Python modules will your program use?
+
+    (Some examples are: csv, datetime, functools, matplotlib, math,
+    pandas, pytest, random, requests, and tkinter.)
+
+	- tkinter (for GUI interface)
+
+	- tkinter.scrolledtext (for displaying stored data)
+
+	- pytest (for writing and running test cases)
+
+5. Will you separate your Python program into functions that each
+perform a single task?
+
+    (Remember that the most reusable functions don't get user input and
+    don't print results but instead have parameters and return a result.
+    Functions that get user input and print results are important and do
+    useful work but are not easily reusable.)
+
+    (Remember also that it's hard to test functions that get user input
+    and print results. It's easy to test functions that don't get user
+    input and don't print results but instead have parameters and return
+    a result. Therefore, you should write most of your program functions
+    to have parameters and return a result.)
+
+	- Yes. My program is organized into multiple functions, and each function performs a specific task, such as creating a password file, saving an entry, viewing saved passwords, or searching entries. Some functions get user input and print results, but most of the core logic is handled by testable functions with parameters and return values.
+
+
+
+6. Will you write test functions to test at least two of your program
+functions?
+	- Yes. I have already written test functions using pytest for create_password_file, add_password_entry, and search_entries. Each test includes multiple calls and assertions to ensure accuracy and reliability.
+

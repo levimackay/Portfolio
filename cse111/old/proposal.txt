@@ -1,0 +1,39 @@
+CSE 111 Proposal for a Student Chosen Program
+
+    (This is a proposal. All proposals are written with our best
+    knowledge at the beginning of a project. As we progress from the
+    beginning to the end of a project, we gain more knowledge, and we
+    change some of our proposed ideas. This is part of completing any
+    project and is fine.  However, we still must write a proposal so
+    that our teachers or supervisors know what we intend to do. Please
+    answer each of the following questions to the best of your
+    knowledge.)
+
+1. What is the title of your program?
+
+    -Mission Language Flashcard Generator
+
+2. What real-world problem will your program address or help to solve?
+
+    -Returned missionaries and language learners often forget important vocabulary and grammar rules. This program helps them efficiently review and reinforce their knowledge of mission languages (specifically Bosnian, Croatian, and Serbian) by creating flashcards that are either printable or interactive.
+
+3. What will you learn from developing this program?
+
+    -I will learn how to use Python to build an interactive user interface with tkinter, generate structured text or HTML files with jinja2, and organize code into reusable and testable functions. I'll also gain experience with reading and processing CSV data and filtering user-defined inputs. Additionally, I will learn how to use `pytest` to test function logic.
+
+4. What Python modules will your program use?
+
+    -csv, random, tkinter, jinja2, pytest, os, and possibly re for pattern matching.
+
+5. Will you separate your Python program into functions that each perform a single task?
+
+    -Yes. Each function will perform a specific task such as reading vocabulary from a file, filtering by dialect or part of speech, formatting flashcards, or rendering the GUI. Most functions will take parameters and return results. Only the GUI-related functions will handle user input or display output.
+
+6. Will you write test functions to test at least two of your program functions?
+
+Yes. I will write and run test functions using pytest for at least two core logic functions, such as:
+- `filter_by_dialect()`
+- `format_flashcards()`
+- `read_vocabulary_file()`
+
+These tests will confirm that the functions return correct and expected outputs based on given inputs.
