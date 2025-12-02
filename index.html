@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Levi Mackay | CSE Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-container">
+      <div class="logo">
+        <span class="logo-mark">LM</span>
+        <span class="logo-text">Levi Mackay</span>
+      </div>
+
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <p class="hero-kicker">Computer Science • BYU–Idaho</p>
+          <h1>Hey, I’m Levi.</h1>
+          <p class="hero-subtitle">
+            I am a computer science student who likes building practical tools:
+            from language flashcard generators to baseball analytics and
+            machine learning projects.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">View Projects</a>
+            <a href="#contact" class="btn btn-outline">Contact Me</a>
+          </div>
+
+          <div class="hero-tags">
+            <span>Python</span>
+            <span>SQL</span>
+            <span>Web Dev</span>
+            <span>Machine Learning</span>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <div class="hero-card-inner">
+            <p class="hero-card-title">Current Focus</p>
+            <ul class="hero-card-list">
+              <li><span class="dot"></span>Building a baseball stats database</li>
+              <li><span class="dot"></span>Mission language flashcard generator</li>
+              <li><span class="dot"></span>Learning full stack web dev</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="container section-inner">
+        <div class="section-header">
+          <h2>About Me</h2>
+          <p>
+            I am a computer science student who likes solving real problems with code.
+            I enjoy backend work with SQL and Python as well as building simple,
+            clean user interfaces.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-card">
+            <h3>What I care about</h3>
+            <p>
+              Writing code that is clean, understandable, and actually useful.
+              I like projects that have a real user, even if it is just me and my friends.
+            </p>
+          </div>
+
+          <div class="about-card">
+            <h3>What I am learning</h3>
+            <ul>
+              <li>Data structures and algorithms</li>
+              <li>Database design and SQL</li>
+              <li>Python for automation and ML</li>
+              <li>Front end web development</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section section-alt">
+      <div class="container section-inner">
+        <div class="section-header">
+          <h2>Projects</h2>
+          <p>
+            A few things I have worked on. These are still a work in progress
+            but show how I think and build.
+          </p>
+        </div>
+
+        <div class="card-grid">
+          <article class="card">
+            <div class="card-badge">Python • Tkinter</div>
+            <h3>Mission Language Flashcard Generator</h3>
+            <p>
+              A desktop app that helps returned missionaries review Bosnian,
+              Croatian, and Serbian vocabulary using flashcards and quiz modes.
+            </p>
+            <ul class="card-tags">
+              <li>Python</li>
+              <li>File export</li>
+              <li>GUI</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <div class="card-badge">MySQL • Data Modeling</div>
+            <h3>Baseball Stats Database</h3>
+            <p>
+              A normalized baseball database with teams, players, games, and
+              advanced SQL queries using window functions and CTEs.
+            </p>
+            <ul class="card-tags">
+              <li>SQL</li>
+              <li>ERD</li>
+              <li>Analytics</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <div class="card-badge">ML • Computer Vision</div>
+            <h3>SwingOS Prototype</h3>
+            <p>
+              Early work on a system that analyzes baseball swings using
+              Python and computer vision to give simple, visual feedback.
+            </p>
+            <ul class="card-tags">
+              <li>Python</li>
+              <li>OpenCV</li>
+              <li>ML</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section">
+      <div class="container section-inner">
+        <div class="section-header">
+          <h2>Skills & Tools</h2>
+          <p>
+            Stuff I am comfortable using right now. Always adding to this list.
+          </p>
+        </div>
+
+        <div class="skills-grid">
+          <div class="skills-group">
+            <h3>Languages</h3>
+            <div class="pill-row">
+              <span class="pill">Python</span>
+              <span class="pill">Java</span>
+              <span class="pill">C++</span>
+              <span class="pill">HTML</span>
+              <span class="pill">CSS</span>
+              <span class="pill">SQL</span>
+            </div>
+          </div>
+
+          <div class="skills-group">
+            <h3>Tools & Tech</h3>
+            <div class="pill-row">
+              <span class="pill">Git / GitHub</span>
+              <span class="pill">MySQL Workbench</span>
+              <span class="pill">VS Code</span>
+              <span class="pill">Linux / Terminal</span>
+            </div>
+          </div>
+
+          <div class="skills-group">
+            <h3>Coursework</h3>
+            <ul>
+              <li>Intro to Programming</li>
+              <li>Data Structures and Algorithms</li>
+              <li>Database and SQL</li>
+              <li>Web Development basics</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section section-alt">
+      <div class="container section-inner contact-inner">
+        <div>
+          <h2>Contact</h2>
+          <p>
+            Want to talk about a project, internship, or just code stuff in general?
+            Reach out and I will get back to you.
+          </p>
+        </div>
+
+        <div class="contact-info">
+          <a href="mailto:youremail@example.com" class="contact-item">
+            <span class="contact-label">Email</span>
+            <span>youremail@example.com</span>
+          </a>
+          <a href="https://github.com/your-github" target="_blank" class="contact-item">
+            <span class="contact-label">GitHub</span>
+            <span>github.com/your-github</span>
+          </a>
+          <a href="https://www.linkedin.com/in/your-linkedin" target="_blank" class="contact-item">
+            <span class="contact-label">LinkedIn</span>
+            <span>linkedin.com/in/your-linkedin</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Levi Mackay. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Small script to keep the year current
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
