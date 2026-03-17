@@ -538,3 +538,14 @@ body {
     padding: 3.2rem 0;
   }
 }
+
+
+.card-links {
+  margin-top: 10px;
+}
+
+.card-links a {
+  font-size: 0.85rem;
+  color: var(--accent);
+  text-decoration: none;
+}
