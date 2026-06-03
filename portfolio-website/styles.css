@@ -43,18 +43,40 @@
 }
 
 /* 
+  CUSTOM SCROLLBAR
+  Ensuring even the browser chrome matches the aesthetic.
+*/
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--bg-alt);
+  border: 2px solid var(--bg);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1e293b;
+}
+
+/* 
   GRAIN OVERLAY
   Adding a subtle noise texture to give the site a 'premium' feel. 
   It breaks up the flat digital colors.
 */
 .grain {
   position: fixed;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background-image: url('https://grainy-gradients.vercel.app/noise.svg');
-  opacity: 0.05;
+  opacity: 0.03;
   pointer-events: none;
   z-index: 9999;
 }
@@ -216,18 +238,21 @@ body {
 */
 .glass-card {
   background: var(--card-bg);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border: 1px solid var(--glass-border);
   border-radius: var(--radius);
-  padding: 2rem;
-  transition: all var(--med) cubic-bezier(0.23, 1, 0.32, 1);
+  padding: 2.5rem;
+  transition: transform 0.4s cubic-bezier(0.2, 0, 0.2, 1), 
+              border-color 0.4s ease, 
+              box-shadow 0.4s ease;
 }
 
 .glass-card:hover {
-  border-color: var(--glass-border-hover);
-  transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), 0 0 20px var(--accent-glow);
+  border-color: var(--accent);
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 
+              0 0 20px rgba(56, 189, 248, 0.1);
 }
 
 /* 
@@ -300,20 +325,30 @@ body {
 }
 
 .project-specs {
-  margin: 1.5rem 0;
+  margin: 2rem 0;
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 1rem;
 }
 
 .spec-item {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
+  font-family: 'JetBrains Mono', monospace;
+  padding: 0.75rem;
+  background: rgba(15, 23, 42, 0.4);
+  border-radius: 8px;
+  border-left: 2px solid var(--accent);
+  line-height: 1.4;
 }
 
 .spec-label {
-  color: var(--muted);
+  color: var(--accent);
   font-weight: 600;
   margin-right: 0.5rem;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  display: block;
+  margin-bottom: 0.25rem;
 }
 
 .card-tags {
@@ -400,13 +435,15 @@ body {
 
 .btn-primary:hover {
   background: #7dd3fc;
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(56, 189, 248, 0.4);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(56, 189, 248, 0.3);
 }
 
 .magnetic {
   display: inline-block;
-  transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  /* Optimized transition for the magnetic pull. Reduced duration and added hardware acceleration. */
+  transition: transform 0.2s cubic-bezier(0.33, 1, 0.68, 1);
+  will-change: transform;
 }
 
 .btn-outline {
@@ -546,8 +583,8 @@ footer {
   position: fixed;
   bottom: 2rem;
   right: 2rem;
-  width: 50px;
-  height: 50px;
+  width: 55px;
+  height: 55px;
   background: var(--accent);
   color: var(--bg);
   border-radius: 50%;
@@ -556,12 +593,21 @@ footer {
   justify-content: center;
   cursor: pointer;
   z-index: 1000;
-  box-shadow: 0 0 20px var(--accent-glow);
-  transition: transform 0.3s var(--bounce);
+  box-shadow: 0 0 25px rgba(56, 189, 248, 0.3);
+  transition: all 0.3s var(--bounce);
+  animation: pulse 3s infinite;
 }
 
 .terminal-toggle:hover {
-  transform: scale(1.1);
+  transform: scale(1.15) rotate(5deg);
+  box-shadow: 0 0 35px rgba(56, 189, 248, 0.5);
+  animation-play-state: paused;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(56, 189, 248, 0.4); }
+  70% { box-shadow: 0 0 0 15px rgba(56, 189, 248, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(56, 189, 248, 0); }
 }
 
 /* 
