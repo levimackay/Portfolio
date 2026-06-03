@@ -474,7 +474,7 @@
       constructor() {
         this.x = Math.random() * canvas.width;
         this.y = Math.random() * canvas.height;
-        this.size = Math.random() * 2 + 1;
+        this.size = Math.random() * 2.5 + 1.5; /* Slightly larger particles */
         this.speedX = Math.random() * 0.5 - 0.25;
         this.speedY = Math.random() * 0.5 - 0.25;
       }
@@ -501,7 +501,7 @@
       }
 
       draw() {
-        ctx.fillStyle = 'rgba(56, 189, 248, 0.2)';
+        ctx.fillStyle = 'rgba(56, 189, 248, 0.45)'; /* Increased opacity from 0.2 */
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         ctx.fill();
