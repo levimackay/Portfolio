@@ -112,24 +112,34 @@
 
     <!-- ABOUT: My background and approach -->
     <section id="about" class="container reveal">
-      <h2 class="section-title">About Me</h2>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem; align-items: center;">
+      <h2 class="section-title">The Man Behind the Code</h2>
+      
+      <div style="display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 3rem; align-items: start; margin-bottom: 3rem;">
         <div class="profile-image-placeholder">
           <img src="profile.png" alt="Levi Mackay">
         </div>
         <div>
-          <p style="color: var(--muted); margin-bottom: 1.5rem;">
-            I'm a BYU-Idaho CS student with a 4.0 GPA and a background that isn't your typical tech path. From landscape foreman to ski lift operator, I've learned that software is just another tool to keep things running smoothly.
+          <p style="color: var(--muted); font-size: 1.1rem; margin-bottom: 1.5rem; line-height: 1.8;">
+            I'm a computer science student at BYU–Idaho with a 4.0 GPA, but my path to software wasn't exactly a straight line. I grew up in a military family, moving from country to country, which taught me how to adapt fast and see things from a global perspective.
           </p>
-          <p style="color: var(--muted);">
-            I don't just write code; I build systems. I enjoy taking messy, manual processes—like tracking baseball stats or learning a new language—and automating them into something useful.
+          <p style="color: var(--muted); line-height: 1.8;">
+            I don't just "write code"—I build tools that solve actual headaches. Whether it's automating baseball stats or building a language quiz for missionaries, I'm at my best when I'm learning by doing and shipping real products.
           </p>
         </div>
-        
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
         <div class="glass-card">
-          <h3 style="margin-bottom: 1rem;"><i class="fas fa-lightbulb"></i> Philosophy</h3>
-          <p style="font-size: 0.95rem; color: var(--muted);">
-            Write code that is clean, understandable, and serves a specific purpose. If it doesn't solve a problem for a real user, it's just noise.
+          <h3 style="margin-bottom: 1.5rem;"><i class="fas fa-briefcase" style="color: var(--accent);"></i> Versatile Experience</h3>
+          <p style="font-size: 0.95rem; color: var(--muted); line-height: 1.6;">
+            I’ve worked in environments most devs haven't touched. I've been a <strong>Startup Founder</strong> in the Sandbox incubator, a <strong>CS Teaching Assistant</strong>, and an <strong>IT Specialist</strong>. But I’ve also been a <strong>Farm Hand</strong> plowing fields, a <strong>Ski Lift Operator</strong> at Kelly Canyon, and a landscape foreman. That range gives me a unique "blue-collar" work ethic that I bring to every line of code I write.
+          </p>
+        </div>
+
+        <div class="glass-card">
+          <h3 style="margin-bottom: 1.5rem;"><i class="fas fa-mountain" style="color: var(--accent);"></i> Beyond the Terminal</h3>
+          <p style="font-size: 0.95rem; color: var(--muted); line-height: 1.6;">
+            When I’m not debugging or optimizing SQL queries, you’ll probably find me outdoors. I love skiing, exploring the Apple ecosystem, and anything involving high-performance tech. I’m a big fan of baseball (obviously) and love the challenge of picking up new languages—both human and machine.
           </p>
         </div>
       </div>
@@ -561,10 +571,10 @@
     const commands = {
       help: "Available commands: ls, whoami, clear, projects, bio, contact",
       ls: "bio.txt  projects.bin  contact.key",
-      whoami: "Levi Mackay. BYU-Idaho CS Student. Problem Solver.",
-      bio: "4.0 GPA student. Landscape foreman turned Software Engineer. Building tools that solve real problems.",
-      projects: "1. Mission Language Generator\n2. Baseball Analytics Engine\n3. SwingOS Prototype",
-      contact: "Email: levibmackay@gmail.com | GitHub: levibmackay",
+      whoami: "Levi Mackay. CS Student. Military kid. Startup Founder. Problem Solver.",
+      bio: "4.0 GPA student at BYU-I. From plowing fields as a farm hand to building AI tools in the Sandbox incubator. I've worked as a ski lift operator, landscape foreman, and IT specialist. I build stuff that works.",
+      projects: "1. SwingOS Prototype\n2. Foreman's Friend\n3. Mission Language Generator\n4. Baseball Analytics Engine",
+      contact: "Email: levibmackay@gmail.com | LinkedIn: linkedin.com/in/levi-mackay-217380396/",
       clear: "clear"
     };
 
