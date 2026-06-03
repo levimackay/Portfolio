@@ -51,8 +51,8 @@
   <header class="site-header">
     <div class="container nav-container">
       <div class="logo">
-        <span class="logo-mark">LM</span>
-        <span class="logo-text">Levi Mackay</span>
+        <span class="logo-mark">&gt;_</span>
+        <span class="logo-text">Levi.OS</span>
       </div>
 
       <button class="mobile-nav-toggle" aria-label="Toggle navigation">
@@ -111,7 +111,11 @@
     <!-- ABOUT: My background and approach -->
     <section id="about" class="container reveal">
       <h2 class="section-title">About Me</h2>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem;">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem; align-items: center;">
+        <div class="profile-image-placeholder">
+          <i class="fas fa-user-code"></i>
+          <!-- To add your photo: <img src="your-photo.jpg" alt="Levi Mackay"> -->
+        </div>
         <div>
           <p style="color: var(--muted); margin-bottom: 1.5rem;">
             I'm a BYU-Idaho CS student with a 4.0 GPA and a background that isn't your typical tech path. From landscape foreman to ski lift operator, I've learned that software is just another tool to keep things running smoothly.
@@ -595,6 +599,14 @@
             toast.classList.add('active');
             setTimeout(() => toast.classList.remove('active'), 2000);
           });
+        });
+      }
+    });
+
+  </script>
+</body>
+
+</html>});
         });
       }
     });
