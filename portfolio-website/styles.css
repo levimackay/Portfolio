@@ -10,7 +10,7 @@
   --bg-alt: #0f172a;
   --card-bg: rgba(30, 41, 59, 0.5); /* Glass base */
   --accent: #38bdf8;
-  --accent-glow: rgba(56, 189, 248, 0.15);
+  --accent-glow: rgba(56, 189, 248, 0.25); /* Increased from 0.15 */
   --text: #f8fafc;
   --muted: #94a3b8;
   
