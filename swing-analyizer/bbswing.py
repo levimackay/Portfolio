@@ -1,129 +1,115 @@
 # =============================================================================
-# AI-POWERED BASEBALL SWING ANALYZER
+# LEVI'S AI SWING ANALYZER (Prototype v1.0)
 #
-# Author: Levi Mackay
-# Project: Foundational prototype for a real-time swing analysis tool.
+# This is my first real swing at combining computer vision with baseball.
+# The goal is to eventually have this thing tell you exactly why you're 
+# swinging under the ball or why your head is moving too much.
 #
-# Description:
-# This application leverages computer vision to provide biomechanical feedback
-# on a baseball swing. It captures video from a webcam, uses the MediaPipe
-# library to perform real-time pose estimation, and overlays a skeletal
-# model onto the video feed. This serves as the core framework for a more
-# advanced system intended to analyze specific metrics like head movement
-# and bat path.
-#
-# Note: This is a foundational prototype and does not include detailed tracking.
-#
+# Right now, it's a solid proof-of-concept using MediaPipe to track 
+# body positions in real-time.
 # =============================================================================
 
-# --- Imports ---
 import cv2
 import mediapipe as mp
+import time
 
-
-# --- Initialization ---
-''' This section sets up the necessary components for the application, including
-the video capture device (webcam) and the MediaPipe pose estimation model. '''
-print("Initializing models and camera...")
+# --- Setup Stuff ---
+# This is where we get the MediaPipe engine running. 
+# It's basically a pre-trained model that knows where human joints are.
+print("Firing up the AI models... hang tight.")
 mp_drawing = mp.solutions.drawing_utils  
 mp_pose = mp.solutions.pose              
-pose_tracker = mp_pose.Pose()
+pose_tracker = mp_pose.Pose(
+    min_detection_confidence=0.5,
+    min_tracking_confidence=0.5
+)
 
-# Initialize the video capture object to access the default webcam (index 0).
+# Open the webcam. If you have multiple cameras, you might need to change 0 to 1.
 cap = cv2.VideoCapture(0)
 if not cap.isOpened():
-    raise IOError("Cannot open webcam. Please check its connection and permissions.")
+    print("Uh oh. I can't find your webcam. Check the connection.")
+    exit()
 
-# --- Head Tracking Variables ---
+# Variables to keep track of where your head is
 head_anchor_y = None
-status = "PRESS 'S' TO SET ANCHOR"
+status = "READY - PRESS 'S' TO SET HEAD LEVEL"
 
-print("Initialization complete. Starting video stream...")
+print("All systems go. Let's see that swing.")
 
+# --- The Main Loop ---
+# This runs constantly, processing each frame from your camera.
+while cap.isOpened():
+    success, frame = cap.read()
+    if not success:
+        print("Empty camera frame. Skipping...")
+        continue
 
-# --- Main Application Loop ---
-''' This loop continuously captures frames from the webcam, processes them to
-detect human poses, and displays the annotated frames in real-time. '''
-while True:
-    ret, frame = cap.read()
-    if not ret:
-        print("Error: Failed to capture frame. Exiting.")
-        break
-    
+    # Flip the image horizontally for a later selfie-view display
+    # (Makes it feel more like a mirror, which is easier for drills)
+    frame = cv2.flip(frame, 1)
     h, w, _ = frame.shape
+    
+    # MediaPipe needs RGB, but OpenCV defaults to BGR. Logic, right?
     rgb_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
     results = pose_tracker.process(rgb_frame)
     
-    # Check for user key presses.
+    # --- Input Handling ---
     key = cv2.waitKey(1) & 0xFF
     if key == ord('q'):
-        print("'q' pressed. Shutting down.")
+        print("Shutting down. Go hit some bombs.")
         break
+        
     if key == ord('s'):
-        # 's' key sets the head anchor point.
+        # Setting the 'anchor' - basically the height of your head at stance.
         if results.pose_landmarks:
-            # We use the nose landmark (index 0) as our proxy for the head's position.
-            nose_landmark = results.pose_landmarks.landmark[mp_pose.PoseLandmark.NOSE.value]
-            # MediaPipe provides coordinates normalized to [0.0, 1.0]. We store the y-coordinate.
-            head_anchor_y = nose_landmark.y
-            print(f"Head anchor set at normalized Y: {head_anchor_y:.2f}")
-            status = "ANCHOR SET"
+            # Using the nose as the center point of the head.
+            nose = results.pose_landmarks.landmark[mp_pose.PoseLandmark.NOSE]
+            head_anchor_y = nose.y
+            status = "ANCHOR SET - STAY LEVEL"
         else:
-            status = "NO PERSON DETECTED!"
+            status = "ERROR: I DON'T SEE A HUMAN"
 
+    # --- Draw the Skeleton ---
     if results.pose_landmarks:
-        ''' Draw the pose landmarks and connections on the original frame.
-        The landmarks represent key points on the human body, and the connections
-        illustrate the skeletal structure. '''
+        # This draws the lines and dots over your body.
         mp_drawing.draw_landmarks(
-            image=frame,                     
-            landmark_list=results.pose_landmarks,  
-            connections=mp_pose.POSE_CONNECTIONS, 
-            landmark_drawing_spec=mp_drawing.DrawingSpec(color=(245, 117, 66), thickness=2, circle_radius=2),
-            connection_drawing_spec=mp_drawing.DrawingSpec(color=(245, 66, 230), thickness=2, circle_radius=2)
+            frame, 
+            results.pose_landmarks, 
+            mp_pose.POSE_CONNECTIONS,
+            mp_drawing.DrawingSpec(color=(56, 189, 248), thickness=2, circle_radius=2), # LM Blue
+            mp_drawing.DrawingSpec(color=(255, 255, 255), thickness=1, circle_radius=1)
         )
+        
+        # --- Head Tracking Logic ---
+        # This is where the actual 'analysis' happens.
         if head_anchor_y is not None:
-            # Get the current y-coordinate of the nose.
-            current_head_y = results.pose_landmarks.landmark[mp_pose.PoseLandmark.NOSE.value].y
+            current_nose_y = results.pose_landmarks.landmark[mp_pose.PoseLandmark.NOSE].y
+            
+            # Convert normalized (0-1) coordinates to actual pixels
+            anchor_px = int(head_anchor_y * h)
+            current_px = int(current_nose_y * h)
 
-            # Convert the normalized anchor and current positions to pixel coordinates.
-            anchor_pixel_y = int(head_anchor_y * h)
-            current_pixel_y = int(current_head_y * h)
+            # Draw the visual guides
+            cv2.line(frame, (0, anchor_px), (w, anchor_px), (0, 255, 0), 2) # Green = Target
+            cv2.line(frame, (0, current_px), (w, current_px), (0, 0, 255), 2) # Red = Current
 
-            # Draw a green line for the anchor point (your target level).
-            cv2.line(frame, (0, anchor_pixel_y), (w, anchor_pixel_y), (0, 255, 0), 2)
-            # Draw a red line for the current head position.
-            cv2.line(frame, (0, current_pixel_y), (w, current_pixel_y), (0, 0, 255), 2)
-
-            # Determine if the head has moved up or down significantly.
-            vertical_diff_pixels = anchor_pixel_y - current_pixel_y
-            if abs(vertical_diff_pixels) > 15: # A 15-pixel threshold to avoid minor jitters.
-                if vertical_diff_pixels > 0:
-                    status = "HEAD MOVED UP"
-                else:
-                    status = "HEAD MOVED DOWN"
+            # If you move your head more than 20 pixels, we flag it.
+            diff = anchor_px - current_px
+            if abs(diff) > 20:
+                status = "WATCH YOUR HEAD!" if diff < 0 else "STAY DOWN!"
             else:
-                status = "HEAD LEVEL"
-    cv2.rectangle(frame, (0, 0), (w, 60), (0, 0, 0), -1)
-    cv2.putText(frame, "Press 's' to set anchor, 'q' to quit", (10, 20),
-                cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 1, cv2.LINE_AA)
-    cv2.putText(frame, f"STATUS: {status}", (10, 50),
-                cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 255, 255), 2, cv2.LINE_AA)
-    
-    ''' Display the annotated frame in a window titled "AI Swing Analyzer". '''
-    cv2.imshow("AI Swing Analyzer", frame)
+                status = "SOLID - STAY THERE"
 
-    ''' Check for 'q' key press to exit the loop and terminate the application.'''
-    if cv2.waitKey(1) & 0xFF == ord('q'):
-        print("'q' pressed. Shutting down.")
-        break
+    # --- UI Overlay ---
+    # Just making it look a bit cleaner for the portfolio.
+    cv2.rectangle(frame, (0, 0), (w, 50), (15, 23, 42), -1) # Dark Slate Header
+    cv2.putText(frame, status, (20, 35), cv2.FONT_HERSHEY_SIMPLEX, 0.8, (56, 189, 248), 2)
+    cv2.putText(frame, "'S' to set anchor | 'Q' to quit", (w-300, 30), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 1)
 
+    # Show the result
+    cv2.imshow('Levi\'s AI SwingOS Prototype', frame)
 
-# --- Cleanup Phase ---
-print("Releasing resources...")
-cap.release()               
-cv2.destroyAllWindows()     
-print("Shutdown complete.")
-
-
-# --- All done! :) ---
+# Clean up
+cap.release()
+cv2.destroyAllWindows()
+pose_tracker.close()
