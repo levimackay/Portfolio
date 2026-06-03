@@ -18,12 +18,16 @@
 </head>
 
 <body>
+  <!-- High-end design layers: Grain texture and custom cursor -->
+  <div class="grain"></div>
+  <div class="cursor-follower"></div>
+
   <!-- Interactive background engine -->
   <canvas id="bg-canvas"></canvas>
 
   <header class="site-header">
     <div class="container nav-container">
-      <div class="logo">
+      <div class="logo magnetic">
         <span class="logo-mark">LM</span>
         <span class="logo-text">Levi Mackay</span>
       </div>
@@ -47,21 +51,21 @@
       <div class="container hero-grid">
         <div class="hero-text">
           <p class="hero-kicker">Computer Science • BYU–Idaho</p>
-          <h1>Building tools that solve real problems.</h1>
+          <h1 id="hero-headline">Building tools that solve real problems.</h1>
           <p class="hero-subtitle">
             I'm a CS student focused on backend logic, data automation, and building clean, high-performance web tools.
           </p>
 
           <div class="hero-actions">
-            <a href="#projects" class="btn btn-primary">Browse Projects</a>
-            <a href="https://github.com/levibmackay" target="_blank" class="btn btn-outline">
+            <a href="#projects" class="btn btn-primary magnetic">Browse Projects</a>
+            <a href="https://github.com/levibmackay" target="_blank" class="btn btn-outline magnetic">
               <i class="fab fa-github"></i> GitHub Profile
             </a>
           </div>
         </div>
 
         <!-- Dynamic card showing what I'm currently hacking on -->
-        <div class="glass-card hero-status">
+        <div class="glass-card hero-status reveal">
           <p class="project-meta">Live Status</p>
           <ul class="hero-card-list" style="list-style: none;">
             <li style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
@@ -108,6 +112,37 @@
       <h2 class="section-title">Case Studies</h2>
       <div class="card-grid">
         
+        <!-- PROJECT 3 (FEATURED): SwingOS - Making it wide and tall for visual impact -->
+        <article class="glass-card project-card card-wide card-tall">
+          <p class="project-meta">ML • Vision • Featured</p>
+          <h3>SwingOS Prototype</h3>
+          <div class="project-specs">
+            <div class="spec-item">
+              <span class="spec-label">Problem:</span> Visual feedback for athletes is often qualitative and vague.
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Solution:</span> Implementing OpenCV pose-estimation to quantify swing mechanics.
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Outcome:</span> (In Progress) Moving towards real-time frame-by-frame mechanical analysis.
+            </div>
+          </div>
+          <p style="color: var(--muted); font-size: 0.9rem; margin-top: 1rem;">
+            This is my most complex project. It combines computer vision with athletic biomechanics to bridge the gap between "feel" and "real" in baseball training.
+          </p>
+          <div class="card-tags">
+            <span class="tag">OpenCV</span>
+            <span class="tag">Python</span>
+            <span class="tag">Computer Vision</span>
+            <span class="tag">MediaPipe</span>
+          </div>
+          <div style="margin-top: 2rem;">
+            <a href="https://github.com/levibmackay/Portfolio/tree/main/swing-analyizer" target="_blank" class="btn btn-outline magnetic" style="width: 100%; justify-content: center;">
+              <i class="fas fa-microchip"></i> Track Progress
+            </a>
+          </div>
+        </article>
+
         <!-- PROJECT 1: Flashcards -->
         <article class="glass-card project-card">
           <p class="project-meta">Automation • Python</p>
@@ -129,7 +164,7 @@
             <span class="tag">File I/O</span>
           </div>
           <div style="margin-top: 2rem;">
-            <a href="https://github.com/levibmackay/Portfolio/tree/main/flashcard-app" target="_blank" class="btn btn-outline" style="width: 100%; justify-content: center;">
+            <a href="https://github.com/levibmackay/Portfolio/tree/main/flashcard-app" target="_blank" class="btn btn-outline magnetic" style="width: 100%; justify-content: center;">
               <i class="fas fa-code"></i> View Source
             </a>
           </div>
@@ -156,35 +191,8 @@
             <span class="tag">CTEs</span>
           </div>
           <div style="margin-top: 2rem;">
-            <a href="https://github.com/levibmackay/Portfolio/tree/main/baseball-database" target="_blank" class="btn btn-outline" style="width: 100%; justify-content: center;">
+            <a href="https://github.com/levibmackay/Portfolio/tree/main/baseball-database" target="_blank" class="btn btn-outline magnetic" style="width: 100%; justify-content: center;">
               <i class="fas fa-database"></i> Explore Schema
-            </a>
-          </div>
-        </article>
-
-        <!-- PROJECT 3: SwingOS -->
-        <article class="glass-card project-card">
-          <p class="project-meta">ML • Vision</p>
-          <h3>SwingOS Prototype</h3>
-          <div class="project-specs">
-            <div class="spec-item">
-              <span class="spec-label">Problem:</span> Visual feedback for athletes is often qualitative and vague.
-            </div>
-            <div class="spec-item">
-              <span class="spec-label">Solution:</span> Implementing OpenCV pose-estimation to quantify swing mechanics.
-            </div>
-            <div class="spec-item">
-              <span class="spec-label">Outcome:</span> (In Progress) Moving towards real-time frame-by-frame mechanical analysis.
-            </div>
-          </div>
-          <div class="card-tags">
-            <span class="tag">OpenCV</span>
-            <span class="tag">Python</span>
-            <span class="tag">Computer Vision</span>
-          </div>
-          <div style="margin-top: 2rem;">
-            <a href="https://github.com/levibmackay/Portfolio/tree/main/swing-analyizer" target="_blank" class="btn btn-outline" style="width: 100%; justify-content: center;">
-              <i class="fas fa-microchip"></i> Track Progress
             </a>
           </div>
         </article>
@@ -233,10 +241,10 @@
           Currently looking for internship opportunities. Whether it's about backend architecture, baseball, or BCS languages, I'm always down to chat.
         </p>
         <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem;">
-          <a href="mailto:levibmackay@gmail.com" class="btn btn-primary">
+          <a href="mailto:levibmackay@gmail.com" class="btn btn-primary magnetic">
             <i class="fas fa-envelope"></i> Email Me
           </a>
-          <a href="https://linkedin.com/in/your-linkedin" target="_blank" class="btn btn-outline">
+          <a href="https://linkedin.com/in/your-linkedin" target="_blank" class="btn btn-outline magnetic">
             <i class="fab fa-linkedin"></i> LinkedIn
           </a>
         </div>
@@ -253,6 +261,107 @@
   <script>
     // Keeping it simple: Just updating the copyright year.
     document.getElementById("year").textContent = new Date().getFullYear();
+
+    /* 
+       TEXT SCRAMBLE ENGINE
+       Adds a 'decryption' effect to the hero headline for that tech-heavy feel.
+    */
+    class TextScramble {
+      constructor(el) {
+        this.el = el;
+        this.chars = '!<>-_\\/[]{}—=+*^?#________';
+        this.update = this.update.bind(this);
+      }
+      setText(newText) {
+        const oldText = this.el.innerText;
+        const length = Math.max(oldText.length, newText.length);
+        const promise = new Promise((resolve) => this.resolve = resolve);
+        this.queue = [];
+        for (let i = 0; i < length; i++) {
+          const from = oldText[i] || '';
+          const to = newText[i] || '';
+          const start = Math.floor(Math.random() * 40);
+          const end = start + Math.floor(Math.random() * 40);
+          this.queue.push({ from, to, start, end });
+        }
+        cancelAnimationFrame(this.frameRequest);
+        this.frame = 0;
+        this.update();
+        return promise;
+      }
+      update() {
+        let output = '';
+        let complete = 0;
+        for (let i = 0, n = this.queue.length; i < n; i++) {
+          let { from, to, start, end, char } = this.queue[i];
+          if (this.frame >= end) {
+            complete++;
+            output += to;
+          } else if (this.frame >= start) {
+            if (!char || Math.random() < 0.28) {
+              char = this.randomChar();
+              this.queue[i].char = char;
+            }
+            output += `<span class="dud">${char}</span>`;
+          } else {
+            output += from;
+          }
+        }
+        this.el.innerHTML = output;
+        if (complete === this.queue.length) {
+          this.resolve();
+        } else {
+          this.frameRequest = requestAnimationFrame(this.update);
+          this.frame++;
+        }
+      }
+      randomChar() {
+        return this.chars[Math.floor(Math.random() * this.chars.length)];
+      }
+    }
+
+    const el = document.getElementById('hero-headline');
+    const fx = new TextScramble(el);
+    setTimeout(() => fx.setText("Building tools that solve real problems."), 500);
+
+    /* 
+       MAGNETIC INTERACTION ENGINE
+       Calculates the distance between the cursor and elements to create a 'pull' effect.
+       Keeps the UI feeling tactile and high-end.
+    */
+    const magnetics = document.querySelectorAll('.magnetic');
+    
+    magnetics.forEach((el) => {
+      el.addEventListener('mousemove', function(e) {
+        const pos = this.getBoundingClientRect();
+        const x = e.pageX - pos.left - pos.width / 2;
+        const y = e.pageY - pos.top - pos.height / 2;
+        
+        this.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px)`;
+      });
+      
+      el.addEventListener('mouseleave', function() {
+        this.style.transform = 'translate(0px, 0px)';
+      });
+    });
+
+    /* 
+       CUSTOM CURSOR & HOVER ENGINE
+       Smoothly follow mouse and react to interactive elements.
+    */
+    const cursor = document.querySelector('.cursor-follower');
+    if (window.innerWidth > 1024) { // Only enable on desktop
+      cursor.style.display = 'block';
+      window.addEventListener('mousemove', (e) => {
+        cursor.style.left = e.clientX + 'px';
+        cursor.style.top = e.clientY + 'px';
+      });
+
+      document.querySelectorAll('a, button, .glass-card').forEach(el => {
+        el.addEventListener('mouseenter', () => cursor.classList.add('active'));
+        el.addEventListener('mouseleave', () => cursor.classList.remove('active'));
+      });
+    }
 
     /* 
        MOBILE NAVIGATION 
