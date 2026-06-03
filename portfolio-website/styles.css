@@ -174,6 +174,38 @@ body {
   padding: 0.4rem 0.6rem;
   border-radius: 8px;
   color: #fff;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1rem;
+}
+
+.profile-image-placeholder {
+  width: 100%;
+  aspect-ratio: 1;
+  background: var(--bg-alt);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  color: var(--accent);
+  position: relative;
+  overflow: hidden;
+}
+
+.profile-image-placeholder::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: radial-gradient(circle at center, var(--accent-glow), transparent 70%);
+}
+
+.profile-image-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+  z-index: 1;
 }
 
 .nav {
