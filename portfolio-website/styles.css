@@ -276,9 +276,9 @@ body {
 
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-auto-rows: minmax(300px, auto);
-  gap: 1.5rem;
+  gap: 2rem;
 }
 
 .project-card {
@@ -288,34 +288,42 @@ body {
 }
 
 .project-card .project-specs {
-  flex-grow: 1; /* Pushes the buttons to the bottom consistently */
+  flex-grow: 1; 
 }
 
 /* 
-  BENTO SPANS
-  Refined for a more compact, balanced flow.
+  BENTO SPANS - Hero + Grid Strategy
+  The featured card takes the full width, others sit side-by-side.
 */
 .card-wide {
   grid-column: span 2;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  align-items: start;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 3rem;
+  align-items: center;
+  padding: 3.5rem;
   background: linear-gradient(135deg, var(--card-bg), rgba(30, 41, 59, 0.8)), 
               radial-gradient(circle at top right, rgba(56, 189, 248, 0.1), transparent 50%);
 }
 
 .card-tall {
-  grid-row: span 1; /* Reducing height to prevent 'empty' feel */
+  grid-row: span 1; 
 }
 
 @media (max-width: 1000px) {
-  .card-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
   .card-wide {
     grid-template-columns: 1fr;
-    grid-column: span 2;
+    padding: 2.5rem;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 750px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+  .card-wide {
+    grid-column: span 1;
   }
 }
 
