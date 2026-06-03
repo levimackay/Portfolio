@@ -18,12 +18,35 @@
 </head>
 
 <body>
-  <!-- High-end design layers: Grain texture and custom cursor -->
+  <!-- High-end design layers: Progress bar, grain, and cursor -->
+  <div class="scroll-progress"></div>
   <div class="grain"></div>
   <div class="cursor-follower"></div>
+  <div class="toast">Copied to clipboard!</div>
 
   <!-- Interactive background engine -->
   <canvas id="bg-canvas"></canvas>
+
+  <!-- Terminal Modal: The technical showcase -->
+  <div class="terminal-modal">
+    <div class="terminal-header">
+      <span>levimackay -- terminal</span>
+      <span class="terminal-close" style="cursor: pointer;">&times;</span>
+    </div>
+    <div class="terminal-body" id="terminal-output">
+      <div style="margin-bottom: 1rem;">Welcome to the Levi Mackay Interactive CLI. Type 'help' to see available commands.</div>
+    </div>
+    <div style="padding: 1rem; border-top: 1px solid var(--glass-border);">
+      <div class="terminal-input-row">
+        <span>&gt;</span>
+        <input type="text" class="terminal-input" id="terminal-input" placeholder="Type a command...">
+      </div>
+    </div>
+  </div>
+
+  <div class="terminal-toggle" title="Open Interactive Terminal">
+    <i class="fas fa-terminal"></i>
+  </div>
 
   <header class="site-header">
     <div class="container nav-container">
@@ -485,6 +508,99 @@
 
     init();
     animate();
+
+    /* 
+       SCROLL PROGRESS ENGINE
+    */
+    window.addEventListener('scroll', () => {
+      const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      document.querySelector(".scroll-progress").style.width = scrolled + "%";
+    });
+
+    /* 
+       3D TILT ENGINE
+       Calculates the tilt based on mouse position relative to card center.
+       Adds a premium physical feel.
+    */
+    const cards = document.querySelectorAll('.glass-card');
+    cards.forEach(card => {
+      card.addEventListener('mousemove', e => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        const rotateX = (y - centerY) / 10;
+        const rotateY = (centerX - x) / 10;
+
+        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-5px)`;
+      });
+
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0px)`;
+      });
+    });
+
+    /* 
+       TERMINAL LOGIC ENGINE
+       Handling state and command parsing for the interactive CLI.
+    */
+    const terminalToggle = document.querySelector('.terminal-toggle');
+    const terminalModal = document.querySelector('.terminal-modal');
+    const terminalClose = document.querySelector('.terminal-close');
+    const terminalInput = document.getElementById('terminal-input');
+    const terminalOutput = document.getElementById('terminal-output');
+
+    terminalToggle.addEventListener('click', () => terminalModal.classList.add('active'));
+    terminalClose.addEventListener('click', () => terminalModal.classList.remove('active'));
+
+    const commands = {
+      help: "Available commands: ls, whoami, clear, projects, bio, contact",
+      ls: "bio.txt  projects.bin  contact.key",
+      whoami: "Levi Mackay. BYU-Idaho CS Student. Problem Solver.",
+      bio: "4.0 GPA student. Landscape foreman turned Software Engineer. Building tools that solve real problems.",
+      projects: "1. Mission Language Generator\n2. Baseball Analytics Engine\n3. SwingOS Prototype",
+      contact: "Email: levibmackay@gmail.com | GitHub: levibmackay",
+      clear: "clear"
+    };
+
+    terminalInput.addEventListener('keydown', e => {
+      if (e.key === 'Enter') {
+        const input = terminalInput.value.toLowerCase().trim();
+        const response = commands[input] || `Command not found: ${input}. Type 'help' for options.`;
+        
+        if (response === 'clear') {
+          terminalOutput.innerHTML = '';
+        } else {
+          const row = document.createElement('div');
+          row.style.marginBottom = '0.5rem';
+          row.innerHTML = `<span style="color: #fff;">&gt; ${input}</span><br>${response.replace(/\n/g, '<br>')}`;
+          terminalOutput.appendChild(row);
+          terminalOutput.scrollTop = terminalOutput.scrollHeight;
+        }
+        terminalInput.value = '';
+      }
+    });
+
+    /* 
+       TOAST ENGINE
+       Simple clipboard integration with visual feedback.
+    */
+    document.querySelectorAll('.btn-primary, .contact-item').forEach(el => {
+      if (el.href && el.href.includes('mailto:')) {
+        el.addEventListener('click', (e) => {
+          e.preventDefault();
+          const email = el.href.replace('mailto:', '');
+          navigator.clipboard.writeText(email).then(() => {
+            const toast = document.querySelector('.toast');
+            toast.classList.add('active');
+            setTimeout(() => toast.classList.remove('active'), 2000);
+          });
+        });
+      }
+    });
 
   </script>
 </body>
