@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Levi Mackay | CSE Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -15,6 +16,10 @@
         <span class="logo-mark">LM</span>
         <span class="logo-text">Levi Mackay</span>
       </div>
+
+      <button class="mobile-nav-toggle" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
 
       <nav class="nav">
         <a href="#about">About</a>
@@ -42,15 +47,15 @@
             <a href="#projects" class="btn btn-primary">View Projects</a>
             <a href="#contact" class="btn btn-outline">Contact Me</a>
             <a href="https://github.com/levibmackay" target="_blank" class="btn btn-outline">
-              GitHub
+              <i class="fab fa-github"></i> GitHub
             </a>
           </div>
 
           <div class="hero-tags">
-            <span>Python</span>
-            <span>SQL</span>
-            <span>Web Dev</span>
-            <span>Machine Learning</span>
+            <span><i class="fab fa-python"></i> Python</span>
+            <span><i class="fas fa-database"></i> SQL</span>
+            <span><i class="fas fa-code"></i> Web Dev</span>
+            <span><i class="fas fa-brain"></i> Machine Learning</span>
           </div>
         </div>
 
@@ -88,7 +93,7 @@
 
         <div class="about-grid">
           <div class="about-card">
-            <h3>What I care about</h3>
+            <h3><i class="fas fa-heart"></i> What I care about</h3>
             <p>
               Writing code that is clean, understandable, and actually useful.
               I like projects that have a real user, even if it is just me and my friends.
@@ -96,7 +101,7 @@
           </div>
 
           <div class="about-card">
-            <h3>What I am learning</h3>
+            <h3><i class="fas fa-graduation-cap"></i> What I am learning</h3>
             <ul>
               <li>Data structures and algorithms</li>
               <li>Database design and SQL</li>
@@ -133,8 +138,8 @@
               <li>GUI</li>
             </ul>
             <div class="card-links">
-              <a href="https://github.com/levibmackay/Portfolio/blob/main/flashcard-app/bcs_flashcards.py" target="_blank">
-                View Code
+              <a href="https://github.com/levibmackay/Portfolio/tree/main/flashcard-app" target="_blank">
+                <i class="fas fa-external-link-alt"></i> View Project
               </a>
             </div>
           </article>
@@ -152,8 +157,8 @@
               <li>Analytics</li>
             </ul>
             <div class="card-links">
-              <a href="https://github.com/levibmackay/Portfolio/blob/main/baseball-database/SQL/baseballdbcode.sql" target="_blank">
-                View Code
+              <a href="https://github.com/levibmackay/Portfolio/tree/main/baseball-database" target="_blank">
+                <i class="fas fa-external-link-alt"></i> View Project
               </a>
             </div>
           </article>
@@ -171,8 +176,8 @@
               <li>ML</li>
             </ul>
             <div class="card-links">
-              <a href="https://github.com/levibmackay/flashcard-generator" target="_blank">
-                View Code
+              <a href="https://github.com/levibmackay/Portfolio/tree/main/swing-analyizer" target="_blank">
+                <i class="fas fa-external-link-alt"></i> View Project
               </a>
             </div>
           </article>
@@ -192,10 +197,10 @@
 
         <div class="skills-grid">
           <div class="skills-group">
-            <h3>Languages</h3>
+            <h3><i class="fas fa-terminal"></i> Languages</h3>
             <div class="pill-row">
               <span class="pill">Python</span>
-              <span class="pill">Java Script</span>
+              <span class="pill">JavaScript</span>
               <span class="pill">C++</span>
               <span class="pill">HTML</span>
               <span class="pill">CSS</span>
@@ -204,7 +209,7 @@
           </div>
 
           <div class="skills-group">
-            <h3>Tools & Tech</h3>
+            <h3><i class="fas fa-tools"></i> Tools & Tech</h3>
             <div class="pill-row">
               <span class="pill">Git / GitHub</span>
               <span class="pill">MySQL Workbench</span>
@@ -214,7 +219,7 @@
           </div>
 
           <div class="skills-group">
-            <h3>Coursework</h3>
+            <h3><i class="fas fa-book"></i> Coursework</h3>
             <ul>
               <li>Intro to Programming</li>
               <li>Data Structures and Algorithms</li>
@@ -240,15 +245,15 @@
         <div class="contact-info">
           <a href="mailto:levibmackay@gmail.com" class="contact-item">
             <span class="contact-label">Email</span>
-            <span>levibmackay@gmail.com</span>
+            <span><i class="fas fa-envelope"></i> levibmackay@gmail.com</span>
           </a>
           <a href="https://github.com/levibmackay" target="_blank" class="contact-item">
             <span class="contact-label">GitHub</span>
-            <span>https://github.com/levibmackay</span>
+            <span><i class="fab fa-github"></i> github.com/levibmackay</span>
           </a>
           <a href="https://www.linkedin.com/in/your-linkedin" target="_blank" class="contact-item">
             <span class="contact-label">LinkedIn</span>
-            <span>linkedin.com/in/your-linkedin</span>
+            <span><i class="fab fa-linkedin"></i> linkedin.com/in/your-linkedin</span>
           </a>
         </div>
       </div>
@@ -264,6 +269,30 @@
   <script>
     // Small script to keep the year current
     document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Mobile nav toggle
+    const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+    const nav = document.querySelector('.nav');
+
+    mobileNavToggle.addEventListener('click', () => {
+      nav.classList.toggle('active');
+      const icon = mobileNavToggle.querySelector('i');
+      if (nav.classList.contains('active')) {
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-times');
+      } else {
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+      }
+    });
+
+    // Close mobile nav when link is clicked
+    document.querySelectorAll('.nav a').forEach(link => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('active');
+        mobileNavToggle.querySelector('i').classList.replace('fa-times', 'fa-bars');
+      });
+    });
   </script>
 </body>
 
