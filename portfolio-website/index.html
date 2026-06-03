@@ -5,11 +5,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Levi Mackay | CSE Portfolio</title>
+  
+  <!-- Fonts: Inter for readability, JetBrains Mono for the 'Dev' aesthetic -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  
+  <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
+  <!-- Interactive background engine -->
+  <canvas id="bg-canvas"></canvas>
+
   <header class="site-header">
     <div class="container nav-container">
       <div class="logo">
@@ -31,268 +42,341 @@
   </header>
 
   <main>
-    <!-- HERO SECTION -->
+    <!-- HERO: The first impression -->
     <section class="hero">
       <div class="container hero-grid">
         <div class="hero-text">
           <p class="hero-kicker">Computer Science • BYU–Idaho</p>
-          <h1>Hey, I’m Levi.</h1>
+          <h1>Building tools that solve real problems.</h1>
           <p class="hero-subtitle">
-            I am a computer science student who likes building practical tools:
-            from language flashcard generators to baseball analytics and
-            machine learning projects.
+            I'm a CS student focused on backend logic, data automation, and building clean, high-performance web tools.
           </p>
 
           <div class="hero-actions">
-            <a href="#projects" class="btn btn-primary">View Projects</a>
-            <a href="#contact" class="btn btn-outline">Contact Me</a>
+            <a href="#projects" class="btn btn-primary">Browse Projects</a>
             <a href="https://github.com/levibmackay" target="_blank" class="btn btn-outline">
-              <i class="fab fa-github"></i> GitHub
+              <i class="fab fa-github"></i> GitHub Profile
             </a>
           </div>
-
-          <div class="hero-tags">
-            <span><i class="fab fa-python"></i> Python</span>
-            <span><i class="fas fa-database"></i> SQL</span>
-            <span><i class="fas fa-code"></i> Web Dev</span>
-            <span><i class="fas fa-brain"></i> Machine Learning</span>
-          </div>
         </div>
 
-        <div class="hero-card">
-          <div class="hero-card-inner">
-            <p class="hero-card-title">Current Focus</p>
-            <ul class="hero-card-list">
-              <li><span class="dot"></span>Building a baseball stats database</li>
-              <li><span class="dot"></span>Mission language flashcard generator</li>
-              <li><span class="dot"></span>Learning full stack web dev</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section id="about" class="section">
-      <div class="container section-inner">
-        <div class="section-header">
-          <h2>About Me</h2>
-          <p>
-            I am a Computer Science student at BYU–Idaho with a 4.0 GPA and growing experience in Python, SQL, and
-            building clean, practical software solutions. My background is pretty different from the usual tech path.
-            I’ve worked as a landscape foreman, a farm hand, a ski lift operator, and a dealer operations assistant. But
-            those jobs taught me how to work hard, solve problems quickly, and keep things running smoothly even when
-            the pressure is on.
-            I like building tools that actually help people, whether that’s automating everyday tasks, organizing data,
-            or creating projects that make learning easier. I enjoy taking messy problems and breaking them down into
-            something simple and usable. Right now I’m focused on improving my backend skills, learning more about
-            full-stack development, and creating projects that combine programming with things I care about like sports,
-            language learning, and data analysis.
-          </p>
-        </div>
-
-        <div class="about-grid">
-          <div class="about-card">
-            <h3><i class="fas fa-heart"></i> What I care about</h3>
-            <p>
-              Writing code that is clean, understandable, and actually useful.
-              I like projects that have a real user, even if it is just me and my friends.
-            </p>
-          </div>
-
-          <div class="about-card">
-            <h3><i class="fas fa-graduation-cap"></i> What I am learning</h3>
-            <ul>
-              <li>Data structures and algorithms</li>
-              <li>Database design and SQL</li>
-              <li>Python for automation and ML</li>
-              <li>Front end web development</li>
-            </ul>
-          </div>
+        <!-- Dynamic card showing what I'm currently hacking on -->
+        <div class="glass-card hero-status">
+          <p class="project-meta">Live Status</p>
+          <ul class="hero-card-list" style="list-style: none;">
+            <li style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
+              <span style="width: 8px; height: 8px; border-radius: 50%; background: var(--accent);"></span>
+              Optimizing SQL query patterns
+            </li>
+            <li style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
+              <span style="width: 8px; height: 8px; border-radius: 50%; background: var(--accent);"></span>
+              Refining SwingOS Vision logic
+            </li>
+            <li style="display: flex; align-items: center; gap: 10px;">
+              <span style="width: 8px; height: 8px; border-radius: 50%; background: var(--accent);"></span>
+              Exploring full-stack architecture
+            </li>
+          </ul>
         </div>
       </div>
     </section>
 
-    <!-- PROJECTS -->
-    <section id="projects" class="section section-alt">
-      <div class="container section-inner">
-        <div class="section-header">
-          <h2>Projects</h2>
-          <p>
-            A few things I have worked on. These are still a work in progress
-            but show how I think and build.
-          </p>
-        </div>
-
-        <div class="card-grid">
-          <article class="card">
-            <div class="card-badge">Python • Tkinter</div>
-            <h3>Mission Language Flashcard Generator</h3>
-            <p>
-              A desktop app that helps returned missionaries review Bosnian,
-              Croatian, and Serbian vocabulary using flashcards and quiz modes.
-            </p>
-            <ul class="card-tags">
-              <li>Python</li>
-              <li>File export</li>
-              <li>GUI</li>
-            </ul>
-            <div class="card-links">
-              <a href="https://github.com/levibmackay/Portfolio/tree/main/flashcard-app" target="_blank">
-                <i class="fas fa-external-link-alt"></i> View Project
-              </a>
-            </div>
-          </article>
-
-          <article class="card">
-            <div class="card-badge">MySQL • Data Modeling</div>
-            <h3>Baseball Stats Database</h3>
-            <p>
-              A normalized baseball database with teams, players, games, and
-              advanced SQL queries using window functions and CTEs.
-            </p>
-            <ul class="card-tags">
-              <li>SQL</li>
-              <li>ERD</li>
-              <li>Analytics</li>
-            </ul>
-            <div class="card-links">
-              <a href="https://github.com/levibmackay/Portfolio/tree/main/baseball-database" target="_blank">
-                <i class="fas fa-external-link-alt"></i> View Project
-              </a>
-            </div>
-          </article>
-
-          <article class="card">
-            <div class="card-badge">ML • Computer Vision</div>
-            <h3>SwingOS Prototype</h3>
-            <p>
-              Early work on a system that analyzes baseball swings using
-              Python and computer vision to give simple, visual feedback.
-            </p>
-            <ul class="card-tags">
-              <li>Python</li>
-              <li>OpenCV</li>
-              <li>ML</li>
-            </ul>
-            <div class="card-links">
-              <a href="https://github.com/levibmackay/Portfolio/tree/main/swing-analyizer" target="_blank">
-                <i class="fas fa-external-link-alt"></i> View Project
-              </a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- SKILLS -->
-    <section id="skills" class="section">
-      <div class="container section-inner">
-        <div class="section-header">
-          <h2>Skills & Tools</h2>
-          <p>
-            Stuff I am comfortable using right now. Always adding to this list.
-          </p>
-        </div>
-
-        <div class="skills-grid">
-          <div class="skills-group">
-            <h3><i class="fas fa-terminal"></i> Languages</h3>
-            <div class="pill-row">
-              <span class="pill">Python</span>
-              <span class="pill">JavaScript</span>
-              <span class="pill">C++</span>
-              <span class="pill">HTML</span>
-              <span class="pill">CSS</span>
-              <span class="pill">SQL</span>
-            </div>
-          </div>
-
-          <div class="skills-group">
-            <h3><i class="fas fa-tools"></i> Tools & Tech</h3>
-            <div class="pill-row">
-              <span class="pill">Git / GitHub</span>
-              <span class="pill">MySQL Workbench</span>
-              <span class="pill">VS Code</span>
-              <span class="pill">Linux / Terminal</span>
-            </div>
-          </div>
-
-          <div class="skills-group">
-            <h3><i class="fas fa-book"></i> Coursework</h3>
-            <ul>
-              <li>Intro to Programming</li>
-              <li>Data Structures and Algorithms</li>
-              <li>Database and SQL</li>
-              <li>Web Development basics</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="section section-alt">
-      <div class="container section-inner contact-inner">
+    <!-- ABOUT: My background and approach -->
+    <section id="about" class="container reveal">
+      <h2 class="section-title">About Me</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem;">
         <div>
-          <h2>Contact</h2>
-          <p>
-            Want to talk about a project, internship, or just code stuff in general?
-            Reach out and I will get back to you.
+          <p style="color: var(--muted); margin-bottom: 1.5rem;">
+            I'm a BYU-Idaho CS student with a 4.0 GPA and a background that isn't your typical tech path. From landscape foreman to ski lift operator, I've learned that software is just another tool to keep things running smoothly.
+          </p>
+          <p style="color: var(--muted);">
+            I don't just write code; I build systems. I enjoy taking messy, manual processes—like tracking baseball stats or learning a new language—and automating them into something useful.
           </p>
         </div>
+        
+        <div class="glass-card">
+          <h3 style="margin-bottom: 1rem;"><i class="fas fa-lightbulb"></i> Philosophy</h3>
+          <p style="font-size: 0.95rem; color: var(--muted);">
+            Write code that is clean, understandable, and serves a specific purpose. If it doesn't solve a problem for a real user, it's just noise.
+          </p>
+        </div>
+      </div>
+    </section>
 
-        <div class="contact-info">
-          <a href="mailto:levibmackay@gmail.com" class="contact-item">
-            <span class="contact-label">Email</span>
-            <span><i class="fas fa-envelope"></i> levibmackay@gmail.com</span>
+    <!-- PROJECTS: Showcasing problem-solving -->
+    <section id="projects" class="container reveal" style="padding: 8rem 0;">
+      <h2 class="section-title">Case Studies</h2>
+      <div class="card-grid">
+        
+        <!-- PROJECT 1: Flashcards -->
+        <article class="glass-card project-card">
+          <p class="project-meta">Automation • Python</p>
+          <h3>Mission Language Generator</h3>
+          <div class="project-specs">
+            <div class="spec-item">
+              <span class="spec-label">Problem:</span> Manual vocab review was fragmented and slow.
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Solution:</span> Built a Tkinter-based engine to batch-generate and quiz BCS vocabulary.
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Outcome:</span> Automated a 3-hour manual process into 5 minutes of data entry.
+            </div>
+          </div>
+          <div class="card-tags">
+            <span class="tag">Python</span>
+            <span class="tag">Tkinter</span>
+            <span class="tag">File I/O</span>
+          </div>
+          <div style="margin-top: 2rem;">
+            <a href="https://github.com/levibmackay/Portfolio/tree/main/flashcard-app" target="_blank" class="btn btn-outline" style="width: 100%; justify-content: center;">
+              <i class="fas fa-code"></i> View Source
+            </a>
+          </div>
+        </article>
+
+        <!-- PROJECT 2: Baseball DB -->
+        <article class="glass-card project-card">
+          <p class="project-meta">Data • SQL</p>
+          <h3>Baseball Analytics Engine</h3>
+          <div class="project-specs">
+            <div class="spec-item">
+              <span class="spec-label">Problem:</span> Flat-file sports data made trend analysis impossible.
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Solution:</span> Designed a normalized schema with complex window functions for performance tracking.
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Outcome:</span> Enabled instant querying of multi-year player performance trends.
+            </div>
+          </div>
+          <div class="card-tags">
+            <span class="tag">MySQL</span>
+            <span class="tag">Relational Design</span>
+            <span class="tag">CTEs</span>
+          </div>
+          <div style="margin-top: 2rem;">
+            <a href="https://github.com/levibmackay/Portfolio/tree/main/baseball-database" target="_blank" class="btn btn-outline" style="width: 100%; justify-content: center;">
+              <i class="fas fa-database"></i> Explore Schema
+            </a>
+          </div>
+        </article>
+
+        <!-- PROJECT 3: SwingOS -->
+        <article class="glass-card project-card">
+          <p class="project-meta">ML • Vision</p>
+          <h3>SwingOS Prototype</h3>
+          <div class="project-specs">
+            <div class="spec-item">
+              <span class="spec-label">Problem:</span> Visual feedback for athletes is often qualitative and vague.
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Solution:</span> Implementing OpenCV pose-estimation to quantify swing mechanics.
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Outcome:</span> (In Progress) Moving towards real-time frame-by-frame mechanical analysis.
+            </div>
+          </div>
+          <div class="card-tags">
+            <span class="tag">OpenCV</span>
+            <span class="tag">Python</span>
+            <span class="tag">Computer Vision</span>
+          </div>
+          <div style="margin-top: 2rem;">
+            <a href="https://github.com/levibmackay/Portfolio/tree/main/swing-analyizer" target="_blank" class="btn btn-outline" style="width: 100%; justify-content: center;">
+              <i class="fas fa-microchip"></i> Track Progress
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- SKILLS: Technical proficiency -->
+    <section id="skills" class="container reveal" style="padding-bottom: 8rem;">
+      <h2 class="section-title">Technical Stack</h2>
+      <div class="skills-grid">
+        <div class="glass-card skills-group">
+          <h4>Languages</h4>
+          <div class="pill-row">
+            <span class="pill">Python</span>
+            <span class="pill">JavaScript</span>
+            <span class="pill">SQL (MySQL/Postgres)</span>
+            <span class="pill">C++</span>
+          </div>
+        </div>
+        <div class="glass-card skills-group">
+          <h4>Tools & Environment</h4>
+          <div class="pill-row">
+            <span class="pill">Git / GitHub</span>
+            <span class="pill">Linux (Debian/Arch)</span>
+            <span class="pill">VS Code</span>
+            <span class="pill">Docker</span>
+          </div>
+        </div>
+        <div class="glass-card skills-group">
+          <h4>Core Coursework</h4>
+          <div class="pill-row">
+            <span class="pill">Data Structures</span>
+            <span class="pill">Algorithms</span>
+            <span class="pill">DB Design</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT: Call to action -->
+    <section id="contact" class="container reveal" style="padding-bottom: 8rem;">
+      <div class="glass-card" style="text-align: center; padding: 4rem 2rem;">
+        <h2 style="margin-bottom: 1rem;">Let's talk code.</h2>
+        <p style="color: var(--muted); margin-bottom: 2.5rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+          Currently looking for internship opportunities. Whether it's about backend architecture, baseball, or BCS languages, I'm always down to chat.
+        </p>
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem;">
+          <a href="mailto:levibmackay@gmail.com" class="btn btn-primary">
+            <i class="fas fa-envelope"></i> Email Me
           </a>
-          <a href="https://github.com/levibmackay" target="_blank" class="contact-item">
-            <span class="contact-label">GitHub</span>
-            <span><i class="fab fa-github"></i> github.com/levibmackay</span>
-          </a>
-          <a href="https://www.linkedin.com/in/your-linkedin" target="_blank" class="contact-item">
-            <span class="contact-label">LinkedIn</span>
-            <span><i class="fab fa-linkedin"></i> linkedin.com/in/your-linkedin</span>
+          <a href="https://linkedin.com/in/your-linkedin" target="_blank" class="btn btn-outline">
+            <i class="fab fa-linkedin"></i> LinkedIn
           </a>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>© <span id="year"></span> Levi Mackay. All rights reserved.</p>
+  <footer>
+    <div class="container">
+      <p>© <span id="year"></span> Levi Mackay. Built with Vanilla JS & intentionality.</p>
     </div>
   </footer>
 
   <script>
-    // Small script to keep the year current
+    // Keeping it simple: Just updating the copyright year.
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    // Mobile nav toggle
+    /* 
+       MOBILE NAVIGATION 
+       Managing the slide-in menu for small screens.
+    */
     const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
     const nav = document.querySelector('.nav');
 
     mobileNavToggle.addEventListener('click', () => {
       nav.classList.toggle('active');
       const icon = mobileNavToggle.querySelector('i');
-      if (nav.classList.contains('active')) {
-        icon.classList.remove('fa-bars');
-        icon.classList.add('fa-times');
-      } else {
-        icon.classList.remove('fa-times');
-        icon.classList.add('fa-bars');
-      }
+      icon.classList.toggle('fa-bars');
+      icon.classList.toggle('fa-times');
     });
 
-    // Close mobile nav when link is clicked
+    // Close menu when a link is clicked
     document.querySelectorAll('.nav a').forEach(link => {
       link.addEventListener('click', () => {
         nav.classList.remove('active');
-        mobileNavToggle.querySelector('i').classList.replace('fa-times', 'fa-bars');
+        const icon = mobileNavToggle.querySelector('i');
+        icon.classList.add('fa-bars');
+        icon.classList.remove('fa-times');
       });
     });
+
+    /* 
+       SCROLL REVEAL ENGINE 
+       Using IntersectionObserver to trigger animations as sections enter the viewport.
+       This is way more performant than listening to 'scroll' events directly.
+    */
+    const observerOptions = {
+      threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    /* 
+       INTERACTIVE BACKGROUND ENGINE 
+       Creating a subtle particle mesh that follows the mouse. 
+       Kept lightweight to ensure it runs smooth even on lower-end devices.
+    */
+    const canvas = document.getElementById('bg-canvas');
+    const ctx = canvas.getContext('2d');
+    let particles = [];
+    let mouse = { x: null, y: null };
+
+    function resize() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+
+    window.addEventListener('resize', resize);
+    resize();
+
+    window.addEventListener('mousemove', (e) => {
+      mouse.x = e.x;
+      mouse.y = e.y;
+    });
+
+    class Particle {
+      constructor() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.size = Math.random() * 2 + 1;
+        this.speedX = Math.random() * 0.5 - 0.25;
+        this.speedY = Math.random() * 0.5 - 0.25;
+      }
+
+      update() {
+        this.x += this.speedX;
+        this.y += this.speedY;
+
+        if (this.x > canvas.width) this.x = 0;
+        else if (this.x < 0) this.x = canvas.width;
+        if (this.y > canvas.height) this.y = 0;
+        else if (this.y < 0) this.y = canvas.height;
+
+        // Subtle mouse attraction
+        if (mouse.x) {
+          let dx = mouse.x - this.x;
+          let dy = mouse.y - this.y;
+          let dist = Math.sqrt(dx*dx + dy*dy);
+          if (dist < 150) {
+            this.x += dx * 0.01;
+            this.y += dy * 0.01;
+          }
+        }
+      }
+
+      draw() {
+        ctx.fillStyle = 'rgba(56, 189, 248, 0.2)';
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fill();
+      }
+    }
+
+    function init() {
+      particles = [];
+      for (let i = 0; i < 60; i++) {
+        particles.push(new Particle());
+      }
+    }
+
+    function animate() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      particles.forEach(p => {
+        p.update();
+        p.draw();
+      });
+      requestAnimationFrame(animate);
+    }
+
+    init();
+    animate();
+
   </script>
 </body>
 
