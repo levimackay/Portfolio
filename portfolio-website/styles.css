@@ -200,12 +200,31 @@ body {
   background: radial-gradient(circle at center, var(--accent-glow), transparent 70%);
 }
 
+.profile-image-placeholder:hover img {
+  transform: scale(1.05);
+  filter: grayscale(0%);
+}
+
 .profile-image-placeholder img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   position: relative;
   z-index: 1;
+  transition: all 0.5s ease;
+  filter: grayscale(20%);
+}
+
+@media (max-width: 800px) {
+  #about > div:first-of-type {
+    grid-template-columns: 1fr !important;
+    text-align: center;
+  }
+  
+  .profile-image-placeholder {
+    max-width: 300px;
+    margin: 0 auto;
+  }
 }
 
 .nav {
