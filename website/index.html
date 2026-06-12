@@ -6,12 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Levi Mackay | CSE Portfolio</title>
   
-  <!-- Fonts: Inter for readability, JetBrains Mono for the 'Dev' aesthetic -->
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   
-  <!-- Icons -->
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   
   <link rel="stylesheet" href="styles.css">
@@ -20,16 +20,16 @@
 </head>
 
 <body>
-  <!-- High-end design layers: Progress bar, grain, and cursor -->
+
   <div class="scroll-progress"></div>
   <div class="grain"></div>
   <div class="cursor-follower"></div>
   <div class="toast">Copied to clipboard!</div>
 
-  <!-- Interactive background engine -->
+
   <canvas id="bg-canvas"></canvas>
 
-  <!-- Terminal Modal: The technical showcase -->
+
   <div class="terminal-modal">
     <div class="terminal-header">
       <span>levimackay terminal</span>
@@ -71,7 +71,7 @@
   </header>
 
   <main>
-    <!-- HERO: The first impression -->
+
     <section class="hero">
       <div class="container hero-grid">
         <div class="hero-text">
@@ -89,7 +89,7 @@
           </div>
         </div>
 
-        <!-- Dynamic card showing what I'm currently hacking on -->
+
         <div class="glass-card hero-status reveal">
           <p class="project-meta">Current Focus</p>
           <ul class="hero-card-list" style="list-style: none;">
@@ -110,7 +110,7 @@
       </div>
     </section>
 
-    <!-- ABOUT: My background and approach -->
+
     <section id="about" class="container reveal">
       <h2 class="section-title">The Man Behind the Code</h2>
       
@@ -152,12 +152,12 @@
       </div>
     </section>
 
-    <!-- PROJECTS: Showcasing problem-solving -->
+
     <section id="projects" class="container reveal" style="padding: 4rem 0;">
       <h2 class="section-title">Case Studies</h2>
       <div class="card-grid">
         
-        <!-- PROJECT 3 (FEATURED): SwingOS -->
+
         <article class="glass-card project-card card-featured">
           <div style="margin: -2rem -2rem 1.5rem -2rem; border-radius: 12px 12px 0 0; overflow: hidden; aspect-ratio: 16/9; border-bottom: 1px solid var(--glass-border);">
             <iframe width="100%" height="100%" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="SwingOS Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="border: none;"></iframe>
@@ -192,7 +192,7 @@
           </div>
         </article>
 
-        <!-- PROJECT 4: Landscape Estimator -->
+
         <article class="glass-card project-card">
           <div style="margin: -2rem -2rem 1.5rem -2rem; border-radius: 12px 12px 0 0; overflow: hidden; aspect-ratio: 16/9; border-bottom: 1px solid var(--glass-border);">
             <iframe width="100%" height="100%" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Foreman's Friend Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="border: none;"></iframe>
@@ -227,7 +227,7 @@
           </div>
         </article>
 
-        <!-- PROJECT 1: Flashcards -->
+
         <article class="glass-card project-card">
           <div style="margin: -2rem -2rem 1.5rem -2rem; border-radius: 12px 12px 0 0; overflow: hidden; aspect-ratio: 16/9; border-bottom: 1px solid var(--glass-border);">
             <iframe width="100%" height="100%" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Mission Language Generator Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="border: none;"></iframe>
@@ -260,7 +260,7 @@
           </div>
         </article>
 
-        <!-- PROJECT 2: Baseball DB -->
+
         <article class="glass-card project-card">
           <div style="margin: -2rem -2rem 1.5rem -2rem; border-radius: 12px 12px 0 0; overflow: hidden; aspect-ratio: 16/9; border-bottom: 1px solid var(--glass-border);">
             <iframe width="100%" height="100%" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Baseball Analytics Engine Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="border: none;"></iframe>
@@ -296,7 +296,7 @@
       </div>
     </section>
 
-    <!-- SKILLS: Technical proficiency -->
+
     <section id="skills" class="container reveal" style="padding-bottom: 8rem;">
       <h2 class="section-title">Technical Stack</h2>
       <div class="skills-grid">
@@ -329,7 +329,7 @@
       </div>
     </section>
 
-    <!-- CONTACT: Call to action -->
+
     <section id="contact" class="container reveal" style="padding-bottom: 8rem;">
       <div class="glass-card" style="text-align: center; padding: 4rem 2rem;">
         <h2 style="margin-bottom: 1rem;">Let's talk code.</h2>
@@ -361,13 +361,10 @@
   </footer>
 
   <script>
-    // Keeping it simple: Just updating the copyright year.
+
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    /* 
-       TEXT SCRAMBLE ENGINE
-       Adds a 'decryption' effect to the hero headline for that tech-heavy feel.
-    */
+
     class TextScramble {
       constructor(el) {
         this.el = el;
@@ -447,10 +444,7 @@
     const randomPhrase = phrases[Math.floor(Math.random() * phrases.length)];
     setTimeout(() => fx.setText(randomPhrase), 500);
 
-    /* 
-       CUSTOM CURSOR & HOVER ENGINE
-       Smoothly follow mouse and react to interactive elements.
-    */
+
     const cursor = document.querySelector('.cursor-follower');
     if (window.innerWidth > 1024) { // Only enable on desktop
       cursor.style.display = 'block';
@@ -465,10 +459,7 @@
       });
     }
 
-    /* 
-       MOBILE NAVIGATION 
-       Managing the slide-in menu for small screens.
-    */
+
     const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
     const nav = document.querySelector('.nav');
 
@@ -479,7 +470,7 @@
       icon.classList.toggle('fa-times');
     });
 
-    // Close menu when a link is clicked
+
     document.querySelectorAll('.nav a').forEach(link => {
       link.addEventListener('click', () => {
         nav.classList.remove('active');
@@ -489,11 +480,7 @@
       });
     });
 
-    /* 
-       SCROLL REVEAL ENGINE 
-       Using IntersectionObserver to trigger animations as sections enter the viewport.
-       This is way more performant than listening to 'scroll' events directly.
-    */
+
     const observerOptions = {
       threshold: 0.1
     };
@@ -508,11 +495,7 @@
 
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-    /* 
-       INTERACTIVE BACKGROUND ENGINE 
-       Creating a subtle particle mesh that follows the mouse. 
-       Kept lightweight to ensure it runs smooth even on lower-end devices.
-    */
+
     const canvas = document.getElementById('bg-canvas');
     const ctx = canvas.getContext('2d');
     let particles = [];
@@ -588,9 +571,7 @@
     init();
     animate();
 
-    /* 
-       SCROLL PROGRESS ENGINE
-    */
+
     window.addEventListener('scroll', () => {
       const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
       const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -598,10 +579,7 @@
       document.querySelector(".scroll-progress").style.width = scrolled + "%";
     });
 
-    /* 
-       TERMINAL LOGIC ENGINE
-       Handling state and command parsing for the interactive CLI.
-    */
+
     const terminalToggle = document.querySelector('.terminal-toggle');
     const terminalModal = document.querySelector('.terminal-modal');
     const terminalClose = document.querySelector('.terminal-close');
@@ -639,10 +617,7 @@
       }
     });
 
-    /* 
-       TOAST ENGINE
-       Simple clipboard integration with visual feedback.
-    */
+
     document.querySelectorAll('.btn-primary, .contact-item').forEach(el => {
       if (el.href && el.href.includes('mailto:')) {
         el.addEventListener('click', (e) => {
@@ -656,11 +631,6 @@
         });
       }
     });
-
-  </script>
-</body>
-
-</html>
 
   </script>
 </body>

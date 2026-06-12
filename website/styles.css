@@ -1,8 +1,4 @@
-/* 
-  LEVI'S DESIGN SYSTEM
-  Refining the portfolio to look high-end. 
-  Using a deep navy/slate palette with a punchy blue accent.
-*/
+
 
 :root {
   /* Core Palette */
@@ -28,10 +24,7 @@
   --bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-/* 
-  SCROLL PROGRESS
-  A subtle indicator of how far the recruiter has read.
-*/
+
 .scroll-progress {
   position: fixed;
   top: 0;
@@ -42,10 +35,7 @@
   z-index: 10001;
 }
 
-/* 
-  CUSTOM SCROLLBAR
-  Ensuring even the browser chrome matches the aesthetic.
-*/
+
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -64,11 +54,7 @@
   background: #1e293b;
 }
 
-/* 
-  GRAIN OVERLAY
-  Adding a subtle noise texture to give the site a 'premium' feel. 
-  It breaks up the flat digital colors.
-*/
+
 .grain {
   position: fixed;
   top: 0;
@@ -81,10 +67,7 @@
   z-index: 9999;
 }
 
-/* 
-  CUSTOM CURSOR
-  A soft ring that follows the mouse. Expand it when hovering over links.
-*/
+
 .cursor-follower {
   position: fixed;
   width: 20px;
@@ -104,7 +87,7 @@
   border: 1px solid var(--accent);
 }
 
-/* Base resets & fonts */
+
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -123,7 +106,7 @@ body {
   overflow-x: hidden;
 }
 
-/* Background canvas stays fixed behind everything */
+
 #bg-canvas {
   position: fixed;
   top: 0;
@@ -140,10 +123,7 @@ body {
   padding: 0 1.5rem;
 }
 
-/* 
-  HEADER & NAVIGATION
-  Using backdrop-filter for that 'frosted' look as you scroll.
-*/
+
 .site-header {
   position: sticky;
   top: 0;
@@ -244,10 +224,7 @@ body {
   color: var(--accent);
 }
 
-/* 
-  HERO SECTION
-  Keeping it clean but impactful.
-*/
+
 .hero {
   padding: 8rem 0 4rem;
   min-height: 80vh;
@@ -282,10 +259,7 @@ body {
   margin-bottom: 2rem;
 }
 
-/* 
-  PROJECTS SECTION 
-  Using a bento-style grid for visual variety.
-*/
+
 .section-title {
   font-size: 2rem;
   margin-bottom: 3rem;
@@ -406,10 +380,7 @@ body {
   font-weight: 600;
 }
 
-/* 
-  SKILLS SECTION
-  Grouped and clean.
-*/
+
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -441,9 +412,7 @@ body {
   border-color: var(--accent);
 }
 
-/* 
-  UTILITIES & ANIMATIONS
-*/
+
 .reveal {
   opacity: 0;
   transform: translateY(30px);
@@ -495,10 +464,7 @@ body {
   border-color: var(--accent);
 }
 
-/* 
-  MOBILE ADAPTATION
-  Stacking things properly on smaller screens.
-*/
+
 .mobile-nav-toggle {
   display: none;
   background: none;
@@ -545,7 +511,7 @@ body {
   }
 }
 
-/* Footer styling */
+
 footer {
   padding: 4rem 0;
   text-align: center;
@@ -554,10 +520,7 @@ footer {
   font-size: 0.8rem;
 }
 
-/* 
-  RETRO TERMINAL MODAL
-  The 'Masterpiece' feature: A functional CLI for recruiters.
-*/
+
 .terminal-modal {
   position: fixed;
   top: 50%;
@@ -649,10 +612,7 @@ footer {
   100% { box-shadow: 0 0 0 0 rgba(56, 189, 248, 0); }
 }
 
-/* 
-  TOAST NOTIFICATIONS
-  Polite UI feedback for copy-to-clipboard.
-*/
+
 .toast {
   position: fixed;
   bottom: 2rem;
