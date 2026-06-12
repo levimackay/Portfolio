@@ -78,7 +78,7 @@
           <p class="hero-kicker">Software Developer • CS Teaching Assistant • Entrepreneur</p>
           <h1 id="hero-headline">Building technology that solves real-world problems.</h1>
           <p class="hero-subtitle">
-            I'm Levi Mackay, a Computer Science student at BYU-Idaho with a passion for AI, automation, and taking ideas from concept to reality.
+            I am Levi Mackay. I am a Computer Science student at BYU Idaho. I love AI and automation and taking ideas from concept to reality.
           </p>
 
           <div class="hero-actions">
@@ -103,7 +103,7 @@
             </li>
             <li style="display: flex; align-items: center; gap: 10px;">
               <span style="width: 8px; height: 8px; border-radius: 50%; background: var(--accent);"></span>
-              Experimenting with AI & Automation
+              Experimenting with AI and Automation
             </li>
           </ul>
         </div>
@@ -120,33 +120,33 @@
         </div>
         <div>
           <p style="color: var(--muted); font-size: 1.05rem; margin-bottom: 1.5rem; line-height: 1.8;">
-            I'm Levi Mackay, a Computer Science student, Teaching Assistant, and software developer passionate about AI, automation, and building useful products. I enjoy finding opportunities where technology and business intersect to create measurable value.
+            I am a Computer Science student and a Teaching Assistant. I love building useful products with AI and automation. I look for ways technology and business can work together to create real value.
           </p>
           <p style="color: var(--muted); font-size: 1.05rem; line-height: 1.8;">
-            After serving a two-year mission across the Balkans, I returned with a love for learning, problem-solving, and connecting with people from different backgrounds. Today, I spend my time building software, mentoring students, experimenting with AI tools, and working toward a career in software engineering.
+            I served a two year mission across the Balkans. I learned to solve problems and connect with people from different backgrounds. Now I spend my time building software and helping other students learn to code.
           </p>
         </div>
       </div>
 
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
         <div class="glass-card">
-          <h3 style="margin-bottom: 1.5rem;"><i class="fas fa-briefcase" style="color: var(--accent);"></i> Professional & Academic</h3>
+          <h3 style="margin-bottom: 1.5rem;"><i class="fas fa-briefcase" style="color: var(--accent);"></i> Professional and Academic</h3>
           <p style="font-size: 0.95rem; color: var(--muted); line-height: 1.6;">
-            I serve as a <strong>Teaching Assistant</strong> for programming courses, helping students develop confidence in their coding skills. I'm also active in the <strong>Sandbox startup incubator</strong>, collaborating on product development and innovation-focused projects.
+            I am a Teaching Assistant for programming courses. I help students get better at coding. I also work in the Sandbox startup incubator where I build new products.
           </p>
         </div>
 
         <div class="glass-card">
           <h3 style="margin-bottom: 1.5rem;"><i class="fas fa-globe-europe" style="color: var(--accent);"></i> Balkan Experience</h3>
           <p style="font-size: 0.95rem; color: var(--muted); line-height: 1.6;">
-            During my mission in Bosnia, Croatia, Serbia, Montenegro, and Slovenia, I developed adaptability and cultural awareness. I'm conversational in <strong>Bosnian/Croatian/Serbian</strong> and believe in growth through difficult challenges.
+            I lived in Bosnia and Croatia and Serbia and Montenegro and Slovenia. I learned to adapt to new cultures. I speak Bosnian and Croatian and Serbian.
           </p>
         </div>
 
         <div class="glass-card">
           <h3 style="margin-bottom: 1.5rem;"><i class="fas fa-mountain" style="color: var(--accent);"></i> Beyond the Terminal</h3>
           <p style="font-size: 0.95rem; color: var(--muted); line-height: 1.6;">
-            When I'm not coding, you'll find me weight training, running endurance races, snowboarding, or dirt biking. Discipline and consistency are core to everything I do—whether it's on a trail or in a codebase.
+            I like weight training and running and snowboarding and dirt biking. I believe in discipline and consistency. I use those values when I am training or when I am coding.
           </p>
         </div>
       </div>
@@ -165,17 +165,17 @@
           <p class="project-meta">ML • Vision • Featured</p>
           <h3>SwingOS Prototype</h3>
           <p>
-            A real-time computer vision system that bridges the gap between raw "feel" and quantifiable biomechanical feedback.
+            A computer vision system that gives biomechanical feedback in real time.
           </p>
           
           <div class="project-specs">
             <div class="spec-item">
               <span class="spec-label">Challenge:</span> 
-              Tracking high-velocity rotational movement with standard hardware.
+              Tracking fast movement with normal hardware.
             </div>
             <div class="spec-item">
               <span class="spec-label">Innovation:</span> 
-              Implementing real-time head-anchor tracking and spine angle analysis.
+              Using pose estimation to track head and spine angles.
             </div>
           </div>
 
@@ -427,7 +427,18 @@
 
     const el = document.getElementById('hero-headline');
     const fx = new TextScramble(el);
-    setTimeout(() => fx.setText("Building tools that solve real problems."), 500);
+    
+    const phrases = [
+      "Building tools that solve real problems.",
+      "Taking ideas from concept to reality.",
+      "Automating the boring stuff with AI.",
+      "Ship fast and build things that matter.",
+      "Connecting tech and business for real value.",
+      "Making software that actually works."
+    ];
+    
+    const randomPhrase = phrases[Math.floor(Math.random() * phrases.length)];
+    setTimeout(() => fx.setText(randomPhrase), 500);
 
     /* 
        CUSTOM CURSOR & HOVER ENGINE
