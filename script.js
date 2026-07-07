@@ -184,9 +184,22 @@ glowCards.forEach((card) => {
   card.prepend(light);
 });
 
+// Each --cursor-angle/--edge-proximity write forces the browser to repaint
+// the card's layered gradient/mask background, which is expensive. Capping
+// writes to ~30fps (instead of every pointermove event or every animation
+// frame) keeps the effect visually smooth while cutting that repaint cost
+// roughly in half to a third — this is what made the contact card's intro
+// sweep (and hovering any glow card) janky for the whole page.
+const GLOW_FRAME_MS = 32;
+
 if (canHover) {
   glowCards.forEach((card) => {
+    let lastPaint = 0;
     card.addEventListener('pointermove', (e) => {
+      const now = performance.now();
+      if (now - lastPaint < GLOW_FRAME_MS) return;
+      lastPaint = now;
+
       const r = card.getBoundingClientRect();
       const cx = r.width / 2;
       const cy = r.height / 2;
@@ -203,38 +216,18 @@ if (canHover) {
   });
 }
 
-// Intro sweep: the contact card runs one full glow lap when it first appears
+// Intro flourish: the contact card's border glows once when it first appears.
+// This used to be a ~4s JS-driven sweep that rewrote --cursor-angle every
+// animation frame — each write forced a repaint of the card's layered
+// gradient/mask background, which measured at ~120ms per frame (worse than
+// 8fps) and was the actual source of the whole-page jank. A single class
+// toggle lets the existing CSS opacity transition (cheap, two paints total)
+// do the same "the border wakes up" effect instead.
 function glowSweep(card) {
-  const angleStart = 110;
-  const angleEnd = 465;
+  card.style.setProperty('--cursor-angle', '135deg');
+  card.style.setProperty('--edge-proximity', '100');
   card.classList.add('sweep-active');
-
-  const run = ({ start = 0, end = 100, duration, delay = 0, easeIn = false, onUpdate, onEnd }) => {
-    setTimeout(() => {
-      const t0 = performance.now();
-      (function tick() {
-        const t = Math.min((performance.now() - t0) / duration, 1);
-        const eased = easeIn ? t * t * t : 1 - Math.pow(1 - t, 3);
-        onUpdate(start + (end - start) * eased);
-        if (t < 1) requestAnimationFrame(tick);
-        else if (onEnd) onEnd();
-      })();
-    }, delay);
-  };
-
-  const setAngle = (v) =>
-    card.style.setProperty('--cursor-angle', angleStart + (angleEnd - angleStart) * (v / 100) + 'deg');
-  const setEdge = (v) => card.style.setProperty('--edge-proximity', v);
-
-  setAngle(0);
-  run({ duration: 500, onUpdate: setEdge });
-  run({ duration: 1500, end: 50, easeIn: true, onUpdate: setAngle });
-  run({ delay: 1500, duration: 2250, start: 50, end: 100, onUpdate: setAngle });
-  run({
-    delay: 2500, duration: 1500, start: 100, end: 0, easeIn: true,
-    onUpdate: setEdge,
-    onEnd: () => card.classList.remove('sweep-active'),
-  });
+  setTimeout(() => card.classList.remove('sweep-active'), 2200);
 }
 
 if (!reduceMotion) {

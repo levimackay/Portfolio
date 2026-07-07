@@ -221,12 +221,22 @@ h2 {
 
 .hero {
   position: relative;
-  padding: 9rem 0 5rem;
   text-align: center;
 }
 
+/* Fills the space up to the sticky header's bottom edge, so only the
+   headline/actions are visible on load — the stat strip sits below it
+   and stays off-screen until the visitor actually scrolls. */
+.hero-viewport {
+  position: relative;
+  min-height: calc(100svh - 56px);
+  display: flex;
+  align-items: center;
+  padding: 5rem 0;
+}
+
 /* Soft veil that dims the 3D scene behind the headline */
-.hero::after {
+.hero-viewport::after {
   content: "";
   position: absolute;
   inset: -12% 0 0;
@@ -241,7 +251,7 @@ h2 {
 }
 
 /* Faint dot grid, masked to the center of the hero */
-.hero::before {
+.hero-viewport::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -264,6 +274,7 @@ h2 {
 
 .hero-inner {
   position: relative;
+  width: 100%;
 }
 
 .hero-kicker {
