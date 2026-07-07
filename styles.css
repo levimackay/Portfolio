@@ -337,6 +337,11 @@ h2 {
 
 #projects {
   background: radial-gradient(720px 340px at 50% 0%, rgba(41, 151, 255, 0.06), transparent 70%);
+  padding-bottom: 1rem; /* last project row carries its own spacing */
+}
+
+#skills {
+  padding-top: 4rem;
 }
 
 .section-contact {
