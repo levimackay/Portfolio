@@ -159,6 +159,136 @@ if (canHover && !reduceMotion) {
   });
 }
 
+// ---------- Border glow cards (ported from React Bits' BorderGlow) ----------
+// Pointer position near a card's edge lights a conic-masked gradient border,
+// a soft fill, and an outer glow aimed at the cursor. All visuals live in CSS;
+// this just feeds --cursor-angle and --edge-proximity per card.
+const glowCards = document.querySelectorAll('.glow-card');
+
+glowCards.forEach((card) => {
+  const light = document.createElement('span');
+  light.className = 'edge-light';
+  card.prepend(light);
+});
+
+if (canHover) {
+  glowCards.forEach((card) => {
+    card.addEventListener('pointermove', (e) => {
+      const r = card.getBoundingClientRect();
+      const cx = r.width / 2;
+      const cy = r.height / 2;
+      const dx = e.clientX - r.left - cx;
+      const dy = e.clientY - r.top - cy;
+      const kx = dx === 0 ? Infinity : cx / Math.abs(dx);
+      const ky = dy === 0 ? Infinity : cy / Math.abs(dy);
+      const edge = Math.min(Math.max(1 / Math.min(kx, ky), 0), 1);
+      let angle = Math.atan2(dy, dx) * (180 / Math.PI) + 90;
+      if (angle < 0) angle += 360;
+      card.style.setProperty('--edge-proximity', (edge * 100).toFixed(2));
+      card.style.setProperty('--cursor-angle', angle.toFixed(2) + 'deg');
+    });
+  });
+}
+
+// Intro sweep: the contact card runs one full glow lap when it first appears
+function glowSweep(card) {
+  const angleStart = 110;
+  const angleEnd = 465;
+  card.classList.add('sweep-active');
+
+  const run = ({ start = 0, end = 100, duration, delay = 0, easeIn = false, onUpdate, onEnd }) => {
+    setTimeout(() => {
+      const t0 = performance.now();
+      (function tick() {
+        const t = Math.min((performance.now() - t0) / duration, 1);
+        const eased = easeIn ? t * t * t : 1 - Math.pow(1 - t, 3);
+        onUpdate(start + (end - start) * eased);
+        if (t < 1) requestAnimationFrame(tick);
+        else if (onEnd) onEnd();
+      })();
+    }, delay);
+  };
+
+  const setAngle = (v) =>
+    card.style.setProperty('--cursor-angle', angleStart + (angleEnd - angleStart) * (v / 100) + 'deg');
+  const setEdge = (v) => card.style.setProperty('--edge-proximity', v);
+
+  setAngle(0);
+  run({ duration: 500, onUpdate: setEdge });
+  run({ duration: 1500, end: 50, easeIn: true, onUpdate: setAngle });
+  run({ delay: 1500, duration: 2250, start: 50, end: 100, onUpdate: setAngle });
+  run({
+    delay: 2500, duration: 1500, start: 100, end: 0, easeIn: true,
+    onUpdate: setEdge,
+    onEnd: () => card.classList.remove('sweep-active'),
+  });
+}
+
+if (!reduceMotion) {
+  const contactCard = document.querySelector('.contact-card');
+  if (contactCard) {
+    const sweepObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          sweepObserver.unobserve(entry.target);
+          setTimeout(() => glowSweep(entry.target), 350);
+        });
+      },
+      { threshold: 0.5 }
+    );
+    sweepObserver.observe(contactCard);
+  }
+}
+
+// ---------- Blur-in headings (React Bits BlurText style) ----------
+if (!reduceMotion) {
+  document.querySelectorAll('main h2').forEach((h) => {
+    const nodes = Array.from(h.childNodes);
+    let wordIndex = 0;
+    h.textContent = '';
+    nodes.forEach((node) => {
+      if (node.nodeType !== Node.TEXT_NODE) {
+        h.appendChild(node);
+        return;
+      }
+      node.textContent.split(/(\s+)/).forEach((part) => {
+        if (!part) return;
+        if (/^\s+$/.test(part)) {
+          h.appendChild(document.createTextNode(part));
+          return;
+        }
+        const span = document.createElement('span');
+        span.className = 'blur-word';
+        span.style.setProperty('--wd', wordIndex++ * 70 + 'ms');
+        span.textContent = part;
+        h.appendChild(span);
+      });
+    });
+  });
+
+  const blurObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('blur-in');
+        blurObserver.unobserve(entry.target);
+      });
+    },
+    { threshold: 0.5 }
+  );
+  document.querySelectorAll('main h2').forEach((h) => blurObserver.observe(h));
+}
+
+// QA hook: ?glow forces every glow card fully lit
+if (new URLSearchParams(location.search).has('glow')) {
+  glowCards.forEach((card) => {
+    card.classList.add('sweep-active');
+    card.style.setProperty('--edge-proximity', '100');
+    card.style.setProperty('--cursor-angle', '135deg');
+  });
+}
+
 // ---------- Copy email to clipboard ----------
 const toast = document.querySelector('.toast');
 
