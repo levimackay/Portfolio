@@ -25,14 +25,11 @@ nav.querySelectorAll('a').forEach((link) => {
   });
 });
 
-// ---------- Scroll reveal ----------
+// ---------- Scroll reveal (fades back out when scrolled past in either direction) ----------
 const observer = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      }
+      entry.target.classList.toggle('visible', entry.isIntersecting);
     });
   },
   { threshold: 0.12 }
@@ -88,6 +85,22 @@ if (window.matchMedia('(hover: hover)').matches && !reduceMotion) {
       media.style.transform = '';
     });
   });
+}
+
+// ---------- Pause offscreen video (avoid decoding it for the whole scroll session) ----------
+const projectVideos = document.querySelectorAll('.project-media video');
+if (projectVideos.length) {
+  const videoObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        const v = entry.target;
+        if (entry.isIntersecting) v.play().catch(() => {});
+        else v.pause();
+      });
+    },
+    { threshold: 0.1 }
+  );
+  projectVideos.forEach((v) => videoObserver.observe(v));
 }
 
 // ---------- Scroll progress + media parallax ----------
@@ -270,9 +283,7 @@ if (!reduceMotion) {
   const blurObserver = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-        entry.target.classList.add('blur-in');
-        blurObserver.unobserve(entry.target);
+        entry.target.classList.toggle('blur-in', entry.isIntersecting);
       });
     },
     { threshold: 0.5 }
