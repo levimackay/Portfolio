@@ -129,6 +129,28 @@
 
   var forcedP = parseFloat(new URLSearchParams(location.search).get('p'));
 
+  // Fully stop the render loop (not just the per-frame work) once the hero
+  // has scrolled out of view, and resume it if the user scrolls back up.
+  // A `setAnimationLoop` callback that merely early-returns still gets
+  // invoked every frame for as long as the page is open, which keeps the
+  // WebGL context "hot" and adds up over a long scroll session.
+  var looping = true;
+  function syncLoop() {
+    if (!isNaN(forcedP)) return;
+    var p = window.scrollY / (window.innerHeight * 1.15);
+    var shouldRun = p < 1.18;
+    if (shouldRun && !looping) {
+      looping = true;
+      canvas.style.visibility = 'visible';
+      renderer.setAnimationLoop(tick);
+    } else if (!shouldRun && looping) {
+      looping = false;
+      canvas.style.visibility = 'hidden';
+      renderer.setAnimationLoop(null);
+    }
+  }
+  window.addEventListener('scroll', syncLoop, { passive: true });
+
   window.addEventListener('mousemove', function (e) {
     mouseX = (e.clientX / window.innerWidth) * 2 - 1;
     mouseY = (e.clientY / window.innerHeight) * 2 - 1;
@@ -151,20 +173,13 @@
     return t * t * (3 - 2 * t);
   }
 
-  renderer.setAnimationLoop(function (now) {
+  function tick(now) {
     var t = now * 0.001;
 
     // Scroll progress: 0 at top → 1 once the hero has scrolled past
     var p = window.scrollY / (window.innerHeight * 1.15);
     if (!isNaN(forcedP)) p = forcedP;
     p = Math.min(1.2, Math.max(0, p));
-
-    // Park the scene once it's fully off screen
-    if (p >= 1.18) {
-      if (canvas.style.visibility !== 'hidden') canvas.style.visibility = 'hidden';
-      return;
-    }
-    if (canvas.style.visibility === 'hidden') canvas.style.visibility = 'visible';
 
     // Intro: fly in from exploded. Scroll: explode again.
     var intro = 1 - easeOutCubic(Math.min(1, (now - introStart) / INTRO_MS));
@@ -216,5 +231,8 @@
     wire.scale.set(ws, ws, ws);
 
     renderer.render(scene, camera);
-  });
+  }
+
+  renderer.setAnimationLoop(tick);
+  syncLoop();
 })();
