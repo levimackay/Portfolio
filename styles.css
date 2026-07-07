@@ -165,7 +165,7 @@ h2 {
 .nav a {
   color: var(--muted);
   text-decoration: none;
-  font-size: 0.85rem;
+  font-size: 0.94rem;
   font-weight: 500;
   transition: color 0.2s ease;
 }
@@ -1068,6 +1068,14 @@ footer {
   border: 1px solid var(--hairline);
   border-radius: 24px;
   padding: 4rem 2rem;
+}
+
+/* Fixed-angle glow instead of cursor-tracked (see script.js) — this card is
+   large enough that repainting its layered background on every mousemove
+   was the actual source of the page-wide hover lag. */
+.contact-card:hover {
+  --cursor-angle: 135deg;
+  --edge-proximity: 100;
 }
 
 /* ---------- Blur-in headings (React Bits BlurText style) ---------- */

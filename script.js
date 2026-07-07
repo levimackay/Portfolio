@@ -188,12 +188,17 @@ glowCards.forEach((card) => {
 // the card's layered gradient/mask background, which is expensive. Capping
 // writes to ~30fps (instead of every pointermove event or every animation
 // frame) keeps the effect visually smooth while cutting that repaint cost
-// roughly in half to a third — this is what made the contact card's intro
-// sweep (and hovering any glow card) janky for the whole page.
+// roughly in half to a third.
 const GLOW_FRAME_MS = 32;
 
 if (canHover) {
   glowCards.forEach((card) => {
+    // The contact card is far larger than any other glow-card (~6-8x the
+    // paint area), so per-pixel cursor tracking there was the actual source
+    // of the page-wide hover lag. It gets a fixed-angle CSS-only :hover
+    // glow instead (see styles.css) — same "wakes up" feel, no JS.
+    if (card.classList.contains('contact-card')) return;
+
     let lastPaint = 0;
     card.addEventListener('pointermove', (e) => {
       const now = performance.now();
