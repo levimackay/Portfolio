@@ -54,6 +54,21 @@ img, video {
   padding: 0 1.5rem;
 }
 
+/* 3D scene sits behind all content */
+#scene {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+main, footer {
+  position: relative;
+  z-index: 2;
+}
+
 /* ---------- Typography ---------- */
 
 h1, h2, h3 {
@@ -82,10 +97,17 @@ h2 {
 }
 
 .grad {
-  background: linear-gradient(100deg, #5ac8fa 0%, #2997ff 45%, #8c5cff 100%);
+  background: linear-gradient(100deg, #5ac8fa 0%, #2997ff 35%, #8c5cff 65%, #5ac8fa 100%);
+  background-size: 220% 100%;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+  animation: shimmer 7s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
 }
 
 .section-lede {
@@ -189,6 +211,33 @@ h2 {
   text-align: center;
 }
 
+/* Soft veil that dims the 3D scene behind the headline */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: -12% 0 0;
+  background: radial-gradient(ellipse 58% 52% at 50% 40%, rgba(10, 10, 12, 0.66), transparent 74%);
+  pointer-events: none;
+}
+
+.hero-inner,
+.hero .stat-strip {
+  position: relative;
+  z-index: 1;
+}
+
+/* Faint dot grid, masked to the center of the hero */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+  background-size: 28px 28px;
+  -webkit-mask-image: radial-gradient(ellipse 62% 55% at 50% 42%, black 25%, transparent 72%);
+  mask-image: radial-gradient(ellipse 62% 55% at 50% 42%, black 25%, transparent 72%);
+  pointer-events: none;
+}
+
 .hero-glow {
   position: absolute;
   inset: -40% 0 auto 0;
@@ -273,6 +322,14 @@ h2 {
 
 .section {
   padding: 7rem 0;
+}
+
+#projects {
+  background: radial-gradient(720px 340px at 50% 0%, rgba(41, 151, 255, 0.06), transparent 70%);
+}
+
+.section-contact {
+  background: radial-gradient(640px 320px at 50% 100%, rgba(140, 92, 255, 0.08), transparent 70%);
 }
 
 .section-head {
@@ -363,24 +420,23 @@ h2 {
   overflow: hidden;
   background: var(--surface);
   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
-  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
+  will-change: transform;
 }
 
 .project:hover .project-media {
-  transform: translateY(-4px);
   border-color: rgba(255, 255, 255, 0.16);
 }
 
+/* Media renders at its natural aspect ratio — no cropping, no stretching */
 .project-media video,
 .project-media img {
   width: 100%;
-  aspect-ratio: 16 / 10;
-  object-fit: cover;
+  height: auto;
 }
 
-/* Very wide screenshots: anchor the crop to the start of the content */
-.media-left img {
-  object-position: left center;
+.project-media video {
+  aspect-ratio: 2092 / 1638; /* intrinsic size of the demo video */
 }
 
 /* Tile variant: small screenshots get a padded stage instead of a crop */
@@ -392,7 +448,6 @@ h2 {
 }
 
 .media-tile img {
-  aspect-ratio: auto;
   max-height: 320px;
   width: auto;
   margin: 0 auto;

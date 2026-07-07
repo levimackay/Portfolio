@@ -1,3 +1,11 @@
+// ---------- QA hook: ?still freezes entrance animations ----------
+if (new URLSearchParams(location.search).has('still')) {
+  const s = document.createElement('style');
+  s.textContent = '.rise{animation:none!important;opacity:1!important;transform:none!important}' +
+    '.reveal{opacity:1!important;transform:none!important;transition:none!important}';
+  document.head.appendChild(s);
+}
+
 // ---------- Footer year ----------
 document.getElementById('year').textContent = new Date().getFullYear();
 
@@ -31,6 +39,56 @@ const observer = new IntersectionObserver(
 );
 
 document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+
+// ---------- Animated stat counters ----------
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+const counterObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      counterObserver.unobserve(entry.target);
+
+      const el = entry.target;
+      const target = parseFloat(el.dataset.count);
+      const decimals = parseInt(el.dataset.decimals || '0', 10);
+
+      if (reduceMotion) {
+        el.textContent = target.toFixed(decimals);
+        return;
+      }
+
+      const duration = 1400;
+      const start = performance.now();
+      const tick = (now) => {
+        const t = Math.min(1, (now - start) / duration);
+        const eased = 1 - Math.pow(1 - t, 3);
+        el.textContent = (target * eased).toFixed(decimals);
+        if (t < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+    });
+  },
+  { threshold: 0.6 }
+);
+
+document.querySelectorAll('[data-count]').forEach((el) => counterObserver.observe(el));
+
+// ---------- 3D tilt on project media (desktop, pointer devices) ----------
+if (window.matchMedia('(hover: hover)').matches && !reduceMotion) {
+  document.querySelectorAll('.project-media').forEach((media) => {
+    media.closest('.project').addEventListener('mousemove', (e) => {
+      const rect = media.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      media.style.transform =
+        `perspective(1000px) rotateX(${(-y * 4).toFixed(2)}deg) rotateY(${(x * 5).toFixed(2)}deg) translateY(-3px)`;
+    });
+    media.closest('.project').addEventListener('mouseleave', () => {
+      media.style.transform = '';
+    });
+  });
+}
 
 // ---------- Copy email to clipboard ----------
 const toast = document.querySelector('.toast');
