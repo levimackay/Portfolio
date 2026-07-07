@@ -304,9 +304,8 @@ h2 {
 .stat-strip {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  margin-top: 5.5rem;
   border-top: 1px solid var(--hairline);
-  padding-top: 2.5rem;
+  padding-top: 3rem;
 }
 
 .stat {
@@ -713,12 +712,15 @@ footer {
 .scroll-cue {
   width: 26px;
   height: 42px;
-  margin: 4.5rem auto 0;
   border: 1.5px solid rgba(255, 255, 255, 0.25);
   border-radius: 999px;
   display: flex;
   justify-content: center;
-  position: relative;
+  position: absolute;
+  bottom: 1.75rem;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
   z-index: 1;
 }
 
@@ -1123,10 +1125,6 @@ h2.blur-in .blur-word {
   .stat-strip {
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem 0;
-  }
-
-  .hero {
-    padding-top: 6.5rem;
   }
 
   /* Let the headline wrap naturally on narrow screens */
