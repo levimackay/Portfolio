@@ -140,6 +140,11 @@
     renderer.setSize(window.innerWidth, window.innerHeight);
   });
 
+  // Let the terminal's `explode` command replay the assembly intro
+  window.__replayIntro = function () {
+    introStart = performance.now();
+  };
+
   function easeOutCubic(x) { return 1 - Math.pow(1 - x, 3); }
   function smoothstep(a, b, x) {
     var t = Math.min(1, Math.max(0, (x - a) / (b - a)));

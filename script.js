@@ -90,6 +90,75 @@ if (window.matchMedia('(hover: hover)').matches && !reduceMotion) {
   });
 }
 
+// ---------- Scroll progress + media parallax ----------
+const progressBar = document.querySelector('.scroll-progress');
+const canHover = window.matchMedia('(hover: hover)').matches;
+
+const parallaxTargets = [];
+if (canHover && !reduceMotion) {
+  document.querySelectorAll('.project-media:not(.media-tile)').forEach((m) => {
+    const el = m.querySelector('img, video');
+    if (el) {
+      el.style.transform = 'scale(1.1)';
+      parallaxTargets.push(el);
+    }
+  });
+}
+
+let scrollTicking = false;
+function onScroll() {
+  if (scrollTicking) return;
+  scrollTicking = true;
+  requestAnimationFrame(() => {
+    scrollTicking = false;
+    const doc = document.documentElement;
+    const max = doc.scrollHeight - doc.clientHeight;
+    progressBar.style.width = (max ? (window.scrollY / max) * 100 : 0) + '%';
+
+    const mid = window.innerHeight / 2;
+    parallaxTargets.forEach((el) => {
+      const r = el.parentElement.getBoundingClientRect();
+      if (r.bottom < 0 || r.top > window.innerHeight) return;
+      const offset = (r.top + r.height / 2 - mid) / mid; // -1 … 1
+      el.style.transform = `scale(1.1) translateY(${(-offset * 16).toFixed(1)}px)`;
+    });
+  });
+}
+window.addEventListener('scroll', onScroll, { passive: true });
+onScroll();
+
+// ---------- Nav scrollspy ----------
+const spy = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      document.querySelectorAll('.nav a').forEach((a) => {
+        a.classList.toggle('active', a.getAttribute('href') === '#' + entry.target.id);
+      });
+    });
+  },
+  { rootMargin: '-40% 0px -55% 0px' }
+);
+['about', 'projects', 'skills', 'contact'].forEach((id) => {
+  const el = document.getElementById(id);
+  if (el) spy.observe(el);
+});
+
+// ---------- Magnetic buttons ----------
+if (canHover && !reduceMotion) {
+  document.querySelectorAll('.btn, .terminal-toggle').forEach((el) => {
+    el.addEventListener('mousemove', (e) => {
+      const r = el.getBoundingClientRect();
+      const x = e.clientX - r.left - r.width / 2;
+      const y = e.clientY - r.top - r.height / 2;
+      el.style.transform = `translate(${(x * 0.18).toFixed(1)}px, ${(y * 0.28).toFixed(1)}px)`;
+    });
+    el.addEventListener('mouseleave', () => {
+      el.style.transform = '';
+    });
+  });
+}
+
 // ---------- Copy email to clipboard ----------
 const toast = document.querySelector('.toast');
 
@@ -107,18 +176,52 @@ document.querySelectorAll('[data-copy-email]').forEach((el) => {
 // ---------- Terminal easter egg ----------
 const terminal = document.getElementById('terminal');
 const terminalOpen = document.getElementById('terminal-open');
+const terminalToggle = document.getElementById('terminal-toggle');
 const terminalClose = document.getElementById('terminal-close');
 const terminalInput = document.getElementById('terminal-input');
 const terminalOutput = document.getElementById('terminal-output');
 
+// Time-aware greeting
+const hour = new Date().getHours();
+const greeting = hour < 5 ? 'Burning the midnight oil?' : hour < 12 ? 'Good morning.' : hour < 18 ? 'Good afternoon.' : 'Good evening.';
+document.getElementById('terminal-welcome').innerHTML =
+  greeting + " Type <span class='t-hl'>help</span> to see available commands.";
+
 const commands = {
-  help: "Available commands: whoami, bio, projects, contact, ls, clear",
-  ls: "bio.txt  projects/  contact.key",
+  help: "Available commands:\n  whoami     who am I\n  bio        the longer story\n  projects   what I've built\n  skills     the stack\n  contact    how to reach me\n  explode    replay the hero animation\n  ls         look around\n  clear      wipe the screen",
+  ls: "bio.txt  projects/  skills.json  contact.key  secret_plans.enc",
   whoami: "Levi Mackay — CS student, TA, startup builder, problem solver.",
-  bio: "4.0 GPA at BYU–Idaho. From plowing fields as a farm hand to building AI tools in the Sandbox incubator. Ski lift operator, landscape foreman, IT specialist. I build stuff that works.",
+  bio: "4.0 GPA at BYU–Idaho. From plowing fields as a farm hand to building AI tools in the Sandbox incubator. Ski lift operator, landscape foreman, IT specialist. Two years in the Balkans. I build stuff that works.",
   projects: "1. SwingOS — real-time swing analysis (OpenCV + MediaPipe)\n2. AI Security Scanner — Gemini-powered vulnerability detection\n3. Foreman's Friend — job-site estimation CLI\n4. Baseball Analytics Engine — MySQL schema + advanced queries",
+  skills: "languages: [Python, JavaScript, SQL, C++]\ntools: [Git, Linux, Docker]\nfocus: [AI & automation, computer vision, database design]\nhuman: [English, Bosnian, Croatian, Serbian]",
   contact: "email: levibmackay@gmail.com\nlinkedin: linkedin.com/in/levi-mackay-217380396",
+  sudo: "Permission denied. Nice try though.",
+  'secret_plans.enc': "Decryption failed. Some things you have to build first.",
+  explode: () => {
+    closeTerminal();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    setTimeout(() => { if (window.__replayIntro) window.__replayIntro(); }, 500);
+    return "Boom. Rebuilding the sphere…";
+  },
 };
+
+// Typewriter output
+function typeOut(text) {
+  const row = document.createElement('div');
+  terminalOutput.appendChild(row);
+  if (reduceMotion) {
+    row.textContent = text;
+    terminalOutput.scrollTop = terminalOutput.scrollHeight;
+    return;
+  }
+  let i = 0;
+  (function step() {
+    i += 2;
+    row.textContent = text.slice(0, i);
+    terminalOutput.scrollTop = terminalOutput.scrollHeight;
+    if (i < text.length) setTimeout(step, 8);
+  })();
+}
 
 function openTerminal() {
   terminal.hidden = false;
@@ -130,6 +233,7 @@ function closeTerminal() {
 }
 
 terminalOpen.addEventListener('click', openTerminal);
+terminalToggle.addEventListener('click', openTerminal);
 terminalClose.addEventListener('click', closeTerminal);
 
 document.addEventListener('keydown', (e) => {
@@ -158,16 +262,15 @@ terminalInput.addEventListener('keydown', (e) => {
     return;
   }
 
-  const response = commands[input] || `command not found: ${input} — type 'help' for options.`;
-  const row = document.createElement('div');
+  const cmd = commands[input];
+  const response = typeof cmd === 'function' ? cmd() : cmd || `command not found: ${input} — type 'help' for options.`;
 
+  const echo = document.createElement('div');
   const prompt = document.createElement('span');
   prompt.className = 't-hl';
   prompt.textContent = `> ${input}`;
-  row.appendChild(prompt);
-  row.appendChild(document.createElement('br'));
-  row.appendChild(document.createTextNode(response));
+  echo.appendChild(prompt);
+  terminalOutput.appendChild(echo);
 
-  terminalOutput.appendChild(row);
-  terminalOutput.scrollTop = terminalOutput.scrollHeight;
+  typeOut(response);
 });
