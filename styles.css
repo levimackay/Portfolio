@@ -12,6 +12,9 @@
   --muted: #9b9ba3;
   --faint: #6e6e76;
   --accent: #2997ff;
+  --accent-violet: #8c5cff;
+  --accent-cyan: #5ac8fa;
+  --accent-amber: #ffb454;
   --hairline: rgba(255, 255, 255, 0.09);
   --radius: 20px;
   --container: 1080px;
@@ -334,6 +337,10 @@ h2 {
   padding: 7rem 0;
 }
 
+#about {
+  background: radial-gradient(680px 360px at 12% 10%, rgba(90, 200, 250, 0.05), transparent 70%);
+}
+
 #projects {
   background: radial-gradient(720px 340px at 50% 0%, rgba(41, 151, 255, 0.06), transparent 70%);
   padding-bottom: 1rem; /* last project row carries its own spacing */
@@ -341,6 +348,7 @@ h2 {
 
 #skills {
   padding-top: 4rem;
+  background: radial-gradient(680px 360px at 88% 100%, rgba(140, 92, 255, 0.06), transparent 70%);
 }
 
 .section-contact {
@@ -392,21 +400,37 @@ h2 {
 }
 
 .fact {
+  --card-accent: var(--accent);
   background: var(--surface);
   border: 1px solid var(--hairline);
+  border-top: 2px solid var(--card-accent);
   border-radius: var(--radius);
   padding: 1.75rem;
   transition: border-color 0.3s ease, transform 0.3s ease;
 }
 
+.fact:nth-of-type(2) { --card-accent: var(--accent-violet); }
+.fact:nth-of-type(3) { --card-accent: var(--accent-cyan); }
+
 .fact:hover {
   border-color: rgba(255, 255, 255, 0.18);
+  border-top-color: var(--card-accent);
   transform: translateY(-3px);
 }
 
 .fact h3 {
   font-size: 1rem;
   margin-bottom: 0.6rem;
+}
+
+.fact h3::before {
+  content: "";
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  margin-right: 0.55rem;
+  border-radius: 50%;
+  background: var(--card-accent);
 }
 
 .fact p {
@@ -417,12 +441,17 @@ h2 {
 /* ---------- Projects ---------- */
 
 .project {
+  --card-accent: var(--accent);
   display: grid;
   grid-template-columns: 1.15fr 1fr;
   gap: 4rem;
   align-items: center;
   padding: 3.5rem 0;
 }
+
+.project:nth-of-type(2) { --card-accent: var(--accent-violet); }
+.project:nth-of-type(3) { --card-accent: var(--accent-cyan); }
+.project:nth-of-type(4) { --card-accent: var(--accent-amber); }
 
 .project + .project {
   border-top: 1px solid var(--hairline);
@@ -434,16 +463,17 @@ h2 {
 
 .project-media {
   border-radius: var(--radius);
-  border: 1px solid var(--hairline);
+  border: 1px solid color-mix(in srgb, var(--card-accent) 22%, var(--hairline));
   overflow: hidden;
   background: var(--surface);
   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
-  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, box-shadow 0.4s ease;
   will-change: transform;
 }
 
 .project:hover .project-media {
-  border-color: rgba(255, 255, 255, 0.16);
+  border-color: color-mix(in srgb, var(--card-accent) 45%, var(--hairline));
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45), 0 0 40px -12px var(--card-accent);
 }
 
 .project-media video,
@@ -476,6 +506,10 @@ h2 {
   border: 1px solid var(--hairline);
 }
 
+.project-text .eyebrow {
+  color: var(--card-accent);
+}
+
 .project-text h3 {
   font-size: 1.6rem;
   margin-bottom: 0.9rem;
@@ -498,7 +532,7 @@ h2 {
   font-size: 0.88rem;
   color: var(--muted);
   padding-left: 1rem;
-  border-left: 2px solid rgba(41, 151, 255, 0.5);
+  border-left: 2px solid color-mix(in srgb, var(--card-accent) 55%, transparent);
   line-height: 1.5;
 }
 
@@ -532,6 +566,16 @@ h2 {
 
 .project .tag-row {
   margin-bottom: 1.75rem;
+}
+
+.project .tag {
+  color: color-mix(in srgb, var(--card-accent) 70%, var(--text));
+  background: color-mix(in srgb, var(--card-accent) 13%, var(--surface-2));
+  border-color: color-mix(in srgb, var(--card-accent) 32%, var(--hairline));
+}
+
+.project-text .text-link {
+  color: var(--card-accent);
 }
 
 /* ---------- Buttons & links ---------- */
@@ -596,19 +640,31 @@ h2 {
 }
 
 .skill-group {
+  --card-accent: var(--accent);
   background: var(--surface);
   border: 1px solid var(--hairline);
+  border-left: 2px solid var(--card-accent);
   border-radius: var(--radius);
   padding: 1.75rem;
+  transition: border-color 0.3s ease;
 }
+
+.skill-group:nth-of-type(2) { --card-accent: var(--accent-violet); }
+.skill-group:nth-of-type(3) { --card-accent: var(--accent-cyan); }
 
 .skill-group h3 {
   font-size: 0.8rem;
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--faint);
+  color: var(--card-accent);
   margin-bottom: 1.1rem;
+}
+
+.skill-group .tag {
+  color: color-mix(in srgb, var(--card-accent) 65%, var(--text));
+  background: color-mix(in srgb, var(--card-accent) 11%, var(--surface-2));
+  border-color: color-mix(in srgb, var(--card-accent) 28%, var(--hairline));
 }
 
 /* ---------- Contact ---------- */
