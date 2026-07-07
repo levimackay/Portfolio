@@ -24,6 +24,8 @@
 
 <body>
 
+  <canvas id="scene" aria-hidden="true"></canvas>
+
   <div class="toast" role="status">Email copied to clipboard</div>
 
   <header class="site-header">
@@ -67,9 +69,9 @@
       </div>
 
       <div class="container stat-strip rise" style="--d:4">
-        <div class="stat"><span class="stat-num">4.0</span><span class="stat-label">GPA</span></div>
-        <div class="stat"><span class="stat-num">4</span><span class="stat-label">Languages spoken</span></div>
-        <div class="stat"><span class="stat-num">5</span><span class="stat-label">Countries lived in</span></div>
+        <div class="stat"><span class="stat-num" data-count="4.0" data-decimals="1">0.0</span><span class="stat-label">GPA</span></div>
+        <div class="stat"><span class="stat-num" data-count="4">0</span><span class="stat-label">Languages spoken</span></div>
+        <div class="stat"><span class="stat-num" data-count="5">0</span><span class="stat-label">Countries lived in</span></div>
         <div class="stat"><span class="stat-num">TA</span><span class="stat-label">CS teaching assistant</span></div>
       </div>
     </section>
@@ -159,7 +161,7 @@
 
         <!-- AI Security Scanner -->
         <article class="project project-reverse reveal">
-          <div class="project-media media-left">
+          <div class="project-media">
             <img src="assets/security-scanner-demo.png" alt="AI Security Scanner terminal output with color-coded vulnerability findings" loading="lazy">
           </div>
           <div class="project-text">
@@ -308,6 +310,8 @@
     </div>
   </div>
 
+  <script src="assets/vendor/three.min.js"></script>
+  <script src="scene.js"></script>
   <script src="script.js"></script>
 </body>
 
