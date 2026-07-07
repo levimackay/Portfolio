@@ -11,7 +11,9 @@
   <meta property="og:description" content="Computer science student, teaching assistant, and startup builder. AI, computer vision, and tools that solve real problems.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://levibmackay.github.io/Portfolio/">
-  <meta property="og:image" content="https://levibmackay.github.io/Portfolio/assets/profile.png">
+  <meta property="og:image" content="https://levibmackay.github.io/Portfolio/assets/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://levibmackay.github.io/Portfolio/assets/og.png">
   <link rel="canonical" href="https://levibmackay.github.io/Portfolio/">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,6 +26,7 @@
 
 <body>
 
+  <div class="scroll-progress" aria-hidden="true"></div>
   <canvas id="scene" aria-hidden="true"></canvas>
 
   <div class="toast" role="status">Email copied to clipboard</div>
@@ -74,6 +77,8 @@
         <div class="stat"><span class="stat-num" data-count="5">0</span><span class="stat-label">Countries lived in</span></div>
         <div class="stat"><span class="stat-num">TA</span><span class="stat-label">CS teaching assistant</span></div>
       </div>
+
+      <div class="scroll-cue rise" style="--d:5" aria-hidden="true"><span></span></div>
     </section>
 
     <!-- ============ ABOUT ============ -->
@@ -161,7 +166,7 @@
 
         <!-- AI Security Scanner -->
         <article class="project project-reverse reveal">
-          <div class="project-media">
+          <div class="project-media media-left">
             <img src="assets/security-scanner-demo.png" alt="AI Security Scanner terminal output with color-coded vulnerability findings" loading="lazy">
           </div>
           <div class="project-text">
@@ -287,6 +292,13 @@
     </section>
   </main>
 
+  <button class="terminal-toggle" id="terminal-toggle" title="Open terminal (T)" aria-label="Open interactive terminal">
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <polyline points="4 6 10 12 4 18"/>
+      <line x1="13" y1="18" x2="20" y2="18"/>
+    </svg>
+  </button>
+
   <footer>
     <div class="container footer-inner">
       <p>© <span id="year"></span> Levi Mackay</p>
@@ -302,7 +314,7 @@
       <button class="terminal-close" id="terminal-close" aria-label="Close terminal">&times;</button>
     </div>
     <div class="terminal-body" id="terminal-output">
-      <div>Type <span class="t-hl">help</span> to see available commands.</div>
+      <div id="terminal-welcome">Type <span class="t-hl">help</span> to see available commands.</div>
     </div>
     <div class="terminal-input-row">
       <span class="t-hl">&gt;</span>

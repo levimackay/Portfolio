@@ -43,6 +43,16 @@ body {
   background: rgba(41, 151, 255, 0.35);
 }
 
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+section[id] {
+  scroll-margin-top: 76px;
+}
+
 img, video {
   display: block;
   max-width: 100%;
@@ -157,7 +167,8 @@ h2 {
   transition: color 0.2s ease;
 }
 
-.nav a:hover {
+.nav a:hover,
+.nav a.active {
   color: var(--text);
 }
 
@@ -352,6 +363,9 @@ h2 {
 
 .about-photo img {
   width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: cover;
   border-radius: var(--radius);
   border: 1px solid var(--hairline);
 }
@@ -428,15 +442,16 @@ h2 {
   border-color: rgba(255, 255, 255, 0.16);
 }
 
-/* Media renders at its natural aspect ratio — no cropping, no stretching */
 .project-media video,
 .project-media img {
   width: 100%;
-  height: auto;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
 }
 
-.project-media video {
-  aspect-ratio: 2092 / 1638; /* intrinsic size of the demo video */
+/* Very wide screenshots: anchor the crop to the start of the content */
+.media-left img {
+  object-position: left center;
 }
 
 /* Tile variant: small screenshots get a padded stage instead of a crop */
@@ -448,6 +463,8 @@ h2 {
 }
 
 .media-tile img {
+  aspect-ratio: auto;
+  object-fit: contain;
   max-height: 320px;
   width: auto;
   margin: 0 auto;
@@ -524,7 +541,8 @@ h2 {
   font-size: 0.92rem;
   font-weight: 600;
   text-decoration: none;
-  transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+  transition: transform 0.18s ease-out, background 0.2s ease, border-color 0.2s ease;
+  will-change: transform;
 }
 
 .btn-primary {
@@ -637,6 +655,81 @@ footer {
 .terminal-hint:hover {
   color: var(--accent);
   border-color: var(--accent);
+}
+
+/* ---------- Terminal toggle (floating circle) ---------- */
+
+.terminal-toggle {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 900;
+  box-shadow: 0 8px 30px rgba(41, 151, 255, 0.35);
+  animation: pulse 3s infinite;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.terminal-toggle:hover {
+  box-shadow: 0 8px 40px rgba(41, 151, 255, 0.55);
+  animation-play-state: paused;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 8px 30px rgba(41, 151, 255, 0.35), 0 0 0 0 rgba(41, 151, 255, 0.4); }
+  70% { box-shadow: 0 8px 30px rgba(41, 151, 255, 0.35), 0 0 0 14px rgba(41, 151, 255, 0); }
+  100% { box-shadow: 0 8px 30px rgba(41, 151, 255, 0.35), 0 0 0 0 rgba(41, 151, 255, 0); }
+}
+
+/* ---------- Scroll progress ---------- */
+
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background: linear-gradient(90deg, #5ac8fa, #2997ff, #8c5cff);
+  z-index: 1001;
+  pointer-events: none;
+}
+
+/* ---------- Scroll cue ---------- */
+
+.scroll-cue {
+  width: 26px;
+  height: 42px;
+  margin: 4.5rem auto 0;
+  border: 1.5px solid rgba(255, 255, 255, 0.25);
+  border-radius: 999px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+.scroll-cue span {
+  width: 4px;
+  height: 8px;
+  border-radius: 2px;
+  background: var(--accent);
+  margin-top: 7px;
+  animation: cue 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes cue {
+  0% { transform: translateY(0); opacity: 1; }
+  70% { transform: translateY(16px); opacity: 0; }
+  100% { transform: translateY(16px); opacity: 0; }
 }
 
 /* ---------- Terminal ---------- */
