@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Levi Mackay — Software Developer</title>
+  <meta name="description" content="Levi Mackay is a computer science student, teaching assistant, and startup builder working on AI, computer vision, and automation.">
+
+  <meta property="og:title" content="Levi Mackay — Software Developer">
+  <meta property="og:description" content="Computer science student, teaching assistant, and startup builder. AI, computer vision, and tools that solve real problems.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://levibmackay.github.io/Portfolio/">
+  <meta property="og:image" content="https://levibmackay.github.io/Portfolio/assets/profile.png">
+  <link rel="canonical" href="https://levibmackay.github.io/Portfolio/">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+
+<body>
+
+  <div class="toast" role="status">Email copied to clipboard</div>
+
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="#top" class="wordmark">Levi Mackay</a>
+
+      <nav class="nav" id="nav">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact" class="nav-cta">Contact</a>
+      </nav>
+
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="container hero-inner">
+        <p class="hero-kicker rise" style="--d:0">Computer Science · BYU–Idaho</p>
+        <h1 class="rise" style="--d:1">
+          I build software that <br>solves <span class="grad">real problems</span>.
+        </h1>
+        <p class="hero-subtitle rise" style="--d:2">
+          Levi Mackay — CS student, teaching assistant, and startup builder.
+          I work at the intersection of AI, automation, and things people actually use.
+        </p>
+        <div class="hero-actions rise" style="--d:3">
+          <a href="#projects" class="btn btn-primary">See my work</a>
+          <a href="https://github.com/levibmackay" target="_blank" rel="noopener" class="btn btn-ghost">
+            GitHub
+            <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M6 3l5 5-5 5-1-1 4-4-4-4z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="container stat-strip rise" style="--d:4">
+        <div class="stat"><span class="stat-num">4.0</span><span class="stat-label">GPA</span></div>
+        <div class="stat"><span class="stat-num">4</span><span class="stat-label">Languages spoken</span></div>
+        <div class="stat"><span class="stat-num">5</span><span class="stat-label">Countries lived in</span></div>
+        <div class="stat"><span class="stat-num">TA</span><span class="stat-label">CS teaching assistant</span></div>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="about-grid reveal">
+          <div class="about-photo">
+            <img src="assets/profile.png" alt="Portrait of Levi Mackay" width="460" height="460">
+          </div>
+          <div class="about-text">
+            <p class="eyebrow">About</p>
+            <h2>Curious by default.<br>Disciplined by choice.</h2>
+            <p>
+              I'm a computer science student at BYU–Idaho, where I also work as a
+              teaching assistant helping other students learn to write better code.
+              Outside of class I build products in the Sandbox startup incubator —
+              mostly tools that use AI and automation to remove tedious work.
+            </p>
+            <p>
+              Before any of that, I spent two years serving across the Balkans —
+              Bosnia, Croatia, Serbia, Montenegro, and Slovenia. Learning to
+              navigate new languages and cultures taught me how to break down
+              unfamiliar problems, which turns out to be most of software engineering.
+            </p>
+            <p>
+              When I'm not at a keyboard I'm lifting, running, snowboarding, or on a
+              dirt bike. Same principle everywhere: show up consistently and the
+              results compound.
+            </p>
+          </div>
+        </div>
+
+        <div class="fact-row reveal">
+          <div class="fact">
+            <h3>Teaching &amp; mentoring</h3>
+            <p>TA for programming courses — code reviews, debugging sessions, and helping students build real fundamentals.</p>
+          </div>
+          <div class="fact">
+            <h3>Startup builder</h3>
+            <p>Building in the Sandbox incubator, taking products from idea to working software with small teams.</p>
+          </div>
+          <div class="fact">
+            <h3>Balkan roots</h3>
+            <p>Two years across five countries. I speak Bosnian, Croatian, and Serbian — and I'll happily talk about it.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Projects</p>
+          <h2>Selected work.</h2>
+          <p class="section-lede">Case studies from real problems — each one built, shipped, and used.</p>
+        </div>
+
+        <!-- SwingOS -->
+        <article class="project reveal">
+          <div class="project-media">
+            <video autoplay loop muted playsinline preload="metadata" aria-label="SwingOS tracking a baseball swing in real time">
+              <source src="assets/swingos-demo.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="project-text">
+            <p class="eyebrow">Computer Vision · Featured</p>
+            <h3>SwingOS</h3>
+            <p class="project-lede">
+              Real-time biomechanical feedback for baseball swings. Pose estimation
+              tracks head and spine angles frame-by-frame — on ordinary consumer hardware.
+            </p>
+            <ul class="project-points">
+              <li><strong>Challenge</strong> Tracking fast, full-body movement without specialized cameras.</li>
+              <li><strong>Approach</strong> MediaPipe pose landmarks piped through OpenCV to compute joint angles live.</li>
+            </ul>
+            <div class="tag-row">
+              <span class="tag">Python</span><span class="tag">OpenCV</span><span class="tag">MediaPipe</span>
+            </div>
+            <a class="text-link" href="https://github.com/levibmackay/Portfolio/tree/main/projects/swing-analyzer" target="_blank" rel="noopener">
+              View source <svg viewBox="0 0 16 16" width="13" height="13" aria-hidden="true"><path fill="currentColor" d="M6 3l5 5-5 5-1-1 4-4-4-4z"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- AI Security Scanner -->
+        <article class="project project-reverse reveal">
+          <div class="project-media media-left">
+            <img src="assets/security-scanner-demo.png" alt="AI Security Scanner terminal output with color-coded vulnerability findings" loading="lazy">
+          </div>
+          <div class="project-text">
+            <p class="eyebrow">AI · Security</p>
+            <h3>AI Security Scanner</h3>
+            <p class="project-lede">
+              An AI-powered code scanner that finds vulnerabilities, ranks them from
+              Critical to Low, and writes the fix — not just the warning.
+            </p>
+            <ul class="project-points">
+              <li><strong>Challenge</strong> Manual security review is slow, inconsistent, and misses things.</li>
+              <li><strong>Approach</strong> Gemini-driven analysis with severity classification and concrete remediation code for every finding.</li>
+            </ul>
+            <div class="tag-row">
+              <span class="tag">Python</span><span class="tag">Gemini API</span><span class="tag">Security</span>
+            </div>
+            <a class="text-link" href="https://github.com/levibmackay/SecurityScanner" target="_blank" rel="noopener">
+              View source <svg viewBox="0 0 16 16" width="13" height="13" aria-hidden="true"><path fill="currentColor" d="M6 3l5 5-5 5-1-1 4-4-4-4z"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Foreman's Friend -->
+        <article class="project reveal">
+          <div class="project-media media-tile">
+            <img src="assets/foremans-friend.png" alt="Foreman's Friend job estimate output: materials, labor, and grand total" loading="lazy">
+          </div>
+          <div class="project-text">
+            <p class="eyebrow">Automation · CLI</p>
+            <h3>Foreman's Friend</h3>
+            <p class="project-lede">
+              A job-site estimator built from experience — I did this math by hand
+              as a landscape foreman before I wrote the tool that does it in seconds.
+            </p>
+            <ul class="project-points">
+              <li><strong>Challenge</strong> Manual volume and labor math on job sites was slow and error-prone.</li>
+              <li><strong>Approach</strong> A calculation engine for mulch, sod, and stone with labor scaling and a complete quote as output.</li>
+            </ul>
+            <div class="tag-row">
+              <span class="tag">Python</span><span class="tag">CLI</span>
+            </div>
+            <a class="text-link" href="https://github.com/levibmackay/Portfolio/tree/main/projects/landscape-estimator" target="_blank" rel="noopener">
+              View source <svg viewBox="0 0 16 16" width="13" height="13" aria-hidden="true"><path fill="currentColor" d="M6 3l5 5-5 5-1-1 4-4-4-4z"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Baseball Analytics -->
+        <article class="project project-reverse reveal">
+          <div class="project-media">
+            <img src="assets/sql.png" alt="SQL workbench showing a multi-CTE query over the baseball schema" loading="lazy">
+          </div>
+          <div class="project-text">
+            <p class="eyebrow">Data · SQL</p>
+            <h3>Baseball Analytics Engine</h3>
+            <p class="project-lede">
+              A relational schema and query layer for player performance — season
+              aggregates, rolling averages, and advanced metrics over game-level stats.
+            </p>
+            <ul class="project-points">
+              <li><strong>Challenge</strong> Flat-file sports data made real analysis impossible.</li>
+              <li><strong>Approach</strong> Normalized MySQL schema with layered CTEs for season totals and trend metrics.</li>
+            </ul>
+            <div class="tag-row">
+              <span class="tag">MySQL</span><span class="tag">Schema design</span><span class="tag">Analytics</span>
+            </div>
+            <a class="text-link" href="https://github.com/levibmackay/Portfolio/tree/main/projects/baseball-database" target="_blank" rel="noopener">
+              View source <svg viewBox="0 0 16 16" width="13" height="13" aria-hidden="true"><path fill="currentColor" d="M6 3l5 5-5 5-1-1 4-4-4-4z"/></svg>
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Skills</p>
+          <h2>The stack.</h2>
+        </div>
+        <div class="skills-grid reveal">
+          <div class="skill-group">
+            <h3>Languages</h3>
+            <div class="tag-row">
+              <span class="tag">Python</span><span class="tag">JavaScript</span>
+              <span class="tag">SQL</span><span class="tag">C++</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h3>Tools</h3>
+            <div class="tag-row">
+              <span class="tag">Git &amp; GitHub</span><span class="tag">Linux</span>
+              <span class="tag">Docker</span><span class="tag">VS Code</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h3>Focus areas</h3>
+            <div class="tag-row">
+              <span class="tag">AI &amp; automation</span><span class="tag">Computer vision</span>
+              <span class="tag">Database design</span><span class="tag">Data structures &amp; algorithms</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section id="contact" class="section section-contact">
+      <div class="container reveal">
+        <p class="eyebrow">Contact</p>
+        <h2>Let's build something.</h2>
+        <p class="section-lede">
+          I'm looking for internship opportunities. Backend, AI, tooling —
+          or just a conversation about baseball or the Balkans.
+        </p>
+        <div class="contact-actions">
+          <a href="mailto:levibmackay@gmail.com" class="btn btn-primary" data-copy-email>levibmackay@gmail.com</a>
+          <a href="https://github.com/levibmackay" target="_blank" rel="noopener" class="btn btn-ghost">GitHub</a>
+          <a href="https://www.linkedin.com/in/levi-mackay-217380396/" target="_blank" rel="noopener" class="btn btn-ghost">LinkedIn</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Levi Mackay</p>
+      <button class="terminal-hint" id="terminal-open" title="Open terminal (or press T)">&gt;_ terminal</button>
+    </div>
+  </footer>
+
+  <!-- ============ TERMINAL EASTER EGG ============ -->
+  <div class="terminal" id="terminal" role="dialog" aria-label="Interactive terminal" hidden>
+    <div class="terminal-bar">
+      <span class="terminal-dots"><i></i><i></i><i></i></span>
+      <span class="terminal-title">levi@portfolio — zsh</span>
+      <button class="terminal-close" id="terminal-close" aria-label="Close terminal">&times;</button>
+    </div>
+    <div class="terminal-body" id="terminal-output">
+      <div>Type <span class="t-hl">help</span> to see available commands.</div>
+    </div>
+    <div class="terminal-input-row">
+      <span class="t-hl">&gt;</span>
+      <input type="text" id="terminal-input" autocomplete="off" spellcheck="false" placeholder="help">
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
