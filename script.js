@@ -331,7 +331,7 @@ const commands = {
   ls: "bio.txt  projects/  skills.json  contact.key  secret_plans.enc",
   whoami: "Levi Mackay — CS student, TA, startup builder, problem solver.",
   bio: "4.0 GPA at BYU–Idaho. From plowing fields as a farm hand to building AI tools in the Sandbox incubator. Ski lift operator, landscape foreman, IT specialist. Two years in the Balkans. I build stuff that works.",
-  projects: "1. SwingOS — real-time swing analysis (OpenCV + MediaPipe)\n2. AI Security Scanner — Gemini-powered vulnerability detection\n3. Foreman's Friend — job-site estimation CLI\n4. Lydia — local AI coding agent (Ollama + native tool calling)",
+  projects: "1. SwingOS — real-time swing analysis (OpenCV + MediaPipe)\n2. Lydia — local AI coding agent (Ollama + native tool calling)\n3. AI Security Scanner — Gemini-powered vulnerability detection\n4. Foreman's Friend — job-site estimation CLI",
   skills: "languages: [Python, JavaScript, SQL, C++]\ntools: [Git, Linux, Docker]\nfocus: [AI & automation, computer vision, database design]\nhuman: [English, Bosnian, Croatian, Serbian]",
   contact: "email: levibmackay@gmail.com\nlinkedin: linkedin.com/in/levi-mackay-217380396",
   sudo: "Permission denied. Nice try though.",
