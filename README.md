@@ -9,6 +9,7 @@ Hey, I'm Levi. This repo is the central hub for the projects I've built while wo
 | Project | What it is | Stack |
 |---|---|---|
 | [SwingOS](projects/swing-analyzer) | Real-time biomechanical feedback for baseball swings using pose estimation | Python, OpenCV, MediaPipe |
+| [Lydia](https://github.com/levibmackay/lydia-cli) | Local, Claude-Code-style coding agent — no API keys, nothing sent to the cloud | Python, Ollama, Agents |
 | [AI Security Scanner](https://github.com/levibmackay/SecurityScanner) | AI-powered vulnerability detection with severity ratings and suggested fixes | Python, Gemini API |
 | [Foreman's Friend](projects/landscape-estimator) | Job-site material and labor estimator, born from my time as a landscape foreman | Python, CLI |
 | [Baseball Analytics Engine](projects/baseball-database) | Relational schema and layered queries for player performance trends | MySQL |
