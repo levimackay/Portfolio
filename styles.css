@@ -10,7 +10,7 @@
   --surface-2: #1b1b22;
   --text: #f5f5f7;
   --muted: #9b9ba3;
-  --faint: #6e6e76;
+  --faint: #82828a;
   --accent: #2997ff;
   --accent-violet: #8c5cff;
   --accent-cyan: #5ac8fa;
@@ -235,12 +235,14 @@ h2 {
   padding: 5rem 0;
 }
 
-/* Soft veil that dims the 3D scene behind the headline */
+/* Soft veil that dims the 3D scene behind the headline. Wide and dark enough
+   that a bright shard passing behind the muted kicker/subtitle text can't
+   crush its contrast below the veil during the explosion animation. */
 .hero-viewport::after {
   content: "";
   position: absolute;
   inset: -12% 0 0;
-  background: radial-gradient(ellipse 58% 52% at 50% 40%, rgba(10, 10, 12, 0.66), transparent 74%);
+  background: radial-gradient(ellipse 64% 62% at 50% 42%, rgba(10, 10, 12, 0.88), rgba(10, 10, 12, 0.55) 55%, transparent 82%);
   pointer-events: none;
 }
 
@@ -612,12 +614,12 @@ h2 {
 }
 
 .btn-primary {
-  background: var(--accent);
+  background: #1f6fd6;
   color: #fff;
 }
 
 .btn-primary:hover {
-  background: #45a4ff;
+  background: #1a5fb8;
   transform: translateY(-2px);
 }
 
