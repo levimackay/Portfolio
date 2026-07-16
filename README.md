@@ -25,3 +25,5 @@ Hey, I'm Levi. This repo is the central hub for the projects I've built while wo
 ## Connect
 
 I'm always down to talk code, startups, or baseball. Find me on [LinkedIn](https://www.linkedin.com/in/levi-mackay-217380396/) or email me at levibmackay@gmail.com.
+
+_Last updated: 2026-07-16_
