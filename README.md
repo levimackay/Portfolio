@@ -68,3 +68,7 @@ I'm always down to talk code, startups, or baseball. Find me on [LinkedIn](https
 
 ---
 _Last updated: July 22, 2026_
+
+---
+
+Maintained by [Levi Mackay](https://github.com/levibmackay)
