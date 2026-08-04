@@ -21,3 +21,5 @@ node_modules/
 .npm/
 dist/
 build/
+
+graphify-out/
