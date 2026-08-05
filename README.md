@@ -1,6 +1,6 @@
 # Levi Mackay — Portfolio
 
-**Live site → [levimackay.github.io/Portfolio](https://levimackay.github.io/Portfolio/)**
+**Live site → [levimackay.com](https://levimackay.com/)**
 
 Hey, I'm Levi. This repo is the central hub for the projects I've built while working through my CS degree at BYU–Idaho — a mix of computer vision, AI tooling, data engineering, and automation. It's also the source for my personal portfolio site: a single-page, no-build HTML/CSS/JS site with a WebGL hero scene, scroll animations, and a hidden interactive terminal easter egg.
 
@@ -60,7 +60,7 @@ python3 -m http.server 8000
 
 ## Contributors
 
-- Levi B Mackay ([@levibmackay](https://github.com/levimackay)) — sole author and maintainer.
+- Levi B Mackay ([@levimackay](https://github.com/levimackay)) — sole author and maintainer.
 
 ## Connect
 

@@ -113,7 +113,7 @@ function updateScroll() {
 
 // ---------- Live GitHub Stats & Chart ----------
 async function fetchGithubStats() {
-  const username = 'levibmackay';
+  const username = 'levimackay';
   const syncIndicator = document.getElementById('github-sync-indicator');
   
   try {
