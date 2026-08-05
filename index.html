@@ -56,7 +56,7 @@
   <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
 
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-  <script type="module" crossorigin src="/assets/index-By_0JAJq.js"></script>
+  <script type="module" crossorigin src="/assets/index-4vNWQb3G.js"></script>
   <link rel="stylesheet" crossorigin href="/assets/index-B80x5mQz.css">
 </head>
 
@@ -261,7 +261,7 @@
             </p>
             <dl class="panel-points">
               <div><dt>Challenge</dt><dd>An agentic coding workflow without paying for API usage or sending code to a third party.</dd></div>
-              <div><dt>Approach</dt><dd>An Ollama-backed agent loop with native tool calling for file edits, git, and shell, plus a verify step that runs my tests before calling a task done. Inference runs on a second machine's GPU over Tailscale. 390 tests run in CI on every push, green across Python 3.11, 3.12, and 3.13.</dd></div>
+              <div><dt>Approach</dt><dd>An Ollama-backed agent loop with native tool calling for file edits, git, and shell, plus a verify step that runs my tests before calling a task done. Inference runs on a second machine's GPU over Tailscale. 381 tests run in CI on every push, green across Python 3.11, 3.12, and 3.13.</dd></div>
               <div><dt>In the wild</dt><dd>A contributor filed an issue that a config boolean was stored as a string and evaluating truthy, then sent a pull request fixing it. Another added a whole systemd backend so scheduled briefings work on Linux, after the macOS-only version failed on their machine. Both are reviewed and merged, and the systemd one landed with tests covering both backends.</dd></div>
             </dl>
             <div class="mt-5 flex flex-wrap gap-2">
@@ -285,13 +285,13 @@
               The core of it is a value score: a 224-line PL/pgSQL function that ranks
               every listing 0 to 100 across price, distance, amenities, review quality,
               management, internet, and rent trend, normalized against the whole dataset.
-              It uses Bayesian-style shrinkage on review scores, so an apartment with two
-              glowing reviews doesn't outrank one with fifty good ones.
+              Listings with fewer than three reviews fall back to the site average, so a
+              place can't ride on one or two ratings.
             </p>
             <dl class="panel-points">
               <div><dt>Challenge</dt><dd>Comparing off-campus housing means weighing price, distance, amenities, and reviews against each other with no consistent way to score them.</dd></div>
-              <div><dt>Approach</dt><dd>13 Postgres tables behind Supabase, with 129 lines of row-level security policy and a weighted scoring function that runs set-wise across the table using population min/max normalization, called under security definer with a pinned search path.</dd></div>
-              <div><dt>Honest gap</dt><dd>No automated tests yet. That's the next priority before building further on top of the marketplace and messaging features.</dd></div>
+              <div><dt>Approach</dt><dd>23 Postgres tables behind Supabase, with 129 lines of row-level security policy and a weighted scoring function that runs set-wise across the table using population min/max normalization.</dd></div>
+              <div><dt>Honest gap</dt><dd>123 tests cover the scoring and ranking logic, but the Stripe payment paths are only exercised by hand. Automating those is the next priority.</dd></div>
             </dl>
             <div class="mt-5 flex flex-wrap gap-2">
               <span class="tag">Next.js</span><span class="tag">TypeScript</span><span class="tag">Supabase</span><span class="tag">PostgreSQL</span>
