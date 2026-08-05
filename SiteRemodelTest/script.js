@@ -632,7 +632,7 @@ const commands = {
   'blog 2': "SwingOS summary: Outlines the trigonometry needed to track Bat tilt and head movement stabilizer from 33 joint positions mapped in OpenCV coordinate domains.",
   'blog 3': "TA summary: Explains how reviewing hundreds of beginner code structures taught me to write minimal clean APIs and design code that reduces cognitive load.",
   timeline: "Milestones:\n- 2024-Present: BYU-Idaho TA and Startup Builder in Sandbox\n- 2023-2025: Built SwingOS, Lydia, SecurityScanner, 4.0 GPA\n- 2021-2023: Full-time volunteer service across 5 Balkan countries\n- Before 2021: Landscape Foreman & Operator, designed estimators",
-  contact: "Email: levibmackay@gmail.com\nLinkedIn: linkedin.com/in/levi-mackay-217380396\nGitHub: github.com/levibmackay",
+  contact: "Email: levibmackay@gmail.com\nLinkedIn: linkedin.com/in/levi-mackay-217380396\nGitHub: github.com/levimackay",
   sudo: "Permission denied. Nice try though.",
   'secret_plans.enc': "Decryption failed. Some things you have to build first.",
   explode: () => {

@@ -1,6 +1,6 @@
 # Levi Mackay — Portfolio
 
-**Live site → [levibmackay.github.io/Portfolio](https://levibmackay.github.io/Portfolio/)**
+**Live site → [levimackay.github.io/Portfolio](https://levimackay.github.io/Portfolio/)**
 
 Hey, I'm Levi. This repo is the central hub for the projects I've built while working through my CS degree at BYU–Idaho — a mix of computer vision, AI tooling, data engineering, and automation. It's also the source for my personal portfolio site: a single-page, no-build HTML/CSS/JS site with a WebGL hero scene, scroll animations, and a hidden interactive terminal easter egg.
 
@@ -25,7 +25,7 @@ Hey, I'm Levi. This repo is the central hub for the projects I've built while wo
 There's no build step or package manager involved in the site itself — it's static files. To view it locally, serve the repo root with any static file server (opening `index.html` directly also works, but a local server avoids `file://` restrictions on things like fetch/video):
 
 ```bash
-git clone https://github.com/levibmackay/Portfolio.git
+git clone https://github.com/levimackay/Portfolio.git
 cd Portfolio
 python3 -m http.server 8000
 # then open http://localhost:8000
@@ -42,8 +42,8 @@ python3 -m http.server 8000
 | Project | What it is | Stack |
 |---|---|---|
 | [SwingOS](projects/swing-analyzer) | Real-time biomechanical feedback for baseball swings using pose estimation | Python, OpenCV, MediaPipe |
-| [Lydia](https://github.com/levibmackay/lydia-cli) | Local, Claude-Code-style coding agent — no API keys, nothing sent to the cloud | Python, Ollama, Agents |
-| [AI Security Scanner](https://github.com/levibmackay/SecurityScanner) | AI-powered vulnerability detection with severity ratings and suggested fixes | Python, Gemini API |
+| [Lydia](https://github.com/levimackay/lydia-cli) | Local, Claude-Code-style coding agent — no API keys, nothing sent to the cloud | Python, Ollama, Agents |
+| [AI Security Scanner](https://github.com/levimackay/SecurityScanner) | AI-powered vulnerability detection with severity ratings and suggested fixes | Python, Gemini API |
 | [Foreman's Friend](projects/landscape-estimator) | Job-site material and labor estimator, born from my time as a landscape foreman | Python, CLI |
 | [Baseball Analytics Engine](projects/baseball-database) | Relational schema and layered queries for player performance trends | MySQL |
 | [BCS Flashcards](projects/flashcard-app) | Vocabulary tool I built to study Bosnian, Croatian, and Serbian | Python, Tkinter |
@@ -60,7 +60,7 @@ python3 -m http.server 8000
 
 ## Contributors
 
-- Levi B Mackay ([@levibmackay](https://github.com/levibmackay)) — sole author and maintainer.
+- Levi B Mackay ([@levibmackay](https://github.com/levimackay)) — sole author and maintainer.
 
 ## Connect
 
@@ -71,6 +71,6 @@ _Last updated: July 22, 2026_
 
 ---
 
-Maintained by [Levi Mackay](https://github.com/levibmackay)
+Maintained by [Levi Mackay](https://github.com/levimackay)
 
 **Last updated:** 2026-08-04 16:57 PDT
