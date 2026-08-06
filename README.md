@@ -74,4 +74,3 @@ _Last updated: July 22, 2026_
 Maintained by [Levi Mackay](https://github.com/levimackay)
 
 **Last updated:** 2026-08-05 19:46 PDT
-
