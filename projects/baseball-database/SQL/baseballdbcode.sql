@@ -13,7 +13,7 @@ SELECT
         3
     ) AS rolling_5game_avg
 FROM player p
-JOIN playerStats ps ON p.playerID = ps.playerID
+JOIN playerGameStats ps ON p.playerID = ps.playerID
 JOIN game g ON ps.gameID = g.gameID
 ORDER BY p.lastName, g.gameDate DESC;
 
@@ -36,10 +36,10 @@ SELECT
     p.firstName, 
     p.lastName,
     SUM(ps.hits) AS total_hits,
-    SUM(ps.rbi) AS total_rbis,
-    ROUND(SUM(ps.rbi) / NULLIF(SUM(ps.hits), 0), 2) AS rbis_per_hit
+    SUM(ps.rbis) AS total_rbis,
+    ROUND(SUM(ps.rbis) / NULLIF(SUM(ps.hits), 0), 2) AS rbis_per_hit
 FROM player p
-JOIN playerStats ps ON p.playerID = ps.playerID
+JOIN playerGameStats ps ON p.playerID = ps.playerID
 GROUP BY p.playerID
 HAVING total_hits > 10
 ORDER BY rbis_per_hit DESC

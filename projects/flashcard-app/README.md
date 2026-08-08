@@ -1,9 +1,11 @@
-# Mission Language Generator
+# BCS Flashcards
 
-I spent two years speaking Bosnian, Croatian, and Serbian on a mission so I built this to keep the language sharp after coming home. You load a CSV of vocabulary words and it lets you filter by dialect, part of speech, and difficulty level.
+I spent two years speaking Bosnian, Croatian, and Serbian on a mission, so I built this to keep the language sharp after coming home. It's a small Tkinter desktop app. You load a CSV of vocabulary and filter it by dialect, part of speech, difficulty, and a free text search across words and translations.
 
-Once you have your filtered set you can generate a word list, export it to a text file, or launch the quiz. The quiz pulls four random words from whatever you filtered and makes you pick the right translation. It sounds simple but it is actually pretty effective for drilling specific gaps in your vocabulary.
+Hitting Generate prints the filtered list into the window. From there you can export it to a text file or launch the quiz. The quiz pulls four random words out of the filtered set and makes you pick the right translation for one of them; it needs at least four words to start. It sounds simple but it is actually pretty effective for drilling specific gaps in your vocabulary.
 
-You can also load in a JSON file with grammar notes that gets attached to individual words in the output so the context shows up alongside the translation.
+You can also load a JSON file of grammar notes keyed by word. Those notes show up next to the translation in the generated list on screen. The text export is just `word : translation`, no notes.
 
-Built with Python and Tkinter.
+The CSV needs `word` and `translation` columns, plus `dialect`, `part_of_speech`, and `difficulty` if you want to filter on them.
+
+Built with Python and Tkinter (`bcs_flashcards.py`). No vocabulary file is checked in — bring your own CSV.

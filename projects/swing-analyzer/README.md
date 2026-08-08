@@ -1,9 +1,11 @@
 # SwingOS Prototype
 
-This is a real time computer vision tool that uses your webcam to track your head position during a baseball swing. You press S to lock in your head level as an anchor point and then the system watches whether your head stays level or drops through the swing.
+A real time webcam tool that tracks one thing: the vertical position of your nose landmark. You press `S` to lock in your current head level as an anchor, and from then on it compares where your head is against where it started.
 
-It draws a green line at your anchor and a red line at your current position. If your head drops it tells you WATCH YOUR HEAD and if you come up it says STAY DOWN. The feedback is instant which is the whole point.
+It draws a green line at the anchor and a red line at your current position. If your head drops more than about 20 pixels below the anchor it says WATCH YOUR HEAD, if it rises the same amount it says STAY DOWN, and inside that window it says SOLID. Press `Q` to quit. The feedback is instant, which is the whole point.
 
-I built this because I wanted to know if I could train the body to feel what correct mechanics looked like without needing a coach in the room. Computer vision made that possible.
+It's a prototype, not a swing analyzer — there's no swing detection, no phase segmentation, and no recording. It watches one landmark against one anchor line, live.
 
-Built with Python, OpenCV, and MediaPipe.
+I built it because I wanted to know if I could train the body to feel what correct mechanics looked like without needing a coach in the room. A single tracked landmark turned out to be enough to be useful.
+
+Built with Python, OpenCV, and MediaPipe (`bbswing.py`). Needs a webcam.
