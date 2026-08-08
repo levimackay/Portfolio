@@ -31,7 +31,7 @@
     "name": "Levi Mackay",
     "url": "https://levimackay.com/",
     "jobTitle": "Computer Science Student",
-    "alumniOf": {
+    "affiliation": {
       "@type": "CollegeOrUniversity",
       "name": "BYU-Idaho"
     },
@@ -75,7 +75,7 @@
         <a href="#about" class="hover:text-paper transition-colors duration-300">About</a>
         <a href="#projects" class="hover:text-paper transition-colors duration-300">Projects</a>
         <a href="#skills" class="hover:text-paper transition-colors duration-300">Skills</a>
-        <a href="resume.pdf" target="_blank" rel="noopener" class="hover:text-paper transition-colors duration-300">Résumé</a>
+        <a href="resume.pdf" target="_blank" rel="noopener" class="hover:text-paper transition-colors duration-300">Résumé<span class="sr-only"> (opens in a new tab)</span></a>
         <a href="#contact" class="rounded-full bg-paper/10 px-4 py-1.5 text-paper hover:bg-accent hover:text-white transition-colors duration-300">Contact</a>
       </nav>
       <button id="nav-toggle" type="button" class="sm:hidden inline-flex h-9 w-9 items-center justify-center rounded-full text-paper/70 hover:text-paper transition-colors" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle navigation menu">
@@ -87,17 +87,22 @@
       </button>
     </div>
     <div id="mobile-menu" class="sm:hidden border-t border-hairline bg-ink/95 backdrop-blur" hidden>
-      <nav class="flex flex-col gap-1 px-6 py-4 text-[15px] font-medium text-paper/70" aria-label="Primary">
+      <nav class="flex flex-col gap-1 px-6 py-4 text-[15px] font-medium text-paper/70" aria-label="Mobile">
         <a href="#about" class="rounded-lg px-3 py-2 hover:bg-paper/5 hover:text-paper transition-colors">About</a>
         <a href="#projects" class="rounded-lg px-3 py-2 hover:bg-paper/5 hover:text-paper transition-colors">Projects</a>
         <a href="#skills" class="rounded-lg px-3 py-2 hover:bg-paper/5 hover:text-paper transition-colors">Skills</a>
-        <a href="resume.pdf" target="_blank" rel="noopener" class="rounded-lg px-3 py-2 hover:bg-paper/5 hover:text-paper transition-colors">Résumé</a>
+        <a href="resume.pdf" target="_blank" rel="noopener" class="rounded-lg px-3 py-2 hover:bg-paper/5 hover:text-paper transition-colors">Résumé<span class="sr-only"> (opens in a new tab)</span></a>
         <a href="#contact" class="mt-2 rounded-full bg-paper/10 px-3 py-2 text-center text-paper hover:bg-accent hover:text-white transition-colors">Contact</a>
       </nav>
     </div>
   </header>
 
-  <main id="top" class="relative z-[2]">
+  <!-- tabindex="-1" makes <main> a valid target for the skip link so activating it
+       actually moves keyboard/screen-reader focus (a bare id only moves the scroll
+       position). It is not a tab stop; outline:none suppresses the global
+       :focus-visible ring that would otherwise draw a 2px line around the whole
+       page. Non-interactive skip targets do not require a visible indicator. -->
+  <main id="top" class="relative z-[2]" tabindex="-1" style="outline:none">
 
     <!-- ============ HERO ============ -->
     <section id="hero" class="relative h-[100svh] overflow-hidden">
@@ -116,8 +121,8 @@
         </p>
         <div class="hero-line mt-8 flex flex-wrap items-center justify-center gap-4">
           <a href="#projects" class="btn-primary">See the work</a>
-          <a href="resume.pdf" target="_blank" rel="noopener" class="btn-ghost">Résumé</a>
-          <a href="https://github.com/levimackay" target="_blank" rel="noopener" class="btn-ghost">GitHub ↗</a>
+          <a href="resume.pdf" target="_blank" rel="noopener" class="btn-ghost">Résumé<span class="sr-only"> (opens in a new tab)</span></a>
+          <a href="https://github.com/levimackay" target="_blank" rel="noopener" class="btn-ghost">GitHub ↗<span class="sr-only"> (opens in a new tab)</span></a>
         </div>
       </div>
       <div id="scroll-cue" class="absolute bottom-8 left-1/2 z-10 -translate-x-1/2 text-paper/30" aria-hidden="true">
@@ -146,8 +151,8 @@
           <span class="mt-1 block text-[13px] text-paper/50">Dictionary entries typeset</span>
         </div>
         <div class="stat px-6 py-12 text-center">
-          <span class="stat-num block text-fluid-3xl font-bold tracking-tighter" data-count="4.0" data-decimals="1" aria-hidden="true">0.0</span>
-          <span class="sr-only">4.0</span>
+          <span class="stat-num block text-fluid-3xl font-bold tracking-tighter" data-count="3.98" data-decimals="2" aria-hidden="true">0.00</span>
+          <span class="sr-only">3.98</span>
           <span class="mt-1 block text-[13px] text-paper/50">GPA</span>
         </div>
       </div>
@@ -261,13 +266,13 @@
             </p>
             <dl class="panel-points">
               <div><dt>Challenge</dt><dd>An agentic coding workflow without paying for API usage or sending code to a third party.</dd></div>
-              <div><dt>Approach</dt><dd>An Ollama-backed agent loop with native tool calling for file edits, git, and shell, plus a verify step that runs my tests before calling a task done. Inference runs on a second machine's GPU over Tailscale. 381 tests run in CI on every push, green across Python 3.11, 3.12, and 3.13.</dd></div>
+              <div><dt>Approach</dt><dd>An Ollama-backed agent loop with native tool calling for file edits, git, and shell, plus a verify step that runs my tests before calling a task done. Inference runs on a second machine's GPU over Tailscale. 390 tests run in CI on every push, green across Python 3.11, 3.12, and 3.13.</dd></div>
               <div><dt>In the wild</dt><dd>A contributor filed an issue that a config boolean was stored as a string and evaluating truthy, then sent a pull request fixing it. Another added a whole systemd backend so scheduled briefings work on Linux, after the macOS-only version failed on their machine. Both are reviewed and merged, and the systemd one landed with tests covering both backends.</dd></div>
             </dl>
             <div class="mt-5 flex flex-wrap gap-2">
               <span class="tag">Python</span><span class="tag">Ollama</span><span class="tag">Agents</span><span class="tag">MIT · 36★</span>
             </div>
-            <a class="text-link" href="https://github.com/levimackay/lydia-cli" target="_blank" rel="noopener">View source ↗</a>
+            <a class="text-link" href="https://github.com/levimackay/lydia-cli" target="_blank" rel="noopener">View source ↗<span class="sr-only"> (opens in a new tab)</span></a>
           </div>
         </article>
 
@@ -296,7 +301,7 @@
             <div class="mt-5 flex flex-wrap gap-2">
               <span class="tag">Next.js</span><span class="tag">TypeScript</span><span class="tag">Supabase</span><span class="tag">PostgreSQL</span>
             </div>
-            <a class="text-link" href="https://rexburg-housing.vercel.app" target="_blank" rel="noopener">View live ↗</a>
+            <a class="text-link" href="https://rexburg-housing.vercel.app" target="_blank" rel="noopener">View live ↗<span class="sr-only"> (opens in a new tab)</span></a>
           </div>
         </article>
 
@@ -340,8 +345,8 @@
             </p>
             <p class="mt-4 text-fluid-base leading-relaxed text-paper/70">
               Missing work isn't one flag. A student can be missing an assignment
-              because it's flagged missing, submitted past due, graded as a zero, or
-              marked incomplete, and the model checks all four cases, weighting each
+              because it's flagged missing, past due with nothing submitted, graded as
+              a zero, or marked incomplete, and the model checks all four cases, weighting each
               by its assignment group so a missed final counts more than a missed quiz.
             </p>
             <dl class="panel-points">
@@ -372,7 +377,7 @@
           <div class="fact-card reveal-up">
             <h3 class="text-[15px] font-semibold tracking-tight">SwingOS</h3>
             <p class="mt-2 text-[14px] leading-relaxed text-paper/55">A real-time prototype that tracks a single pose landmark through a webcam and flags it when a batter's head drifts past a hand-set anchor.</p>
-            <a class="text-link mt-3 inline-block" href="https://github.com/levimackay/Portfolio/tree/main/projects/swing-analyzer" target="_blank" rel="noopener">View source ↗</a>
+            <a class="text-link mt-3 inline-block" href="https://github.com/levimackay/Portfolio/tree/main/projects/swing-analyzer" target="_blank" rel="noopener">View source ↗<span class="sr-only"> (opens in a new tab)</span></a>
           </div>
           <div class="fact-card reveal-up">
             <h3 class="text-[15px] font-semibold tracking-tight">leetcoach</h3>
@@ -443,9 +448,9 @@
         </p>
         <div class="reveal-up mt-10 flex flex-wrap items-center justify-center gap-4">
           <a href="mailto:levibmackay@gmail.com" class="btn-primary">levibmackay@gmail.com</a>
-          <a href="resume.pdf" target="_blank" rel="noopener" class="btn-ghost">Résumé</a>
-          <a href="https://github.com/levimackay" target="_blank" rel="noopener" class="btn-ghost">GitHub</a>
-          <a href="https://www.linkedin.com/in/levi-mackay-217380396/" target="_blank" rel="noopener" class="btn-ghost">LinkedIn</a>
+          <a href="resume.pdf" target="_blank" rel="noopener" class="btn-ghost">Résumé<span class="sr-only"> (opens in a new tab)</span></a>
+          <a href="https://github.com/levimackay" target="_blank" rel="noopener" class="btn-ghost">GitHub<span class="sr-only"> (opens in a new tab)</span></a>
+          <a href="https://www.linkedin.com/in/levi-mackay-217380396/" target="_blank" rel="noopener" class="btn-ghost">LinkedIn<span class="sr-only"> (opens in a new tab)</span></a>
         </div>
       </div>
     </section>
@@ -454,12 +459,12 @@
   <footer class="relative z-[2] border-t border-hairline">
     <div class="mx-auto flex max-w-[1200px] items-center justify-between px-6 py-8 text-[13px] text-paper/60">
       <p>© <span id="year"></span> Levi Mackay</p>
-      <button class="terminal-hint" id="terminal-open" title="Open terminal (or press T)">&gt;_ terminal</button>
+      <button class="terminal-hint" id="terminal-open" type="button" title="Open terminal (or press T)" aria-label="Open terminal">&gt;_ terminal</button>
     </div>
   </footer>
 
   <!-- ============ TERMINAL EASTER EGG ============ -->
-  <button class="terminal-toggle" id="terminal-toggle" title="Open terminal (T)" aria-label="Open interactive terminal">
+  <button class="terminal-toggle" id="terminal-toggle" type="button" title="Open terminal (T)" aria-label="Open interactive terminal">
     <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
       <polyline points="4 6 10 12 4 18"/>
       <line x1="13" y1="18" x2="20" y2="18"/>
@@ -470,14 +475,14 @@
     <div class="terminal-bar">
       <span class="terminal-dots"><i></i><i></i><i></i></span>
       <span class="terminal-title">levi@portfolio · zsh</span>
-      <button class="terminal-close" id="terminal-close" aria-label="Close terminal">&times;</button>
+      <button class="terminal-close" id="terminal-close" type="button" aria-label="Close terminal">&times;</button>
     </div>
-    <div class="terminal-body" id="terminal-output">
+    <div class="terminal-body" id="terminal-output" role="log" tabindex="0" aria-label="Terminal output">
       <div id="terminal-welcome"></div>
     </div>
     <div class="terminal-input-row">
-      <span class="t-hl">&gt;</span>
-      <input type="text" id="terminal-input" autocomplete="off" spellcheck="false" placeholder="help">
+      <span class="t-hl" aria-hidden="true">&gt;</span>
+      <input type="text" id="terminal-input" autocomplete="off" spellcheck="false" placeholder="help" aria-label="Terminal command">
     </div>
   </div>
 
