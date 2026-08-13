@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About Levi Mackay</title>
+  <meta name="description" content="Levi Mackay: CS student and TA at BYU-Idaho, Sandbox incubator, two years across the Balkans. The longer version of who is behind the work.">
+  <meta name="author" content="Levi Mackay">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#0a0a0c">
+
+  <meta property="og:title" content="About Levi Mackay">
+  <meta property="og:description" content="CS student and TA at BYU-Idaho. Sandbox incubator. Two years across five Balkan countries.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Levi Mackay">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:url" content="https://levimackay.com/about/">
+  <meta property="og:image" content="https://levimackay.com/assets/og-2.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:alt" content="Levi Mackay. I build tools. Strangers file bugs against them.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="About Levi Mackay">
+  <meta name="twitter:description" content="CS student and TA at BYU-Idaho. Sandbox incubator. Two years across five Balkan countries.">
+  <meta name="twitter:image" content="https://levimackay.com/assets/og-2.png">
+  <link rel="canonical" href="https://levimackay.com/about/">
+
+  <!-- No Person JSON-LD here on purpose: it already lives on the home page
+       (the canonical URL for the "Levi Mackay" entity), and repeating an
+       identical schema block under a second URL adds nothing a search
+       engine needs. -->
+
+  <!-- Same font setup as index.html — see its own head comment for the full
+       reasoning. Repeated verbatim rather than factored out because this is
+       a static multi-page build with no shared-partial system: Vite serves
+       each HTML file independently. -->
+  <link rel="preload" as="font" type="font/woff2" href="/fonts/archivo-var-latin.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="/fonts/martianmono-var-latin.woff2" crossorigin>
+  <style>
+    @font-face {
+      font-family: 'Archivo';
+      font-style: normal;
+      font-weight: 100 900;
+      font-stretch: 62% 125%;
+      font-display: swap;
+      src: url(/fonts/archivo-var-latin.woff2) format('woff2-variations');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+    @font-face {
+      font-family: 'Archivo';
+      font-style: normal;
+      font-weight: 100 900;
+      font-stretch: 62% 125%;
+      font-display: swap;
+      src: url(/fonts/archivo-var-latin-ext.woff2) format('woff2-variations');
+      unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+    }
+    @font-face {
+      font-family: 'Martian Mono';
+      font-style: normal;
+      font-weight: 100 800;
+      font-stretch: 75% 112.5%;
+      font-display: swap;
+      src: url(/fonts/martianmono-var-latin.woff2) format('woff2-variations');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+  </style>
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <script type="module" crossorigin src="/assets/main-ChP_8LYC.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/main-uGZYaOCD.css">
+</head>
+
+<body class="bg-ink text-paper antialiased">
+
+  <a href="#top" class="skip-link">Skip to content</a>
+
+  <header id="site-nav" class="fixed top-0 inset-x-0 z-50 transition-colors duration-500">
+    <div class="mx-auto max-w-[1200px] px-6 h-16 flex items-center justify-between">
+      <a href="#top" class="text-[15px] font-semibold tracking-tight text-paper/90 hover:text-paper transition-colors">Levi Mackay</a>
+      <nav class="hidden sm:flex items-center gap-8 text-[13px] font-medium text-paper/60" aria-label="Primary">
+        <a href="/projects/" class="hover:text-paper transition-colors duration-300">Work</a>
+        <a href="/about/" aria-current="page" class="text-paper transition-colors duration-300">About</a>
+        <a href="/resume.pdf" target="_blank" rel="noopener" class="hover:text-paper transition-colors duration-300">Résumé</a>
+        <a href="/#contact" class="rounded-full bg-paper/10 px-4 py-1.5 text-paper hover:bg-accent hover:text-white transition-colors duration-300">Contact</a>
+      </nav>
+      <button id="nav-toggle" type="button" class="sm:hidden inline-flex h-9 w-9 items-center justify-center rounded-full text-paper/70 hover:text-paper transition-colors" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle navigation menu">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="4" y1="7" x2="20" y2="7"/>
+          <line x1="4" y1="12" x2="20" y2="12"/>
+          <line x1="4" y1="17" x2="20" y2="17"/>
+        </svg>
+      </button>
+    </div>
+    <div id="mobile-menu" class="sm:hidden border-t border-hairline bg-ink/95 backdrop-blur">
+      <nav class="flex flex-col gap-1 px-6 py-4 text-[15px] font-medium text-paper/70" aria-label="Primary">
+        <a href="/projects/" class="rounded-lg px-3 py-2 hover:bg-paper/5 hover:text-paper transition-colors">Work</a>
+        <a href="/about/" aria-current="page" class="rounded-lg px-3 py-2 bg-paper/5 text-paper transition-colors">About</a>
+        <a href="/resume.pdf" target="_blank" rel="noopener" class="rounded-lg px-3 py-2 hover:bg-paper/5 hover:text-paper transition-colors">Résumé</a>
+        <a href="/#contact" class="mt-2 rounded-full bg-paper/10 px-3 py-2 text-center text-paper hover:bg-accent hover:text-white transition-colors">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top" class="relative z-[2]" tabindex="-1">
+
+    <!-- ============ ABOUT ============
+         Deliberately the quiet page of the three. Home is the scene and the
+         terminal, /projects/ is dense and pinned; this one is a reading column
+         with a portrait in the margin, closer to a magazine profile than to
+         either. Same DNA, different register. -->
+    <section id="about" class="page-lead section-pad-lg" tabindex="-1" aria-labelledby="about-heading">
+      <div class="about-lead mx-auto max-w-[1100px] px-6">
+        <div class="about-intro">
+          <p class="eyebrow reveal-up">About</p>
+          <h1 id="about-heading" class="display-lg reveal-up mt-4">The longer version.</h1>
+          <p class="reveal-up mt-6 max-w-[42ch] text-fluid-lg text-paper/55">
+            Who is actually behind the four projects on the work page.
+          </p>
+        </div>
+
+        <!-- Kept small on purpose. The source is 380px wide and upscaling it
+             into a full-bleed hero would show; sized as an inset portrait it
+             stays sharp and reads as a considered choice rather than a
+             constraint. Caption is set in the mono voice the rest of the site
+             uses for metadata. -->
+        <figure class="about-portrait reveal-up">
+          <picture>
+            <source srcset="/assets/levi-portrait.webp" type="image/webp">
+            <img src="/assets/levi-portrait.jpg" width="380" height="535" alt="Levi Mackay" loading="lazy" decoding="async">
+          </picture>
+          <figcaption>Levi Mackay &middot; Rexburg, Idaho</figcaption>
+        </figure>
+      </div>
+
+      <div class="mx-auto mt-20 max-w-[1100px] px-6" data-scrub-group>
+        <p class="scrub-text max-w-[58ch] text-fluid-lg font-medium leading-relaxed" data-scrub>
+          I'm a CS student at BYU-Idaho, where I also TA programming courses and help
+          other students write code that actually works. Outside of class I build in
+          the Sandbox startup incubator, and I run Main Street Sites, a web design studio
+          for small businesses in eastern Idaho: I built the product, set the pricing,
+          and pitch it cold to real owners.
+        </p>
+        <p class="scrub-text mt-8 max-w-[58ch] text-fluid-lg font-medium leading-relaxed" data-scrub>
+          Before any of that I spent two years in the Balkans: Bosnia, Croatia, Serbia,
+          Montenegro, and Slovenia. Learning new languages and cultures meant constantly
+          breaking unfamiliar problems into pieces I could actually work with, which is
+          the same skill I use daily now, reading code I didn't write and figuring out
+          what it's actually doing.
+        </p>
+        <p class="scrub-text mt-8 max-w-[58ch] text-fluid-lg font-medium leading-relaxed" data-scrub>
+          When I'm not at a keyboard I'm lifting, running, snowboarding, or on a dirt
+          bike.
+        </p>
+      </div>
+
+      <!-- Was three .fact-card boxes. The site already uses that card shape for
+           skills on /projects/, and a second identical grid here is the pattern
+           that makes a site read as assembled from parts. Same three facts, set
+           as a mono-labelled list instead. -->
+      <dl class="about-facts mx-auto mt-24 max-w-[1100px] px-6">
+        <div class="reveal-up">
+          <dt>Teaching &amp; mentoring</dt>
+          <dd>Code reviews, debugging sessions, and office hours as a TA for programming courses, catching the same handful of mistakes early before they turn into bad habits.</dd>
+        </div>
+        <div class="reveal-up">
+          <dt>Sandbox incubator</dt>
+          <dd>I build in BYU-Idaho's Sandbox startup incubator, prototyping ideas outside of coursework and testing them against real feedback.</dd>
+        </div>
+        <div class="reveal-up">
+          <dt>Balkan roots</dt>
+          <dd>Two years across five countries. I speak Bosnian, Croatian, and Serbian. Ask me about it.</dd>
+        </div>
+      </dl>
+    </section>
+
+    <section class="section-pad-md border-t border-hairline" aria-label="Continue">
+      <div class="mx-auto flex max-w-[1100px] flex-wrap items-center justify-between gap-6 px-6">
+        <p class="text-fluid-lg text-paper/55 max-w-[38ch]">The work itself is the better argument.</p>
+        <div class="flex flex-wrap gap-4">
+          <a href="/projects/" class="btn-primary">See the work</a>
+          <a href="/#contact" class="btn-ghost">Get in touch</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="relative z-[2] border-t border-hairline">
+    <div class="mx-auto flex max-w-[1200px] items-center justify-between px-6 py-8 text-[13px] text-paper/60">
+      <p>© <span id="year"></span> Levi Mackay</p>
+      <button class="terminal-hint" id="terminal-open" title="Open terminal (or press T)">&gt;_ terminal</button>
+    </div>
+  </footer>
+
+  <!-- ============ TERMINAL EASTER EGG (shared chrome, identical to index.html) ============ -->
+  <button class="terminal-toggle" id="terminal-toggle" title="Open terminal (T)" aria-label="Open interactive terminal">
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <polyline points="4 6 10 12 4 18"/>
+      <line x1="13" y1="18" x2="20" y2="18"/>
+    </svg>
+  </button>
+
+  <div class="terminal" id="terminal" role="dialog" aria-modal="true" aria-label="Interactive terminal" hidden>
+    <div class="terminal-bar">
+      <span class="terminal-dots">
+        <button type="button" class="dot-close" data-window="close" aria-label="Close terminal"></button>
+        <button type="button" class="dot-min" data-window="minimize" aria-label="Minimize terminal"></button>
+        <button type="button" class="dot-zoom" data-window="zoom" aria-label="Zoom terminal"></button>
+      </span>
+      <span class="terminal-title">levi@portfolio · zsh</span>
+      <button class="terminal-close" id="terminal-close" aria-label="Close terminal">&times;</button>
+    </div>
+    <div class="terminal-body" id="terminal-output">
+      <div id="terminal-welcome"></div>
+    </div>
+    <div class="terminal-input-row">
+      <span class="t-hl">&gt;</span>
+      <input type="text" id="terminal-input" autocomplete="off" spellcheck="false" placeholder="help" aria-label="Terminal command input">
+    </div>
+  </div>
+
+</body>
+
+</html>
