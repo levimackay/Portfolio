@@ -69,8 +69,29 @@
   </style>
 
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-  <script type="module" crossorigin src="/assets/main-BvH4GFFh.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/main-kkAq0227.css">
+
+  <script>
+    (function () {
+      var d = document.documentElement;
+      if (!window.matchMedia) return;
+      if (!matchMedia("(min-width: 768px)").matches) return;
+      if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+      d.classList.add("stage-overlay");
+      /* Keyed to load rather than a fixed timer. A first attempt used 4s and
+         fired while the module was still downloading on a throttled
+         connection, reverting to the fallback and then re-applying when
+         initProjectStage finally ran, which turned one layout shift into two.
+         By load the bundle has either executed and decided for itself, or it
+         never will. */
+      addEventListener("load", function () {
+        setTimeout(function () {
+          if (!d.dataset.stageConfirmed) d.classList.remove("stage-overlay");
+        }, 500);
+      });
+    })();
+  </script>
+  <script type="module" crossorigin src="/assets/main-CYgf_6Iw.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/main-DLlp3CRW.css">
 </head>
 
 <body class="bg-ink text-paper antialiased">
