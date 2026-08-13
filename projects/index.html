@@ -20,7 +20,7 @@
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:type" content="image/png">
-  <meta property="og:image:alt" content="Levi Mackay. I build tools. Strangers file bugs against them.">
+  <meta property="og:image:alt" content="Levi Mackay. I build software people actually use. Not coursework.">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Levi Mackay: Projects">
   <meta name="twitter:description" content="Four projects: Lydia, RexNest, a Serbo-Croatian dictionary, and canvas-risk.">
@@ -69,8 +69,8 @@
   </style>
 
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-  <script type="module" crossorigin src="/assets/main-ChP_8LYC.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/main-uGZYaOCD.css">
+  <script type="module" crossorigin src="/assets/main-BvH4GFFh.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/main-kkAq0227.css">
 </head>
 
 <body class="bg-ink text-paper antialiased">
@@ -116,7 +116,7 @@
 
       <div class="page-lead mx-auto max-w-[1200px] px-6 pb-[10vh]">
         <p class="eyebrow reveal-up">Projects</p>
-        <h2 id="projects-heading" class="display-lg reveal-up mt-4 max-w-[14ch]">Selected work</h2>
+        <h1 id="projects-heading" class="display-lg reveal-up mt-4 max-w-[14ch]">Selected work</h1>
         <p class="reveal-up mt-6 max-w-[46ch] text-fluid-lg text-paper/55">
           Four projects, described at the level of detail I'd want if I were
           the one reading. Two of them ship to other people. Two don't yet.
@@ -153,7 +153,7 @@
             <picture>
               <source srcset="/assets/canvas-risk-poster.avif" type="image/avif">
               <source srcset="/assets/canvas-risk-poster.webp" type="image/webp">
-              <img src="/assets/canvas-risk-poster.jpg" width="1400" height="875" loading="lazy" decoding="async" style="aspect-ratio:16/10" alt="The canvas-risk weighting table and the compound query that treats four different Canvas states as missing work.">
+              <img src="/assets/canvas-risk-poster.jpg" width="1400" height="875" loading="lazy" decoding="async" style="aspect-ratio:16/10" alt="An illustration of the canvas-risk weighting table, showing the five factors and their weights.">
             </picture>
           </div>
         </div>
@@ -169,10 +169,10 @@
       <!-- Narrative panels roll over the stage -->
       <div id="project-panels" class="relative z-10 -mt-[100svh]">
 
-        <article class="panel flex min-h-[100svh] items-end md:items-center" data-panel="0">
+        <article id="lydia" class="panel flex min-h-[100svh] items-end md:items-center" data-panel="0">
           <div class="panel-card">
             <p class="eyebrow">AI · Coding Agent · Featured</p>
-            <h3 class="display-sm mt-3">Lydia</h3>
+            <h2 class="display-sm mt-3">Lydia</h2>
             <p class="mt-4 text-fluid-base leading-relaxed text-paper/70">
               A local, terminal-based coding agent that reads, edits, and tests my
               code entirely on my own hardware, no API keys, no subscriptions,
@@ -187,7 +187,7 @@
             </p>
             <dl class="panel-points">
               <div><dt>Challenge</dt><dd>An agentic coding workflow without paying for API usage or sending code to a third party.</dd></div>
-              <div><dt>Approach</dt><dd>An Ollama-backed agent loop with native tool calling for file edits, git, and shell, plus a verify step that runs my tests before calling a task done. Inference runs on a second machine's GPU over Tailscale. 381 tests run in CI on every push, green across Python 3.11, 3.12, and 3.13.</dd></div>
+              <div><dt>Approach</dt><dd>An Ollama-backed agent loop with native tool calling for file edits, git, and shell, plus a verify step that runs my tests before calling a task done. Inference runs on a second machine's GPU over Tailscale. 390 tests run in CI on every push, green across Python 3.11, 3.12, and 3.13.</dd></div>
               <div><dt>In the wild</dt><dd>A contributor filed an issue that a config boolean was stored as a string and evaluating truthy, then sent a pull request fixing it. Another added a whole systemd backend so scheduled briefings work on Linux, after the macOS-only version failed on their machine. Both are reviewed and merged, and the systemd one landed with tests covering both backends.</dd></div>
             </dl>
             <div class="mt-5 flex flex-wrap gap-2">
@@ -198,10 +198,10 @@
           </div>
         </article>
 
-        <article class="panel flex min-h-[100svh] items-end md:items-center md:justify-end" data-panel="1">
+        <article id="rexnest" class="panel flex min-h-[100svh] items-end md:items-center md:justify-end" data-panel="1">
           <div class="panel-card">
             <p class="eyebrow">Next.js · Full Stack · Featured</p>
-            <h3 class="display-sm mt-3">RexNest</h3>
+            <h2 class="display-sm mt-3">RexNest</h2>
             <p class="mt-4 text-fluid-base leading-relaxed text-paper/70">
               A student housing comparison platform for BYU-Idaho renters, built so
               comparing off-campus options doesn't mean scrolling through five different
@@ -209,7 +209,7 @@
               moderated reviews with voting and reporting.
             </p>
             <p class="mt-4 text-fluid-base leading-relaxed text-paper/70">
-              The core of it is a value score: a 224-line PL/pgSQL function that ranks
+              The core of it is a value score: a 192-line PL/pgSQL function that ranks
               every listing 0 to 100 across price, distance, amenities, review quality,
               management, internet, and rent trend, normalized against the whole dataset.
               Listings with fewer than three reviews fall back to the site average, so a
@@ -218,7 +218,7 @@
             <dl class="panel-points">
               <div><dt>Challenge</dt><dd>Comparing off-campus housing means weighing price, distance, amenities, and reviews against each other with no consistent way to score them.</dd></div>
               <div><dt>Approach</dt><dd>23 Postgres tables behind Supabase, with 129 lines of row-level security policy and a weighted scoring function that runs set-wise across the table using population min/max normalization.</dd></div>
-              <div><dt>Honest gap</dt><dd>123 tests cover the scoring and ranking logic, but the Stripe payment paths are only exercised by hand. Automating those is the next priority.</dd></div>
+              <div><dt>Honest gap</dt><dd>The scoring function itself has no automated tests. 123 tests cover the app around it, but the PL/pgSQL, the weights, and the fewer-than-three-reviews fallback are all verified by hand, as are the Stripe payment paths. There is no CI on this repo yet. That is the next thing I am fixing.</dd></div>
             </dl>
             <div class="mt-5 flex flex-wrap gap-2">
               <span class="tag">Next.js</span><span class="tag">TypeScript</span><span class="tag">Supabase</span><span class="tag">PostgreSQL</span>
@@ -227,20 +227,20 @@
           </div>
         </article>
 
-        <article class="panel flex min-h-[100svh] items-end md:items-center" data-panel="2">
+        <article id="dictionary" class="panel flex min-h-[100svh] items-end md:items-center" data-panel="2">
           <div class="panel-card">
             <p class="eyebrow">Python · Typesetting · Featured</p>
-            <h3 class="display-sm mt-3">Serbo-Croatian dictionary</h3>
+            <h2 class="display-sm mt-3">Serbo-Croatian dictionary</h2>
             <p class="mt-4 text-fluid-base leading-relaxed text-paper/70">
-              5,709 entries: 4,047 parsed from a 208-page personal scan, 1,608 folded
-              in from two years of daily word sheets, and 54 added by the pipeline to
-              fill gaps. Typeset into a 301-page, 15-chapter book with zero build
+              5,709 entries, merged from a 208-page source dictionary and two years of
+              my own daily word sheets, with a small number generated by the pipeline
+              to fill gaps. Typeset into a 301-page, 15-chapter book with zero build
               warnings.
             </p>
             <dl class="panel-points">
               <div><dt>Challenge</dt><dd>Turning years of handwritten field notes and an old scanned book into something accurate enough to publish, without quietly inventing entries I wasn't confident about.</dd></div>
               <div><dt>Approach</dt><dd>1,026 lines of Python across 7 pipeline stages to parse, merge, and enrich entries, including a custom 180-line Markdown-to-Typst compiler, then Typst to typeset the result.</dd></div>
-              <div><dt>Provenance</dt><dd>Every machine-added field is marked with a degree sign, and that marking is enforced by construction: a machine-supplied field can only reach the page through a wrapper function in the typesetting library that emits the mark, so there's no path that renders one without it. Generated stress marks are checked against their own headword before they're allowed through; nine failed that check and were logged instead of shown.</dd></div>
+              <div><dt>Provenance</dt><dd>Every machine-added field is marked with a degree sign, and that marking is enforced by construction: a machine-supplied field can only reach the page through a wrapper function in the typesetting library that emits the mark, so there's no path that renders one without it. Generated stress marks are checked against their own headword before they're allowed through.</dd></div>
             </dl>
             <p class="mt-4 text-fluid-base italic leading-relaxed text-paper/55">
               The provenance rule I wrote to direct this pipeline, and that the pipeline
@@ -255,10 +255,10 @@
           </div>
         </article>
 
-        <article class="panel flex min-h-[100svh] items-end md:items-center md:justify-end" data-panel="3">
+        <article id="canvas-risk" class="panel flex min-h-[100svh] items-end md:items-center md:justify-end" data-panel="3">
           <div class="panel-card">
             <p class="eyebrow">Python · Education Tooling · Featured</p>
-            <h3 class="display-sm mt-3">canvas-risk</h3>
+            <h2 class="display-sm mt-3">canvas-risk</h2>
             <p class="mt-4 text-fluid-base leading-relaxed text-paper/70">
               A risk model that pulls grade and activity data from the Canvas LMS API
               and scores every student in a course 0 to 100, weighted 40% current grade,
@@ -268,7 +268,7 @@
             </p>
             <p class="mt-4 text-fluid-base leading-relaxed text-paper/70">
               Missing work isn't one flag. A student can be missing an assignment
-              because it's flagged missing, submitted past due, graded as a zero, or
+              because it's flagged missing, never submitted and past due, graded as a zero, or
               marked incomplete, and the model checks all four cases, weighting each
               by its assignment group so a missed final counts more than a missed quiz.
             </p>
@@ -329,7 +329,7 @@
         </dl>
 
         <div class="reveal-up mt-12 flex flex-wrap gap-4">
-          <a href="https://www.mainstreetsites.com" target="_blank" rel="noopener" class="btn-primary">Visit the site <span aria-hidden="true">&#8599;</span></a>
+          <a href="https://mainstreet.levimackay.com" target="_blank" rel="noopener" class="btn-primary">Visit the site <span aria-hidden="true">&#8599;</span></a>
           <a href="https://mockups.levimackay.com" target="_blank" rel="noopener" class="btn-ghost">Spec redesigns <span aria-hidden="true">&#8599;</span></a>
         </div>
       </div>

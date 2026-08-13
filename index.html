@@ -26,7 +26,7 @@
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:type" content="image/png">
-  <meta property="og:image:alt" content="Levi Mackay. I build tools. Strangers file bugs against them.">
+  <meta property="og:image:alt" content="Levi Mackay. I build software people actually use. Not coursework.">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Levi Mackay: Computer Science Student and Software Engineer">
   <meta name="twitter:description" content="CS student and TA at BYU-Idaho. Maintainer of Lydia, an open source local coding agent. Seeking a Summer 2027 SWE internship.">
@@ -103,8 +103,8 @@
   </style>
 
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-  <script type="module" crossorigin src="/assets/main-ChP_8LYC.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/main-uGZYaOCD.css">
+  <script type="module" crossorigin src="/assets/main-BvH4GFFh.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/main-kkAq0227.css">
 </head>
 
 <body class="bg-ink text-paper antialiased">
@@ -153,7 +153,7 @@
           Computer Science · BYU-Idaho
         </p>
         <h1 id="hero-heading" class="hero-line display-hero max-w-[19ch]">
-          I build tools. <span class="text-paper/70">Strangers file bugs against them.</span>
+          I build software people actually use. <span class="text-paper/70">Not coursework.</span>
         </h1>
         <p class="hero-line mt-6 max-w-[44ch] text-fluid-base leading-relaxed text-paper/75">
           Levi Mackay. CS student and TA at BYU-Idaho, looking for a Summer 2027
@@ -168,10 +168,11 @@
 </section>
 
     <!-- ============ CONSOLE: the terminal, promoted from a corner button to a
-         real section. Opens the same dialog terminal.js owns (see
-         #console-terminal-open's wiring in main.js) — not a second terminal,
-         and no decorative terminal mockup here, on purpose. ============ -->
-    <section id="console" class="console-section" aria-labelledby="console-heading">
+         real section. Runs its own inline session (the #console-input block
+         wired up in terminal.js), built on the same command set and window
+         controls the dialog terminal uses on the other two pages — not a
+         second terminal, and no decorative terminal mockup here, on purpose. ============ -->
+    <section id="console" class="console-section" tabindex="-1" aria-labelledby="console-heading">
       <div class="console-grid mx-auto max-w-[1200px] px-6">
         <div class="console-copy">
           <p class="eyebrow reveal-up">Terminal</p>
@@ -222,8 +223,8 @@
           <span class="mt-1 block text-[13px] text-paper/50">GitHub stars on Lydia</span>
         </div>
         <div class="stat px-6 py-12 text-center">
-          <span class="stat-num block text-fluid-3xl font-bold tracking-tighter" data-count="381" aria-hidden="true">381</span>
-          <span class="sr-only">381</span>
+          <span class="stat-num block text-fluid-3xl font-bold tracking-tighter" data-count="390" aria-hidden="true">390</span>
+          <span class="sr-only">390</span>
           <span class="mt-1 block text-[13px] text-paper/50">Tests passing in CI on Python 3.11 to 3.13</span>
         </div>
         <div class="stat px-6 py-12 text-center">
@@ -247,24 +248,34 @@
 
         <ul class="work-list mt-14" role="list">
           <li class="reveal-up">
+            <a class="work-list-link" href="/projects/#lydia">
             <span class="work-list-name">Lydia</span>
             <span class="work-list-desc">A local, terminal-based coding agent that reads, edits, and tests my code.</span>
+            </a>
           </li>
           <li class="reveal-up">
+            <a class="work-list-link" href="/projects/#rexnest">
             <span class="work-list-name">RexNest</span>
             <span class="work-list-desc">A student housing comparison platform for BYU-Idaho renters.</span>
+            </a>
           </li>
           <li class="reveal-up">
+            <a class="work-list-link" href="/projects/#dictionary">
             <span class="work-list-name">Serbo-Croatian dictionary</span>
             <span class="work-list-desc">5,709 entries, parsed from a 208-page personal scan and two years of daily word sheets.</span>
+            </a>
           </li>
           <li class="reveal-up">
+            <a class="work-list-link" href="/projects/#mainstreet">
             <span class="work-list-name">Main Street Sites</span>
             <span class="work-list-desc">A web design studio for small businesses in eastern Idaho. Live, and the pricing is mine.</span>
+            </a>
           </li>
           <li class="reveal-up">
+            <a class="work-list-link" href="/projects/#canvas-risk">
             <span class="work-list-name">canvas-risk</span>
             <span class="work-list-desc">A risk model that pulls grade and activity data from the Canvas LMS API and scores every student in a course 0 to 100.</span>
+            </a>
           </li>
         </ul>
 
