@@ -208,7 +208,7 @@
             </p>
             <dl class="panel-points">
               <div><dt>Challenge</dt><dd>An agentic coding workflow without paying for API usage or sending code to a third party.</dd></div>
-              <div><dt>Approach</dt><dd>An Ollama-backed agent loop with native tool calling for file edits, git, and shell, plus a verify step that runs my tests before calling a task done. Inference runs on a second machine's GPU over Tailscale. 390 tests run in CI on every push, green across Python 3.11, 3.12, and 3.13.</dd></div>
+              <div><dt>Approach</dt><dd>An Ollama-backed agent loop with native tool calling for file edits, git, and shell, plus a verify step that runs my tests before calling a task done. Inference runs on a second machine's GPU over Tailscale. 376 tests run in CI on every push, green across Python 3.11, 3.12, and 3.13.</dd></div>
               <div><dt>In the wild</dt><dd>A contributor filed an issue that a config boolean was stored as a string and evaluating truthy, then sent a pull request fixing it. Another added a whole systemd backend so scheduled briefings work on Linux, after the macOS-only version failed on their machine. Both are reviewed and merged, and the systemd one landed with tests covering both backends.</dd></div>
             </dl>
             <div class="mt-5 flex flex-wrap gap-2">
@@ -315,7 +315,7 @@
          Deliberately not a fifth panel in the stage above. The four projects
          there are software; this one is a business, and giving it the same
          crossfade treatment would flatten that difference into "another card".
-         Set as a ledger instead: the offer stated plainly, the six demo builds
+         Set as a ledger instead: the offer stated plainly, the seven demo builds
          as an index. No screenshots, because the live site is one click away
          and a screenshot of a website is a worse version of the website. -->
     <section id="mainstreet" class="section-pad-lg border-t border-hairline" aria-labelledby="mainstreet-heading">
@@ -335,7 +335,7 @@
           </div>
           <div class="reveal-up">
             <dt>Stack</dt>
-            <dd>React 19 and Vite, Framer Motion, 22 tests in CI. Forms route through Web3Forms so there is no server to keep alive.</dd>
+            <dd>React 19 and Vite, Framer Motion, 32 tests in CI. Forms route through Web3Forms so there is no server to keep alive.</dd>
           </div>
           <div class="reveal-up">
             <dt>Checkout</dt>

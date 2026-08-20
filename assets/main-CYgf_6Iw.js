@@ -35,7 +35,7 @@ var Hl=Object.defineProperty;var ql=(s,e,i)=>e in s?Hl(s,e,{enumerable:!0,config
   explode    replay the hero animation
   ls         look around
   shortcut   toggle the 't' hotkey that opens this terminal
-  clear      wipe the screen`,ls:"bio.txt  projects/  skills.json  contact.key  secret_plans.enc",whoami:"Levi Mackay: CS student, TA, Sandbox incubator participant.",bio:"3.98 GPA at BYU-Idaho. Farm hand, ski lift operator, landscape foreman, IT specialist. Two years in the Balkans. Building AI tools in the Sandbox incubator.",projects:`1. Lydia: local AI coding agent, Ollama-powered, 390 tests passing in CI.
+  clear      wipe the screen`,ls:"bio.txt  projects/  skills.json  contact.key  secret_plans.enc",whoami:"Levi Mackay: CS student, TA, Sandbox incubator participant.",bio:"3.98 GPA at BYU-Idaho. Farm hand, ski lift operator, landscape foreman, IT specialist. Two years in the Balkans. Building AI tools in the Sandbox incubator.",projects:`1. Lydia: local AI coding agent, Ollama-powered, 376 tests passing in CI.
 2. RexNest: BYU-Idaho student housing platform (Next.js, Supabase).
 3. Serbo-Croatian dictionary: 5,709 entries merged from a 208-page source dictionary and two years of daily word sheets.
 4. canvas-risk: 5-factor risk model over the Canvas LMS API flagging students falling behind.`,skills:`languages: [Python, TypeScript, SQL, C#, Swift, Go]
