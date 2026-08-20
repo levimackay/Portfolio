@@ -66,12 +66,6 @@ python3 -m http.server 8000
 
 I'm always down to talk code, startups, or baseball. Find me on [LinkedIn](https://www.linkedin.com/in/levi-mackay-217380396/) or email me at levibmackay@gmail.com.
 
----
-_Last updated: July 22, 2026_
+## License
 
----
-
-Maintained by [Levi Mackay](https://github.com/levimackay)
-
-**Last updated:** 2026-08-06 07:59 PDT
-
+MIT — see [LICENSE](LICENSE).
