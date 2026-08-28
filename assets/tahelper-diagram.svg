@@ -1,0 +1,31 @@
+<svg viewBox="0 0 800 460" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagram of TaHelper's data flow: Canvas LMS API to CanvasAPIClient to CanvasService to DashboardView.">
+<rect x="0" y="0" width="800" height="460" fill="#0a0a0c"/>
+<defs>
+<marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+<path d="M0,0 L10,5 L0,10 z" fill="#f5f5f7"/>
+</marker>
+<marker id="arrowAccent" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+<path d="M0,0 L10,5 L0,10 z" fill="#2997ff"/>
+</marker>
+</defs>
+<line x1="240.8" y1="250.0" x2="249.2" y2="250.0" stroke="#f5f5f7" stroke-width="1.4" marker-end="url(#arrow)"/>
+<line x1="425.8" y1="250.0" x2="434.2" y2="250.0" stroke="#f5f5f7" stroke-width="1.4" marker-end="url(#arrow)"/>
+<line x1="610.8" y1="250.0" x2="619.2" y2="250.0" stroke="#f5f5f7" stroke-width="1.4" marker-end="url(#arrow)"/>
+<rect x="68.5" y="200.0" width="168" height="100" fill="#0a0a0c" stroke="#f5f5f7" stroke-width="1.4"/>
+<text x="152.5" y="250.0" text-anchor="middle" dominant-baseline="middle" font-family='"Archivo", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="13.5" fill="#f5f5f7">Canvas LMS API</text>
+<rect x="253.5" y="200.0" width="168" height="100" fill="#0a0a0c" stroke="#f5f5f7" stroke-width="1.4"/>
+<text x="337.5" y="233.1" text-anchor="middle" dominant-baseline="middle" font-family='"Archivo", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="13.5" fill="#f5f5f7">CanvasAPIClient</text>
+<text x="337.5" y="250.0" text-anchor="middle" dominant-baseline="middle" font-family='"Archivo", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="13.5" fill="#f5f5f7">(fetches enrolled</text>
+<text x="337.5" y="266.9" text-anchor="middle" dominant-baseline="middle" font-family='"Archivo", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="13.5" fill="#f5f5f7">students)</text>
+<rect x="438.5" y="200.0" width="168" height="100" fill="#0a0a0c" stroke="#f5f5f7" stroke-width="1.4"/>
+<text x="522.5" y="233.1" text-anchor="middle" dominant-baseline="middle" font-family='"Archivo", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="13.5" fill="#f5f5f7">CanvasService</text>
+<text x="522.5" y="250.0" text-anchor="middle" dominant-baseline="middle" font-family='"Archivo", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="13.5" fill="#f5f5f7">(computes risk score,</text>
+<text x="522.5" y="266.9" text-anchor="middle" dominant-baseline="middle" font-family='"Archivo", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="13.5" fill="#f5f5f7">sorts descending)</text>
+<rect x="623.5" y="200.0" width="168" height="100" fill="#0a0a0c" stroke="#2997ff" stroke-width="1.4"/>
+<text x="707.5" y="224.7" text-anchor="middle" dominant-baseline="middle" font-family='"Archivo", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="13.5" fill="#f5f5f7">DashboardView</text>
+<text x="707.5" y="241.6" text-anchor="middle" dominant-baseline="middle" font-family='"Archivo", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="13.5" fill="#f5f5f7">(color-coded</text>
+<text x="707.5" y="258.4" text-anchor="middle" dominant-baseline="middle" font-family='"Archivo", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="13.5" fill="#f5f5f7">High / Medium / Low</text>
+<text x="707.5" y="275.3" text-anchor="middle" dominant-baseline="middle" font-family='"Archivo", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="13.5" fill="#f5f5f7">risk badges)</text>
+<text x="400.0" y="60" text-anchor="middle" font-family='"Archivo", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="20" font-weight="600" fill="#f5f5f7">TaHelper — data flow</text>
+<text x="400.0" y="86" text-anchor="middle" font-family='"Archivo", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="13" fill="#f5f5f7" opacity="0.6">Real code, not yet run against live Canvas data</text>
+</svg>

@@ -1,0 +1,4 @@
+$ cd ~/Developer/tinylang && make p0-02
+clang -std=c11 -Wall -Wextra -g -fsanitize=undefined phase0/02_*.c -o build/p0-02
+./build/p0-02
+task 0.2: all tests passed
