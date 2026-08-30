@@ -37,7 +37,7 @@ var Hl=Object.defineProperty;var ql=(s,e,i)=>e in s?Hl(s,e,{enumerable:!0,config
   shortcut   toggle the 't' hotkey that opens this terminal
   clear      wipe the screen`,ls:"bio.txt  projects/  skills.json  contact.key  secret_plans.enc",whoami:"Levi Mackay: CS student, TA, Sandbox incubator participant.",bio:"3.98 GPA at BYU-Idaho. Farm hand, ski lift operator, landscape foreman, IT specialist. Two years in the Balkans. Building AI tools in the Sandbox incubator.",projects:`1. tinylang: a language built from scratch in C — lexer to bytecode VM. Phase 0 in progress, tests green.
 2. minidb: a single-file C database engine — paging, B-trees, small SQL parser. Roadmap committed, build ahead.
-3. Canvas-Risk: terminal dashboard ranking a Canvas course's students by a weighted at-risk score. Run against a live course.
+3. Lydia: a local coding agent that reads, edits and tests your code through an Ollama model on your own machine. On PyPI, with outside contributors.
 4. FORGE: native iOS system turning long-term goals into adaptive daily missions. Phase 0 complete.
 also shipped: Lydia (local AI coding agent, 376 tests in CI), Serbo-Croatian dictionary (5,709 entries typeset).`,skills:`languages: [Python, TypeScript, SQL, C#, Swift, Go, C (learning)]
 tools: [Git, Linux, Docker]
