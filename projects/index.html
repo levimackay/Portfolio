@@ -5,13 +5,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Levi Mackay: Projects</title>
-  <meta name="description" content="tinylang, minidb, Lydia, and FORGE: four projects by Levi Mackay, a computer science student and TA at BYU-Idaho, shown at their actual state.">
+  <meta name="description" content="izvor, minidb, FORGE, and Lydia: four projects by Levi Mackay, a computer science student and TA at BYU-Idaho, shown at their actual state.">
   <meta name="author" content="Levi Mackay">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="theme-color" content="#0a0a0c">
 
   <meta property="og:title" content="Levi Mackay: Projects">
-  <meta property="og:description" content="Four projects in flight: tinylang, minidb, Lydia, and FORGE, shown at their actual state.">
+  <meta property="og:description" content="Four projects in flight: izvor, minidb, FORGE, and Lydia, shown at their actual state.">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Levi Mackay">
   <meta property="og:locale" content="en_US">
@@ -23,7 +23,7 @@
   <meta property="og:image:alt" content="Levi Mackay. I build software people actually use. Not coursework.">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Levi Mackay: Projects">
-  <meta name="twitter:description" content="Four projects in flight: tinylang, minidb, Lydia, and FORGE, shown at their actual state.">
+  <meta name="twitter:description" content="Four projects in flight: izvor, minidb, FORGE, and Lydia, shown at their actual state.">
   <meta name="twitter:image" content="https://levimackay.com/assets/og-2.png">
   <link rel="canonical" href="https://levimackay.com/projects/">
 
@@ -90,7 +90,7 @@
       });
     })();
   </script>
-  <script type="module" crossorigin src="/assets/main-B6nW-T6g.js"></script>
+  <script type="module" crossorigin src="/assets/main-QruBt3qe.js"></script>
   <link rel="stylesheet" crossorigin href="/assets/main-BzHfArZw.css">
 </head>
 
@@ -139,9 +139,10 @@
         <p class="eyebrow reveal-up">Projects</p>
         <h1 id="projects-heading" class="display-lg reveal-up mt-4 max-w-[14ch]">Selected work</h1>
         <p class="reveal-up mt-6 max-w-[46ch] text-fluid-lg text-paper/55">
-          Four builds in flight, shown at their actual state. One has tests
-          you can run today; the others are architecture and roadmaps,
-          presented as exactly that. Nothing here is staged.
+          Four builds in flight, shown at their actual state. Two of them run
+          today, and their panels are recordings of them actually running; the
+          other two are roadmaps and scaffolding, presented as exactly that.
+          Nothing here is staged.
         </p>
       </div>
 
@@ -149,13 +150,8 @@
       <div id="project-stage" class="sticky top-0 h-[100svh] overflow-hidden">
         <div class="media-layer is-framed frame-right" data-media="0">
           <div class="mac-window">
-            <div class="mac-bar" aria-hidden="true"><i></i><i></i><i></i><span>tinylang · zsh</span></div>
-            <div class="terminal-body">
-              <div><span class="t-hl">$</span> make p0-02</div>
-              <div>clang -std=c11 -Wall -Wextra -g -fsanitize=undefined phase0/02_*.c -o build/p0-02</div>
-              <div>./build/p0-02</div>
-              <div>task 0.2: all tests passed</div>
-            </div>
+            <div class="mac-bar" aria-hidden="true"><i></i><i></i><i></i><span>izvor · zsh · recorded session</span></div>
+            <video id="izvor-demo-video" data-src="/assets/izvor-demo.mp4" poster="/assets/izvor-poster.jpg" controls loop muted playsinline preload="metadata" style="aspect-ratio:1500/824" aria-label="Recorded terminal session: make compiles the izvor sources with clang, lexdump prints the token stream for an arithmetic expression, izvor prints the parsed syntax tree and the evaluated result for two expressions, and a malformed expression produces a parse error with its offset."></video>
           </div>
         </div>
         <div class="media-layer is-framed frame-left" data-media="1">
@@ -180,83 +176,26 @@
         </div>
         <div class="media-layer is-framed frame-right" data-media="2">
           <div class="mac-window">
-            <div class="mac-bar" aria-hidden="true"><i></i><i></i><i></i><span>lydia · agent loop</span></div>
-            <svg viewBox="0 0 800 460" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagram of Lydia's agent loop: a plain English request goes to the agent loop, which calls tools that read, edit, run and test code on your machine, driven by a local Ollama model. Nothing leaves the machine.">
-<rect x="0" y="0" width="800" height="460" fill="#0a0a0c"/>
-<defs>
-<marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-<path d="M0,0 L10,5 L0,10 z" fill="#f5f5f7"/>
-</marker>
-</defs>
-<line x1="164.8" y1="250.0" x2="179.2" y2="250.0" stroke="#f5f5f7" stroke-width="1.4" marker-end="url(#arrow)"/>
-<line x1="316.8" y1="250.0" x2="331.2" y2="250.0" stroke="#f5f5f7" stroke-width="1.4" marker-end="url(#arrow)"/>
-<line x1="468.8" y1="250.0" x2="483.2" y2="250.0" stroke="#f5f5f7" stroke-width="1.4" marker-end="url(#arrow)"/>
-<line x1="620.8" y1="250.0" x2="635.2" y2="250.0" stroke="#f5f5f7" stroke-width="1.4" marker-end="url(#arrow)"/>
-<path d="M704 200 L704 150 L248 150 L248 200" fill="none" stroke="#2997ff" stroke-width="1.4" marker-end="url(#arrow)"/>
-<text x="476.0" y="142" text-anchor="middle" font-family='"Archivo", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="12" fill="#2997ff" opacity="0.85">runs the tests, reads the failure, tries again</text>
-<rect x="30" y="200.0" width="132" height="100" fill="#0a0a0c" stroke="#f5f5f7" stroke-width="1.4"/>
-<text x="96.0" y="233.1" text-anchor="middle" dominant-baseline="middle" font-family='"Archivo", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="13" fill="#f5f5f7">You</text>
-<text x="96.0" y="250.0" text-anchor="middle" dominant-baseline="middle" font-family='"Archivo", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="13" fill="#f5f5f7">(a request in</text>
-<text x="96.0" y="266.9" text-anchor="middle" dominant-baseline="middle" font-family='"Archivo", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="13" fill="#f5f5f7">plain English)</text>
-<rect x="182" y="200.0" width="132" height="100" fill="#0a0a0c" stroke="#f5f5f7" stroke-width="1.4"/>
-<text x="248.0" y="241.6" text-anchor="middle" dominant-baseline="middle" font-family='"Archivo", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="13" fill="#f5f5f7">Agent loop</text>
-<text x="248.0" y="258.4" text-anchor="middle" dominant-baseline="middle" font-family='"Archivo", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="13" fill="#f5f5f7">(plan, act, check)</text>
-<rect x="334" y="200.0" width="132" height="100" fill="#0a0a0c" stroke="#f5f5f7" stroke-width="1.4"/>
-<text x="400.0" y="233.1" text-anchor="middle" dominant-baseline="middle" font-family='"Archivo", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="13" fill="#f5f5f7">Tools</text>
-<text x="400.0" y="250.0" text-anchor="middle" dominant-baseline="middle" font-family='"Archivo", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="13" fill="#f5f5f7">(read, edit, run,</text>
-<text x="400.0" y="266.9" text-anchor="middle" dominant-baseline="middle" font-family='"Archivo", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="13" fill="#f5f5f7">git, tests)</text>
-<rect x="486" y="200.0" width="132" height="100" fill="#0a0a0c" stroke="#f5f5f7" stroke-width="1.4"/>
-<text x="552.0" y="241.6" text-anchor="middle" dominant-baseline="middle" font-family='"Archivo", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="13" fill="#f5f5f7">Your machine</text>
-<text x="552.0" y="258.4" text-anchor="middle" dominant-baseline="middle" font-family='"Archivo", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="13" fill="#f5f5f7">(files and shell)</text>
-<rect x="638" y="200.0" width="132" height="100" fill="#0a0a0c" stroke="#2997ff" stroke-width="1.4"/>
-<text x="704.0" y="233.1" text-anchor="middle" dominant-baseline="middle" font-family='"Archivo", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="13" fill="#f5f5f7">Local Ollama</text>
-<text x="704.0" y="250.0" text-anchor="middle" dominant-baseline="middle" font-family='"Archivo", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="13" fill="#f5f5f7">model</text>
-<text x="704.0" y="266.9" text-anchor="middle" dominant-baseline="middle" font-family='"Archivo", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="13" fill="#f5f5f7">(no API key)</text>
-<text x="400.0" y="60" text-anchor="middle" font-family='"Archivo", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="20" font-weight="600" fill="#f5f5f7">Lydia · the loop</text>
-<text x="400.0" y="86" text-anchor="middle" font-family='"Archivo", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="13" fill="#f5f5f7" opacity="0.6">No API key, no account, and no code leaves the machine</text>
-</svg>
+            <div class="mac-bar" aria-hidden="true"><i></i><i></i><i></i><span>forge · ROADMAP.md</span></div>
+            <table class="roadmap-table" aria-label="FORGE roadmap: six phases from foundation to production, phase 0 complete, phase 1 in progress.">
+              <thead>
+                <tr><th scope="col">Phase</th><th scope="col">Name</th><th scope="col">Outcome</th><th scope="col">Status</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>0</td><td>Foundation</td><td>Product definition, architecture, design language, roadmap: a stranger can explain what version 1 will and won't contain</td><td class="is-scaffolded">complete</td></tr>
+                <tr><td>1</td><td>Core loop</td><td>The smallest thing that closes the loop: one device, no network, no intelligence</td><td class="is-scaffolded">in progress</td></tr>
+                <tr><td>2</td><td>Personalization</td><td>Recommendations that actually fit the person, using the evidence Phase 1 collected</td><td>—</td></tr>
+                <tr><td>3</td><td>Platform integration</td><td>Extend the loop to where the decision happens, which is usually not inside the app</td><td>—</td></tr>
+                <tr><td>4</td><td>Intelligence</td><td>Only now, and only where it beats the deterministic baseline</td><td>—</td></tr>
+                <tr><td>5</td><td>Production</td><td>Turn a working app into a shippable one</td><td>—</td></tr>
+              </tbody>
+            </table>
           </div>
         </div>
         <div class="media-layer is-framed frame-left" data-media="3">
           <div class="mac-window">
-            <div class="mac-bar" aria-hidden="true"><i></i><i></i><i></i><span>forge · PRODUCT.md</span></div>
-            <svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagram of the FORGE recommendation loop: Goal, Skills, Progress, Recommended Mission, Completion, Updated Progress, Better Recommendations, feeding back into Goal.">
-<rect x="0" y="0" width="800" height="600" fill="#0a0a0c"/>
-<defs>
-<marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-<path d="M0,0 L10,5 L0,10 z" fill="#f5f5f7"/>
-</marker>
-<marker id="arrowAccent" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-<path d="M0,0 L10,5 L0,10 z" fill="#2997ff"/>
-</marker>
-</defs>
-<line x1="461.5" y1="139.6" x2="495.5" y2="156.0" stroke="#f5f5f7" stroke-width="1.4" marker-end="url(#arrow)"/>
-<line x1="571.7" y1="221.9" x2="595.5" y2="326.1" stroke="#f5f5f7" stroke-width="1.4" marker-end="url(#arrow)"/>
-<line x1="579.5" y1="398.4" x2="521.4" y2="471.3" stroke="#2997ff" stroke-width="1.4" marker-end="url(#arrowAccent)"/>
-<line x1="403.6" y1="509.2" x2="396.4" y2="509.2" stroke="#f5f5f7" stroke-width="1.4" marker-end="url(#arrow)"/>
-<line x1="283.6" y1="477.5" x2="225.5" y2="404.7" stroke="#f5f5f7" stroke-width="1.4" marker-end="url(#arrow)"/>
-<line x1="202.8" y1="333.9" x2="226.5" y2="229.7" stroke="#f5f5f7" stroke-width="1.4" marker-end="url(#arrow)"/>
-<line x1="297.3" y1="159.5" x2="331.3" y2="143.1" stroke="#f5f5f7" stroke-width="1.4" marker-end="url(#arrow)"/>
-<rect x="316.0" y="83.0" width="168" height="54" fill="#0a0a0c" stroke="#f5f5f7" stroke-width="1.4"/>
-<text x="400.0" y="110.0" text-anchor="middle" dominant-baseline="middle" font-family='"Archivo", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="15" fill="#f5f5f7">Goal</text>
-<rect x="480.2" y="162.1" width="168" height="54" fill="#0a0a0c" stroke="#f5f5f7" stroke-width="1.4"/>
-<text x="564.2" y="189.1" text-anchor="middle" dominant-baseline="middle" font-family='"Archivo", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="15" fill="#f5f5f7">Skills</text>
-<rect x="520.7" y="339.7" width="168" height="54" fill="#0a0a0c" stroke="#f5f5f7" stroke-width="1.4"/>
-<text x="604.7" y="366.7" text-anchor="middle" dominant-baseline="middle" font-family='"Archivo", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="15" fill="#f5f5f7">Progress</text>
-<rect x="407.1" y="482.2" width="168" height="54" fill="#0a0a0c" stroke="#2997ff" stroke-width="1.4"/>
-<text x="491.1" y="499.8" text-anchor="middle" dominant-baseline="middle" font-family='"Archivo", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="15" fill="#f5f5f7">Recommended</text>
-<text x="491.1" y="518.6" text-anchor="middle" dominant-baseline="middle" font-family='"Archivo", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="15" fill="#f5f5f7">Mission</text>
-<rect x="224.9" y="482.2" width="168" height="54" fill="#0a0a0c" stroke="#f5f5f7" stroke-width="1.4"/>
-<text x="308.9" y="509.2" text-anchor="middle" dominant-baseline="middle" font-family='"Archivo", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="15" fill="#f5f5f7">Completion</text>
-<rect x="111.3" y="339.7" width="168" height="54" fill="#0a0a0c" stroke="#f5f5f7" stroke-width="1.4"/>
-<text x="195.3" y="357.4" text-anchor="middle" dominant-baseline="middle" font-family='"Archivo", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="15" fill="#f5f5f7">Updated</text>
-<text x="195.3" y="376.1" text-anchor="middle" dominant-baseline="middle" font-family='"Archivo", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="15" fill="#f5f5f7">Progress</text>
-<rect x="151.8" y="162.1" width="168" height="54" fill="#0a0a0c" stroke="#f5f5f7" stroke-width="1.4"/>
-<text x="235.8" y="179.7" text-anchor="middle" dominant-baseline="middle" font-family='"Archivo", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="15" fill="#f5f5f7">Better</text>
-<text x="235.8" y="198.4" text-anchor="middle" dominant-baseline="middle" font-family='"Archivo", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="15" fill="#f5f5f7">Recommendations</text>
-<text x="400.0" y="42" text-anchor="middle" font-family='"Archivo", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="20" font-weight="600" fill="#f5f5f7">FORGE — the recommendation loop</text>
-<text x="400.0" y="66" text-anchor="middle" font-family='"Archivo", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="13" fill="#f5f5f7" opacity="0.6">Phase 0 — architecture only, not yet built</text>
-</svg>
+            <div class="mac-bar" aria-hidden="true"><i></i><i></i><i></i><span>lydia · recorded session · model time compressed</span></div>
+            <video id="lydia-demo-video" data-src="/assets/lydia-demo.mp4" poster="/assets/lydia-poster.jpg" controls loop muted playsinline preload="metadata" style="aspect-ratio:1500/824" aria-label="Recorded Lydia session: the agent is asked to fix a failing test suite, reads the project, finds that slugify leaves a trailing hyphen, adds an rstrip call, reruns the tests, and reports all three passing. The model's thinking time is sped up; the output is unedited."></video>
           </div>
         </div>
         <!-- Project index rail -->
@@ -271,10 +210,10 @@
       <!-- Narrative panels roll over the stage -->
       <div id="project-panels" class="relative z-10 -mt-[100svh]">
 
-        <article id="tinylang" class="panel flex min-h-[100svh] items-end md:items-center" data-panel="0">
+        <article id="izvor" class="panel flex min-h-[100svh] items-end md:items-center" data-panel="0">
           <div class="panel-card">
             <p class="eyebrow">C · Compilers · In progress</p>
-            <h2 class="display-sm mt-3">tinylang</h2>
+            <h2 class="display-sm mt-3">izvor</h2>
             <p class="mt-4 text-fluid-base leading-relaxed text-paper/70">
               A programming language built from scratch in C: a lexer, a
               recursive-descent parser, and a tree-walking interpreter, then a
@@ -282,19 +221,21 @@
               real languages do it.
             </p>
             <p class="mt-4 text-fluid-base leading-relaxed text-paper/70">
-              I'm working through it by hand, task by task — every task is done
-              when its test passes. The window on this panel is the real output
-              of <code>make p0-02</code>, the task that went green this week.
+              I'm working through it by hand, task by task, and a task is done
+              when its test passes. The window on this panel is a recorded
+              session from the repo as it stands: the lexer dumping tokens, the
+              parser printing the syntax tree, and the evaluator computing the
+              answer, including what a parse error looks like.
             </p>
             <dl class="panel-points">
               <div><dt>Challenge</dt><dd>Understanding a language implementation by building one, not reading about one: source text to tokens, tokens to AST, AST to a value.</dd></div>
               <div><dt>Approach</dt><dd>An 8-phase roadmap from C fundamentals through a stack-based VM, roughly 70–90 hours of work, each task shipped with an assert-based test. Compiled with <code>-Wall -Wextra -fsanitize=undefined</code> from the first file.</dd></div>
-              <div><dt>Current state</dt><dd>Phase 0 in progress. Task 0.2 (variables and arithmetic) is green; the transcript shown is genuine, unedited output.</dd></div>
+              <div><dt>Current state</dt><dd>Phase 2 in progress. The lexer is done and the recursive-descent expression parser and evaluator shown in the recording are the newest tasks to go green. The session is genuine, unedited output.</dd></div>
             </dl>
             <div class="mt-5 flex flex-wrap gap-2">
               <span class="tag">C</span><span class="tag">Compilers</span><span class="tag">Interpreters</span>
             </div>
-            <a class="text-link" href="https://github.com/levimackay/tinylang" target="_blank" rel="noopener">View source <span aria-hidden="true">↗</span></a>
+            <a class="text-link" href="https://github.com/levimackay/izvor" target="_blank" rel="noopener">View source <span aria-hidden="true">↗</span></a>
           </div>
         </article>
 
@@ -310,12 +251,12 @@
             <p class="mt-4 text-fluid-base leading-relaxed text-paper/70">
               The full roadmap and Phase 0 scaffolding are written and
               committed; my own implementation hasn't started yet. The panel
-              shows the actual roadmap, because that's what exists — there is
+              shows the actual roadmap, because that's what exists: there is
               no REPL to screenshot, so I'm not showing one.
             </p>
             <dl class="panel-points">
               <div><dt>Challenge</dt><dd>Knowing what a database actually does under the query layer: how rows become bytes, how bytes become pages, how a B-tree makes lookup logarithmic.</dd></div>
-              <div><dt>Approach</dt><dd>Eight phases from binary file I/O to a write-ahead log, ~43–65 hours, phases 0–1 fully scaffolded with stubs, tests, and a reference. Sequenced after tinylang, which covers the C this project assumes.</dd></div>
+              <div><dt>Approach</dt><dd>Eight phases from binary file I/O to a write-ahead log, ~43–65 hours, phases 0–1 fully scaffolded with stubs, tests, and a reference. Sequenced after izvor, which covers the C this project assumes.</dd></div>
               <div><dt>Current state</dt><dd>Roadmap and scaffolding committed; implementation not started. That is what "planned build" means here.</dd></div>
             </dl>
             <div class="mt-5 flex flex-wrap gap-2">
@@ -325,7 +266,36 @@
           </div>
         </article>
 
-        <article id="lydia" class="panel flex min-h-[100svh] items-end md:items-center" data-panel="2">
+        <article id="forge" class="panel flex min-h-[100svh] items-end md:items-center" data-panel="2">
+          <div class="panel-card">
+            <p class="eyebrow">Swift 6 · iOS 26 · Phase 0</p>
+            <h2 class="display-sm mt-3">FORGE</h2>
+            <p class="mt-4 text-fluid-base leading-relaxed text-paper/70">
+              A native iOS personal development system that turns long-term
+              goals into adaptive daily missions: you complete a mission, your
+              skill progress updates, and the next recommendation gets better.
+            </p>
+            <p class="mt-4 text-fluid-base leading-relaxed text-paper/70">
+              Phase 0 is complete: product definition, architecture, decision
+              records, design language, and roadmap, written so a stranger
+              could explain what version 1 will and won't contain. There is no
+              app UI yet, and this panel doesn't pretend otherwise: what you're
+              looking at is the actual roadmap, phase by phase, with the one
+              in-progress phase marked.
+            </p>
+            <dl class="panel-points">
+              <div><dt>Challenge</dt><dd>Long-term goals fail at the daily level: nothing translates "where I want to be in two years" into "what I should do today."</dd></div>
+              <div><dt>Approach</dt><dd>A closed loop (goal, skills, progress, recommended mission, completion, updated progress, better recommendations) with a deterministic scoring function that can justify each recommendation in a sentence. Swift 6, strict concurrency from the first commit.</dd></div>
+              <div><dt>Current state</dt><dd>Phase 1 (core loop) in progress: the Xcode project and the ForgeKit / ForgeData package split are in place with strict concurrency on from the first commit. The domain model, persistence, and the scoring function come next. Speed is explicitly not a goal.</dd></div>
+            </dl>
+            <div class="mt-5 flex flex-wrap gap-2">
+              <span class="tag">Swift 6</span><span class="tag">iOS 26</span><span class="tag">SwiftData</span>
+            </div>
+            <a class="text-link" href="https://github.com/levimackay/forge" target="_blank" rel="noopener">View source <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+
+        <article id="lydia" class="panel flex min-h-[100svh] items-end md:items-center md:justify-end" data-panel="3">
           <div class="panel-card">
             <p class="eyebrow">Python · Ollama · Shipped</p>
             <h2 class="display-sm mt-3">Lydia</h2>
@@ -355,34 +325,6 @@
           </div>
         </article>
 
-        <article id="forge" class="panel flex min-h-[100svh] items-end md:items-center md:justify-end" data-panel="3">
-          <div class="panel-card">
-            <p class="eyebrow">Swift 6 · iOS 26 · Phase 0</p>
-            <h2 class="display-sm mt-3">FORGE</h2>
-            <p class="mt-4 text-fluid-base leading-relaxed text-paper/70">
-              A native iOS personal development system that turns long-term
-              goals into adaptive daily missions: you complete a mission, your
-              skill progress updates, and the next recommendation gets better.
-            </p>
-            <p class="mt-4 text-fluid-base leading-relaxed text-paper/70">
-              Phase 0 is complete — product definition, architecture, decision
-              records, design language, and roadmap, written so a stranger
-              could explain what version 1 will and won't contain. There is no
-              app UI yet, and this panel doesn't pretend otherwise: what you're
-              looking at is the core loop the whole architecture is built
-              around.
-            </p>
-            <dl class="panel-points">
-              <div><dt>Challenge</dt><dd>Long-term goals fail at the daily level: nothing translates "where I want to be in two years" into "what I should do today."</dd></div>
-              <div><dt>Approach</dt><dd>A closed loop — Goal → Skills → Progress → Recommended Mission → Completion → Updated Progress → Better Recommendations — with a deterministic scoring function that can justify each recommendation in a sentence. Swift 6, strict concurrency from the first commit.</dd></div>
-              <div><dt>Current state</dt><dd>Phase 0 (foundation) complete; Phase 1 (the smallest thing that closes the loop, one device, no network) is next. Speed is explicitly not a goal.</dd></div>
-            </dl>
-            <div class="mt-5 flex flex-wrap gap-2">
-              <span class="tag">Swift 6</span><span class="tag">iOS 26</span><span class="tag">SwiftData</span>
-            </div>
-            <a class="text-link" href="https://github.com/levimackay/forge" target="_blank" rel="noopener">View source <span aria-hidden="true">↗</span></a>
-          </div>
-        </article>
 
       </div>
 
