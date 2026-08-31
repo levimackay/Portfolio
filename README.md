@@ -2,27 +2,27 @@
 
 **Live site → [levimackay.com](https://levimackay.com/)**
 
-Hey, I'm Levi. This repo is the central hub for the projects I've built while working through my CS degree at BYU–Idaho — a mix of computer vision, AI tooling, data engineering, and automation. It's also the source for my personal portfolio site: a single-page, no-build HTML/CSS/JS site with a WebGL hero scene, scroll animations, and a hidden interactive terminal easter egg.
+Hey, I'm Levi. This repo is the deploy target for my portfolio site: it holds the built HTML/CSS/JS output plus the `CNAME` GitHub Pages serves from. It is not the buildable source — the source (and its build tooling) lives in a separate private repo. What's tracked here is three pages (home, about, projects) with a WebGL hero scene, GSAP/Lenis-driven scroll animations, and an interactive terminal.
 
 ## Features
 
-- **Single-page portfolio** — hero, about, project case studies, skills, and contact sections, all in `index.html`.
-- **WebGL hero animation** — a sphere of shards that assembles on load and reacts to scroll, built with Three.js (`scene.js`, vendored at `assets/vendor/three.min.js`).
-- **Scroll-driven UI** — a scroll-progress bar, reveal-on-scroll sections, and an animated stat counter, all hand-rolled in `script.js` (no animation library).
-- **Interactive terminal easter egg** — press `T` or click the terminal button to open a fake shell with commands like `whoami`, `bio`, `projects`, `skills`, `contact`, `ls`, and `explode` (replays the hero animation).
-- **Copy-to-clipboard contact** — clicking the email button copies it and shows a toast confirmation.
-- **Project write-ups** — each featured project has its own README under `projects/`.
+- **Three pages** — `index.html` (hero, work list, Main Street Sites business section, skills, contact), `about/index.html`, and `projects/index.html` (case studies for the featured projects plus an "also shipped" grid).
+- **WebGL hero scene** — a Three.js scene, lazy-loaded from a separate chunk (`assets/scene-*.js`) after scroll settles, skipped entirely under `prefers-reduced-motion` or Data Saver.
+- **Scroll-driven UI** — GSAP with ScrollTrigger for reveals, a scrubbed project stage, and animated stat counters; Lenis for smooth scroll. Both fall back to instant, unanimated state under `prefers-reduced-motion`.
+- **Interactive terminal** — press `T` (outside form fields) or use the on-page terminal control to open a command shell; `Escape` closes it, focus is trapped while it's open.
+- **Copy-to-clipboard contact** and a mobile nav menu with focus handling.
+- **Project write-ups** — case studies for the featured projects live in `projects/index.html`; a few older projects also keep source and a README under `projects/<name>/`.
 
 ## Tech stack
 
-- **HTML / CSS / vanilla JavaScript** — no framework, no bundler, no build step for the site itself.
-- **Three.js** (vendored `.js` file, loaded via `<script>` tag — not an npm dependency) for the hero WebGL scene.
-- Google Fonts (Inter) loaded via `<link>`.
-- Individual projects under `projects/` use their own stacks — Python, OpenCV, MediaPipe, MySQL, and Tkinter — see each project's README for specifics.
+- Built HTML/CSS/JS — the JS/CSS bundles under `assets/` (`main-*.js`, `main-*.css`, `scene-*.js`) are hashed build output, not hand-authored files. There's no `package.json` or build step in this repo; whatever's committed here is what ships.
+- **Three.js** for the hero scene, **GSAP + ScrollTrigger** for scroll animation, **Lenis** for smooth scrolling — all bundled into the built JS, not loaded from a CDN.
+- Fonts are self-hosted variable fonts (`fonts/`): Archivo for display and body text, Martian Mono for the terminal and technical labels. No Google Fonts.
+- A few older project folders under `projects/` use their own stacks — Python, OpenCV, MediaPipe, MySQL, Tkinter — see each one's README.
 
 ## Setup / running locally
 
-There's no build step or package manager involved in the site itself — it's static files. To view it locally, serve the repo root with any static file server (opening `index.html` directly also works, but a local server avoids `file://` restrictions on things like fetch/video):
+This repo has no build step of its own — it's already-built static output. To view it locally, serve the repo root with any static file server (opening `index.html` directly also works, but a local server avoids `file://` restrictions on things like fetch/video):
 
 ```bash
 git clone https://github.com/levimackay/Portfolio.git
@@ -31,32 +31,35 @@ python3 -m http.server 8000
 # then open http://localhost:8000
 ```
 
+To change the site's actual content, layout, or styling, edit it in the private source repo and redeploy; editing the built files here directly will just get overwritten by the next deploy.
+
 ## Usage
 
 - Browse the live site at the link above, or run it locally as described.
-- Press **`T`** (or click the `>_ terminal` link in the footer) to open the interactive terminal and type `help` for the list of commands.
-- Project source code and write-ups live under `projects/`; each links out to a public GitHub repo where relevant (e.g. Lydia, AI Security Scanner).
+- Press **`T`** to open the interactive terminal and type `help` for the list of commands.
+- A few older projects keep source and a README under `projects/<name>/` even though they're no longer linked from the live site's nav.
 
 ## Featured projects
 
+Case studies on `/projects`, in the order they appear:
+
 | Project | What it is | Stack |
 |---|---|---|
-| [SwingOS](projects/swing-analyzer) | Real-time biomechanical feedback for baseball swings using pose estimation | Python, OpenCV, MediaPipe |
-| [Lydia](https://github.com/levimackay/lydia-cli) | Local, Claude-Code-style coding agent — no API keys, nothing sent to the cloud | Python, Ollama, Agents |
-| [AI Security Scanner](https://github.com/levimackay/SecurityScanner) | AI-powered vulnerability detection with severity ratings and suggested fixes | Python, Gemini API |
-| [Foreman's Friend](projects/landscape-estimator) | Job-site material and labor estimator, born from my time as a landscape foreman | Python, CLI |
-| [Baseball Analytics Engine](projects/baseball-database) | Relational schema and layered queries for player performance trends | MySQL |
-| [BCS Flashcards](projects/flashcard-app) | Vocabulary tool I built to study Bosnian, Croatian, and Serbian | Python, Tkinter |
+| [tinylang](https://github.com/levimackay/tinylang) | A programming language built from scratch: lexer, recursive-descent parser, tree-walking interpreter, then a bytecode compiler and stack VM. In progress. | C |
+| [minidb](https://github.com/levimackay/minidb) | A single-file database engine: binary file formats, a pager, B-trees, cursors, a small SQL parser. Roadmap and Phase 0 scaffolding committed, implementation not started. | C |
+| [Lydia](https://github.com/levimackay/lydia-cli) | A local coding agent that reads, edits, tests, and drives git through a local Ollama model, nothing sent to the cloud | Python, Ollama |
+| [FORGE](https://github.com/levimackay/forge) | A native iOS app turning long-term goals into adaptive daily missions. Phase 0 (product definition, architecture) complete, no app UI yet. | Swift 6, iOS 26 |
+
+Also shown on `/projects` under "Also shipped": [Canvas-Risk](https://github.com/levimackay/canvas-risk), a Serbo-Croatian dictionary project, [SwingOS](projects/swing-analyzer) (baseball swing pose tracking), leetcoach, flipper-lab, and microplastics-idaho. The homepage also has a section on Main Street Sites, a web design business for local small businesses.
+
+Older project folders that still have source and a README here but are no longer linked from the live site: [Foreman's Friend](projects/landscape-estimator) (job-site estimator), [Baseball Analytics Engine](projects/baseball-database) (MySQL schema and queries), and [BCS Flashcards](projects/flashcard-app) (Bosnian/Croatian/Serbian vocab tool).
 
 ## Repo layout
 
-- **`index.html` / `styles.css` / `script.js` / `scene.js`** — the portfolio site itself.
-- **`assets/`** — demo videos, screenshots, and the vendored Three.js library used by the site.
-- **`projects/`** — source code and READMEs for the featured projects above.
-- **`archive/`** — early coursework and experiments (Python and web dev assignments), kept out of the way of the main projects.
-- **`byui_career_quest.html`** — a standalone browser mini-game, not linked from the main site.
-- **`SiteRemodelTest/`** — a work-in-progress redesign experiment for the portfolio site, not yet live.
-- **`dist/`** — a build output directory (git-ignored); not part of the tracked source.
+- **`index.html`, `about/index.html`, `projects/index.html`** — the three pages of the built site.
+- **`assets/`** — hashed JS/CSS bundles, demo videos, and screenshots. Not meant to be hand-edited; they're build output.
+- **`fonts/`** — self-hosted Archivo and Martian Mono variable font files.
+- **`projects/`** — a couple of older projects' source code and READMEs (see above); most of the case-study content on `/projects` lives in `projects/index.html` itself, not in these subfolders.
 
 ## Contributors
 
