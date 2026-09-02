@@ -45,10 +45,10 @@ Case studies on `/projects`, in the order they appear:
 
 | Project | What it is | Stack |
 |---|---|---|
-| [tinylang](https://github.com/levimackay/tinylang) | A programming language built from scratch: lexer, recursive-descent parser, tree-walking interpreter, then a bytecode compiler and stack VM. In progress. | C |
+| [izvor](https://github.com/levimackay/izvor) | A programming language built from scratch: lexer, recursive-descent parser, tree-walking interpreter, then a bytecode compiler and stack VM. Lexer and parser done; the interpreter runs arithmetic end to end. | C |
 | [minidb](https://github.com/levimackay/minidb) | A single-file database engine: binary file formats, a pager, B-trees, cursors, a small SQL parser. Roadmap and Phase 0 scaffolding committed, implementation not started. | C |
 | [Lydia](https://github.com/levimackay/lydia-cli) | A local coding agent that reads, edits, tests, and drives git through a local Ollama model, nothing sent to the cloud | Python, Ollama |
-| [FORGE](https://github.com/levimackay/forge) | A native iOS app turning long-term goals into adaptive daily missions. Phase 0 (product definition, architecture) complete, no app UI yet. | Swift 6, iOS 26 |
+| [FORGE](https://github.com/levimackay/forge) | A native iOS app turning long-term goals into adaptive daily missions. Phase 1 (core loop) in progress: Xcode project and package split in place, domain model and persistence next. | Swift 6, iOS 26 |
 
 Also shown on `/projects` under "Also shipped": [Canvas-Risk](https://github.com/levimackay/canvas-risk), a Serbo-Croatian dictionary project, [SwingOS](projects/swing-analyzer) (baseball swing pose tracking), leetcoach, flipper-lab, and microplastics-idaho. The homepage also has a section on Main Street Sites, a web design business for local small businesses.
 
