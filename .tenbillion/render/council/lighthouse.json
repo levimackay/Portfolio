@@ -1,0 +1,21 @@
+{
+  "preset": "desktop",
+  "performance": 0.82,
+  "accessibility": 0.96,
+  "lcpMs": 607.0073,
+  "clsScore": 0,
+  "desktop": {
+    "preset": "desktop",
+    "performance": 0.82,
+    "accessibility": 0.96,
+    "lcpMs": 607.0073,
+    "clsScore": 0
+  },
+  "mobile": {
+    "preset": "mobile",
+    "performance": 0.73,
+    "accessibility": 0.96,
+    "lcpMs": 5459.6242999999995,
+    "clsScore": 0
+  }
+}

@@ -1,0 +1,2278 @@
+{
+  "target": ".",
+  "url": "http://127.0.0.1:53354/",
+  "outDir": "/Users/levimackay/Developer/Portfolio/.tenbillion/render/council",
+  "widths": {
+    "390": {
+      "width": 390,
+      "height": 844,
+      "documentHeight": 3960,
+      "opticalCentre": [
+        {
+          "pass": true,
+          "group": "390",
+          "measurement": "optical-centre",
+          "selector": "#hero-heading",
+          "width": 390,
+          "measured": 0,
+          "expected": 4,
+          "defect": "centred box sits right of optical centre",
+          "expectedText": "within 4px",
+          "gotText": "0px"
+        }
+      ],
+      "sectionRhythm": {
+        "sections": [
+          {
+            "selector": "#hero",
+            "top": 0,
+            "height": 844,
+            "paddingTop": 0,
+            "paddingBottom": 0,
+            "paddingTotal": 0
+          },
+          {
+            "selector": "#console",
+            "top": 844,
+            "height": 646,
+            "paddingTop": 48,
+            "paddingBottom": 79,
+            "paddingTotal": 127
+          },
+          {
+            "selector": "#stats",
+            "top": 1490,
+            "height": 359,
+            "paddingTop": 0,
+            "paddingBottom": 0,
+            "paddingTotal": 0
+          },
+          {
+            "selector": "#work",
+            "top": 1849,
+            "height": 1361,
+            "paddingTop": 79,
+            "paddingBottom": 79,
+            "paddingTotal": 158
+          },
+          {
+            "selector": "#contact",
+            "top": 3211,
+            "height": 660,
+            "paddingTop": 91,
+            "paddingBottom": 91,
+            "paddingTotal": 182
+          }
+        ],
+        "paddingCv": 0.8376,
+        "densityAlternation": 0
+      },
+      "typeScale": {
+        "roles": {
+          "h1": 34,
+          "h2": 26,
+          "h3": null,
+          "p": 16,
+          "small": null
+        },
+        "steps": [
+          {
+            "from": "h1",
+            "to": "h2",
+            "ratio": 1.308
+          },
+          {
+            "from": "h2",
+            "to": "p",
+            "ratio": 1.625
+          }
+        ]
+      },
+      "contrast": [
+        {
+          "measurement": "contrast-on-imagery",
+          "selector": "#site-nav > div:nth-of-type(1) > a",
+          "width": 390,
+          "fontSize": 15,
+          "fontWeight": 600,
+          "large": false,
+          "textLuminance": 0.0001,
+          "backgroundLuminance": 0.0039,
+          "measured": 1.08,
+          "expected": 4.5,
+          "pass": false
+        },
+        {
+          "measurement": "contrast-on-imagery",
+          "selector": "#hero-content > p:nth-of-type(1)",
+          "width": 390,
+          "fontSize": 13,
+          "fontWeight": 600,
+          "large": false,
+          "textLuminance": 0.2982,
+          "backgroundLuminance": 0.0033,
+          "measured": 6.54,
+          "expected": 4.5,
+          "pass": true
+        },
+        {
+          "measurement": "contrast-on-imagery",
+          "selector": "#hero-heading",
+          "width": 390,
+          "fontSize": 34,
+          "fontWeight": 700,
+          "large": true,
+          "textLuminance": 0.9143,
+          "backgroundLuminance": 0.0044,
+          "measured": 17.73,
+          "expected": 3,
+          "pass": true
+        },
+        {
+          "measurement": "contrast-on-imagery",
+          "selector": "#hero-heading > span",
+          "width": 390,
+          "fontSize": 34,
+          "fontWeight": 700,
+          "large": true,
+          "textLuminance": 0.0001,
+          "backgroundLuminance": 0.0036,
+          "measured": 1.07,
+          "expected": 3,
+          "pass": false
+        },
+        {
+          "measurement": "contrast-on-imagery",
+          "selector": "#hero-content > p:nth-of-type(2)",
+          "width": 390,
+          "fontSize": 15,
+          "fontWeight": 400,
+          "large": false,
+          "textLuminance": null,
+          "backgroundLuminance": null,
+          "measured": null,
+          "expected": 4.5,
+          "pass": true,
+          "skipped": true,
+          "reason": "not fully visible after scrolling (mid transition or hidden)"
+        },
+        {
+          "measurement": "contrast-on-imagery",
+          "selector": "#hero-content > div > a:nth-of-type(1)",
+          "width": 390,
+          "fontSize": 15,
+          "fontWeight": 600,
+          "large": false,
+          "textLuminance": null,
+          "backgroundLuminance": null,
+          "measured": null,
+          "expected": 4.5,
+          "pass": true,
+          "skipped": true,
+          "reason": "not fully visible after scrolling (mid transition or hidden)"
+        },
+        {
+          "measurement": "contrast-on-imagery",
+          "selector": "#hero-content > div > a:nth-of-type(2)",
+          "width": 390,
+          "fontSize": 15,
+          "fontWeight": 600,
+          "large": false,
+          "textLuminance": null,
+          "backgroundLuminance": null,
+          "measured": null,
+          "expected": 4.5,
+          "pass": true,
+          "skipped": true,
+          "reason": "not fully visible after scrolling (mid transition or hidden)"
+        },
+        {
+          "measurement": "contrast-on-imagery",
+          "selector": "#hero-content > div > a:nth-of-type(3)",
+          "width": 390,
+          "fontSize": 15,
+          "fontWeight": 600,
+          "large": false,
+          "textLuminance": null,
+          "backgroundLuminance": null,
+          "measured": null,
+          "expected": 4.5,
+          "pass": true,
+          "skipped": true,
+          "reason": "not fully visible after scrolling (mid transition or hidden)"
+        }
+      ],
+      "layout": {
+        "elements": [
+          {
+            "selector": "#scene",
+            "top": 0,
+            "left": 0,
+            "width": 390,
+            "clipped": false,
+            "overflowsViewport": false,
+            "orderIndex": 0
+          },
+          {
+            "selector": "#site-nav",
+            "top": 0,
+            "left": 0,
+            "width": 390,
+            "clipped": false,
+            "overflowsViewport": false,
+            "orderIndex": 1
+          },
+          {
+            "selector": "#nav-toggle",
+            "top": 14,
+            "left": 330,
+            "width": 36,
+            "clipped": false,
+            "overflowsViewport": false,
+            "orderIndex": 5
+          },
+          {
+            "selector": "#top",
+            "top": 0,
+            "left": 0,
+            "width": 390,
+            "clipped": false,
+            "overflowsViewport": false,
+            "orderIndex": 2
+          },
+          {
+            "selector": "#hero",
+            "top": 0,
+            "left": 0,
+            "width": 390,
+            "clipped": false,
+            "overflowsViewport": false,
+            "orderIndex": 3
+          },
+          {
+            "selector": "#hero-content",
+            "top": 0,
+            "left": 0,
+            "width": 390,
+            "clipped": false,
+            "overflowsViewport": false,
+            "orderIndex": 4
+          },
+          {
+            "selector": "#hero-heading",
+            "top": 250,
+            "left": 24,
+            "width": 342,
+            "clipped": false,
+            "overflowsViewport": false,
+            "orderIndex": 6
+          },
+          {
+            "selector": "#console",
+            "top": 844,
+            "left": 0,
+            "width": 390,
+            "clipped": false,
+            "overflowsViewport": false,
+            "orderIndex": 7
+          },
+          {
+            "selector": "#console-heading",
+            "top": 925,
+            "left": 24,
+            "width": 342,
+            "clipped": false,
+            "overflowsViewport": false,
+            "orderIndex": 8
+          },
+          {
+            "selector": "#console-output",
+            "top": 1180,
+            "left": 25,
+            "width": 340,
+            "clipped": false,
+            "overflowsViewport": false,
+            "orderIndex": 9
+          },
+          {
+            "selector": "#console-welcome",
+            "top": 1196,
+            "left": 41,
+            "width": 308,
+            "clipped": false,
+            "overflowsViewport": false,
+            "orderIndex": 10
+          },
+          {
+            "selector": "#console-input",
+            "top": 1380,
+            "left": 57,
+            "width": 292,
+            "clipped": false,
+            "overflowsViewport": false,
+            "orderIndex": 11
+          },
+          {
+            "selector": "#stats",
+            "top": 1490,
+            "left": 0,
+            "width": 390,
+            "clipped": false,
+            "overflowsViewport": false,
+            "orderIndex": 12
+          },
+          {
+            "selector": "#work",
+            "top": 1849,
+            "left": 0,
+            "width": 390,
+            "clipped": false,
+            "overflowsViewport": false,
+            "orderIndex": 13
+          },
+          {
+            "selector": "#work-heading",
+            "top": 1962,
+            "left": 24,
+            "width": 342,
+            "clipped": false,
+            "overflowsViewport": false,
+            "orderIndex": 14
+          },
+          {
+            "selector": "#contact",
+            "top": 3211,
+            "left": 0,
+            "width": 390,
+            "clipped": false,
+            "overflowsViewport": false,
+            "orderIndex": 15
+          },
+          {
+            "selector": "#contact-heading",
+            "top": 3346,
+            "left": 24,
+            "width": 342,
+            "clipped": false,
+            "overflowsViewport": false,
+            "orderIndex": 16
+          },
+          {
+            "selector": "#year",
+            "top": 3908,
+            "left": 37,
+            "width": 30,
+            "clipped": false,
+            "overflowsViewport": false,
+            "orderIndex": 17
+          }
+        ],
+        "scrollWidth": 390,
+        "horizontalOverflow": false,
+        "orderShift": [
+          {
+            "selector": "#hero-heading",
+            "at1440": 5,
+            "at390": 6
+          },
+          {
+            "selector": "#console",
+            "at1440": 6,
+            "at390": 7
+          },
+          {
+            "selector": "#console-heading",
+            "at1440": 9,
+            "at390": 8
+          },
+          {
+            "selector": "#console-output",
+            "at1440": 7,
+            "at390": 9
+          },
+          {
+            "selector": "#console-welcome",
+            "at1440": 8,
+            "at390": 10
+          },
+          {
+            "selector": "#console-input",
+            "at1440": 10,
+            "at390": 11
+          },
+          {
+            "selector": "#stats",
+            "at1440": 11,
+            "at390": 12
+          },
+          {
+            "selector": "#work",
+            "at1440": 12,
+            "at390": 13
+          },
+          {
+            "selector": "#work-heading",
+            "at1440": 13,
+            "at390": 14
+          },
+          {
+            "selector": "#contact",
+            "at1440": 14,
+            "at390": 15
+          },
+          {
+            "selector": "#contact-heading",
+            "at1440": 15,
+            "at390": 16
+          },
+          {
+            "selector": "#year",
+            "at1440": 16,
+            "at390": 17
+          }
+        ]
+      }
+    },
+    "768": {
+      "width": 768,
+      "height": 1024,
+      "documentHeight": 3883,
+      "opticalCentre": [
+        {
+          "pass": true,
+          "group": "768",
+          "measurement": "optical-centre",
+          "selector": "#hero-heading",
+          "width": 768,
+          "measured": 0,
+          "expected": 4,
+          "defect": "centred box sits left of optical centre",
+          "expectedText": "within 4px",
+          "gotText": "0px"
+        }
+      ],
+      "sectionRhythm": {
+        "sections": [
+          {
+            "selector": "#hero",
+            "top": 0,
+            "height": 1024,
+            "paddingTop": 0,
+            "paddingBottom": 0,
+            "paddingTotal": 0
+          },
+          {
+            "selector": "#console",
+            "top": 1024,
+            "height": 736,
+            "paddingTop": 48,
+            "paddingBottom": 102,
+            "paddingTotal": 150
+          },
+          {
+            "selector": "#stats",
+            "top": 1760,
+            "height": 202,
+            "paddingTop": 0,
+            "paddingBottom": 0,
+            "paddingTotal": 0
+          },
+          {
+            "selector": "#work",
+            "top": 1962,
+            "height": 1233,
+            "paddingTop": 102,
+            "paddingBottom": 102,
+            "paddingTotal": 204
+          },
+          {
+            "selector": "#contact",
+            "top": 3196,
+            "height": 599,
+            "paddingTop": 118,
+            "paddingBottom": 118,
+            "paddingTotal": 236
+          }
+        ],
+        "paddingCv": 0.8491,
+        "densityAlternation": 0
+      },
+      "typeScale": {
+        "roles": {
+          "h1": 47,
+          "h2": 32,
+          "h3": null,
+          "p": 16,
+          "small": null
+        },
+        "steps": [
+          {
+            "from": "h1",
+            "to": "h2",
+            "ratio": 1.469
+          },
+          {
+            "from": "h2",
+            "to": "p",
+            "ratio": 2
+          }
+        ]
+      },
+      "contrast": [
+        {
+          "measurement": "contrast-on-imagery",
+          "selector": "#site-nav > div:nth-of-type(1) > a",
+          "width": 768,
+          "fontSize": 15,
+          "fontWeight": 600,
+          "large": false,
+          "textLuminance": 0.0001,
+          "backgroundLuminance": 0.0035,
+          "measured": 1.07,
+          "expected": 4.5,
+          "pass": false
+        },
+        {
+          "measurement": "contrast-on-imagery",
+          "selector": "#site-nav > div:nth-of-type(1) > nav > a:nth-of-type(1)",
+          "width": 768,
+          "fontSize": 13,
+          "fontWeight": 500,
+          "large": false,
+          "textLuminance": 0.0001,
+          "backgroundLuminance": 0.0036,
+          "measured": 1.07,
+          "expected": 4.5,
+          "pass": false
+        },
+        {
+          "measurement": "contrast-on-imagery",
+          "selector": "#site-nav > div:nth-of-type(1) > nav > a:nth-of-type(2)",
+          "width": 768,
+          "fontSize": 13,
+          "fontWeight": 500,
+          "large": false,
+          "textLuminance": 0.0001,
+          "backgroundLuminance": 0.0031,
+          "measured": 1.06,
+          "expected": 4.5,
+          "pass": false
+        },
+        {
+          "measurement": "contrast-on-imagery",
+          "selector": "#site-nav > div:nth-of-type(1) > nav > a:nth-of-type(3)",
+          "width": 768,
+          "fontSize": 13,
+          "fontWeight": 500,
+          "large": false,
+          "textLuminance": 0.0001,
+          "backgroundLuminance": 0.0067,
+          "measured": 1.13,
+          "expected": 4.5,
+          "pass": false
+        },
+        {
+          "measurement": "contrast-on-imagery",
+          "selector": "#site-nav > div:nth-of-type(1) > nav > a:nth-of-type(4)",
+          "width": 768,
+          "fontSize": 13,
+          "fontWeight": 500,
+          "large": false,
+          "textLuminance": 0.9143,
+          "backgroundLuminance": 0.0138,
+          "measured": 15.11,
+          "expected": 4.5,
+          "pass": true
+        },
+        {
+          "measurement": "contrast-on-imagery",
+          "selector": "#hero-content > p:nth-of-type(1)",
+          "width": 768,
+          "fontSize": 13,
+          "fontWeight": 600,
+          "large": false,
+          "textLuminance": 0.2982,
+          "backgroundLuminance": 0.004,
+          "measured": 6.45,
+          "expected": 4.5,
+          "pass": true
+        },
+        {
+          "measurement": "contrast-on-imagery",
+          "selector": "#hero-heading",
+          "width": 768,
+          "fontSize": 47,
+          "fontWeight": 700,
+          "large": true,
+          "textLuminance": 0.9143,
+          "backgroundLuminance": 0.0061,
+          "measured": 17.2,
+          "expected": 3,
+          "pass": true
+        },
+        {
+          "measurement": "contrast-on-imagery",
+          "selector": "#hero-heading > span",
+          "width": 768,
+          "fontSize": 47,
+          "fontWeight": 700,
+          "large": true,
+          "textLuminance": 0.0001,
+          "backgroundLuminance": 0.0066,
+          "measured": 1.13,
+          "expected": 3,
+          "pass": false
+        },
+        {
+          "measurement": "contrast-on-imagery",
+          "selector": "#hero-content > p:nth-of-type(2)",
+          "width": 768,
+          "fontSize": 17,
+          "fontWeight": 400,
+          "large": false,
+          "textLuminance": null,
+          "backgroundLuminance": null,
+          "measured": null,
+          "expected": 4.5,
+          "pass": true,
+          "skipped": true,
+          "reason": "not fully visible after scrolling (mid transition or hidden)"
+        },
+        {
+          "measurement": "contrast-on-imagery",
+          "selector": "#hero-content > div > a:nth-of-type(1)",
+          "width": 768,
+          "fontSize": 15,
+          "fontWeight": 600,
+          "large": false,
+          "textLuminance": null,
+          "backgroundLuminance": null,
+          "measured": null,
+          "expected": 4.5,
+          "pass": true,
+          "skipped": true,
+          "reason": "not fully visible after scrolling (mid transition or hidden)"
+        },
+        {
+          "measurement": "contrast-on-imagery",
+          "selector": "#hero-content > div > a:nth-of-type(2)",
+          "width": 768,
+          "fontSize": 15,
+          "fontWeight": 600,
+          "large": false,
+          "textLuminance": null,
+          "backgroundLuminance": null,
+          "measured": null,
+          "expected": 4.5,
+          "pass": true,
+          "skipped": true,
+          "reason": "not fully visible after scrolling (mid transition or hidden)"
+        },
+        {
+          "measurement": "contrast-on-imagery",
+          "selector": "#hero-content > div > a:nth-of-type(3)",
+          "width": 768,
+          "fontSize": 15,
+          "fontWeight": 600,
+          "large": false,
+          "textLuminance": null,
+          "backgroundLuminance": null,
+          "measured": null,
+          "expected": 4.5,
+          "pass": true,
+          "skipped": true,
+          "reason": "not fully visible after scrolling (mid transition or hidden)"
+        }
+      ],
+      "layout": {
+        "elements": [
+          {
+            "selector": "#scene",
+            "top": 0,
+            "left": 0,
+            "width": 768,
+            "clipped": false,
+            "overflowsViewport": false,
+            "orderIndex": 0
+          },
+          {
+            "selector": "#site-nav",
+            "top": 0,
+            "left": 0,
+            "width": 768,
+            "clipped": false,
+            "overflowsViewport": false,
+            "orderIndex": 1
+          },
+          {
+            "selector": "#top",
+            "top": 0,
+            "left": 0,
+            "width": 768,
+            "clipped": false,
+            "overflowsViewport": false,
+            "orderIndex": 2
+          },
+          {
+            "selector": "#hero",
+            "top": 0,
+            "left": 0,
+            "width": 768,
+            "clipped": false,
+            "overflowsViewport": false,
+            "orderIndex": 3
+          },
+          {
+            "selector": "#hero-content",
+            "top": 0,
+            "left": 0,
+            "width": 768,
+            "clipped": false,
+            "overflowsViewport": false,
+            "orderIndex": 4
+          },
+          {
+            "selector": "#hero-heading",
+            "top": 380,
+            "left": 64,
+            "width": 639,
+            "clipped": false,
+            "overflowsViewport": false,
+            "orderIndex": 5
+          },
+          {
+            "selector": "#console",
+            "top": 1024,
+            "left": 0,
+            "width": 768,
+            "clipped": false,
+            "overflowsViewport": false,
+            "orderIndex": 6
+          },
+          {
+            "selector": "#console-heading",
+            "top": 1105,
+            "left": 24,
+            "width": 720,
+            "clipped": false,
+            "overflowsViewport": false,
+            "orderIndex": 7
+          },
+          {
+            "selector": "#console-output",
+            "top": 1337,
+            "left": 25,
+            "width": 718,
+            "clipped": false,
+            "overflowsViewport": false,
+            "orderIndex": 8
+          },
+          {
+            "selector": "#console-welcome",
+            "top": 1353,
+            "left": 41,
+            "width": 686,
+            "clipped": false,
+            "overflowsViewport": false,
+            "orderIndex": 9
+          },
+          {
+            "selector": "#console-input",
+            "top": 1627,
+            "left": 57,
+            "width": 670,
+            "clipped": false,
+            "overflowsViewport": false,
+            "orderIndex": 10
+          },
+          {
+            "selector": "#stats",
+            "top": 1760,
+            "left": 0,
+            "width": 768,
+            "clipped": false,
+            "overflowsViewport": false,
+            "orderIndex": 11
+          },
+          {
+            "selector": "#work",
+            "top": 1962,
+            "left": 0,
+            "width": 768,
+            "clipped": false,
+            "overflowsViewport": false,
+            "orderIndex": 12
+          },
+          {
+            "selector": "#work-heading",
+            "top": 2097,
+            "left": 24,
+            "width": 720,
+            "clipped": false,
+            "overflowsViewport": false,
+            "orderIndex": 13
+          },
+          {
+            "selector": "#contact",
+            "top": 3196,
+            "left": 0,
+            "width": 768,
+            "clipped": false,
+            "overflowsViewport": false,
+            "orderIndex": 14
+          },
+          {
+            "selector": "#contact-heading",
+            "top": 3358,
+            "left": 24,
+            "width": 720,
+            "clipped": false,
+            "overflowsViewport": false,
+            "orderIndex": 15
+          },
+          {
+            "selector": "#year",
+            "top": 3832,
+            "left": 37,
+            "width": 30,
+            "clipped": false,
+            "overflowsViewport": false,
+            "orderIndex": 16
+          }
+        ],
+        "scrollWidth": 768,
+        "horizontalOverflow": false,
+        "orderShift": []
+      }
+    },
+    "1440": {
+      "width": 1440,
+      "height": 900,
+      "documentHeight": 3818,
+      "opticalCentre": [
+        {
+          "pass": true,
+          "group": "1440",
+          "measurement": "optical-centre",
+          "selector": "#hero-heading",
+          "width": 1440,
+          "measured": 0,
+          "expected": 4,
+          "defect": "centred box sits left of optical centre",
+          "expectedText": "within 4px",
+          "gotText": "0px"
+        }
+      ],
+      "sectionRhythm": {
+        "sections": [
+          {
+            "selector": "#hero",
+            "top": 0,
+            "height": 900,
+            "paddingTop": 0,
+            "paddingBottom": 0,
+            "paddingTotal": 0
+          },
+          {
+            "selector": "#console",
+            "top": 900,
+            "height": 536,
+            "paddingTop": 48,
+            "paddingBottom": 128,
+            "paddingTotal": 176
+          },
+          {
+            "selector": "#stats",
+            "top": 1436,
+            "height": 203,
+            "paddingTop": 0,
+            "paddingBottom": 0,
+            "paddingTotal": 0
+          },
+          {
+            "selector": "#work",
+            "top": 1639,
+            "height": 1367,
+            "paddingTop": 128,
+            "paddingBottom": 128,
+            "paddingTotal": 256
+          },
+          {
+            "selector": "#contact",
+            "top": 3007,
+            "height": 723,
+            "paddingTop": 144,
+            "paddingBottom": 144,
+            "paddingTotal": 288
+          }
+        ],
+        "paddingCv": 0.8549,
+        "densityAlternation": 0
+      },
+      "typeScale": {
+        "roles": {
+          "h1": 68,
+          "h2": 42,
+          "h3": null,
+          "p": 16,
+          "small": null
+        },
+        "steps": [
+          {
+            "from": "h1",
+            "to": "h2",
+            "ratio": 1.619
+          },
+          {
+            "from": "h2",
+            "to": "p",
+            "ratio": 2.625
+          }
+        ]
+      },
+      "contrast": [
+        {
+          "measurement": "contrast-on-imagery",
+          "selector": "#site-nav > div:nth-of-type(1) > a",
+          "width": 1440,
+          "fontSize": 15,
+          "fontWeight": 600,
+          "large": false,
+          "textLuminance": 0.0001,
+          "backgroundLuminance": 0.0031,
+          "measured": 1.06,
+          "expected": 4.5,
+          "pass": false
+        },
+        {
+          "measurement": "contrast-on-imagery",
+          "selector": "#site-nav > div:nth-of-type(1) > nav > a:nth-of-type(1)",
+          "width": 1440,
+          "fontSize": 13,
+          "fontWeight": 500,
+          "large": false,
+          "textLuminance": 0.0001,
+          "backgroundLuminance": 0.0031,
+          "measured": 1.06,
+          "expected": 4.5,
+          "pass": false
+        },
+        {
+          "measurement": "contrast-on-imagery",
+          "selector": "#site-nav > div:nth-of-type(1) > nav > a:nth-of-type(2)",
+          "width": 1440,
+          "fontSize": 13,
+          "fontWeight": 500,
+          "large": false,
+          "textLuminance": 0.0001,
+          "backgroundLuminance": 0.0033,
+          "measured": 1.06,
+          "expected": 4.5,
+          "pass": false
+        },
+        {
+          "measurement": "contrast-on-imagery",
+          "selector": "#site-nav > div:nth-of-type(1) > nav > a:nth-of-type(3)",
+          "width": 1440,
+          "fontSize": 13,
+          "fontWeight": 500,
+          "large": false,
+          "textLuminance": 0.0001,
+          "backgroundLuminance": 0.0046,
+          "measured": 1.09,
+          "expected": 4.5,
+          "pass": false
+        },
+        {
+          "measurement": "contrast-on-imagery",
+          "selector": "#site-nav > div:nth-of-type(1) > nav > a:nth-of-type(4)",
+          "width": 1440,
+          "fontSize": 13,
+          "fontWeight": 500,
+          "large": false,
+          "textLuminance": 0.9143,
+          "backgroundLuminance": 0.0031,
+          "measured": 18.17,
+          "expected": 4.5,
+          "pass": true
+        },
+        {
+          "measurement": "contrast-on-imagery",
+          "selector": "#hero-content > p:nth-of-type(1)",
+          "width": 1440,
+          "fontSize": 13,
+          "fontWeight": 600,
+          "large": false,
+          "textLuminance": 0.2982,
+          "backgroundLuminance": 0.0041,
+          "measured": 6.43,
+          "expected": 4.5,
+          "pass": true
+        },
+        {
+          "measurement": "contrast-on-imagery",
+          "selector": "#hero-heading",
+          "width": 1440,
+          "fontSize": 68,
+          "fontWeight": 700,
+          "large": true,
+          "textLuminance": 0.9143,
+          "backgroundLuminance": 0.0052,
+          "measured": 17.48,
+          "expected": 3,
+          "pass": true
+        },
+        {
+          "measurement": "contrast-on-imagery",
+          "selector": "#hero-heading > span",
+          "width": 1440,
+          "fontSize": 68,
+          "fontWeight": 700,
+          "large": true,
+          "textLuminance": null,
+          "backgroundLuminance": null,
+          "measured": null,
+          "expected": 3,
+          "pass": true,
+          "skipped": true,
+          "reason": "not fully visible after scrolling (mid transition or hidden)"
+        },
+        {
+          "measurement": "contrast-on-imagery",
+          "selector": "#hero-content > p:nth-of-type(2)",
+          "width": 1440,
+          "fontSize": 18,
+          "fontWeight": 400,
+          "large": false,
+          "textLuminance": null,
+          "backgroundLuminance": null,
+          "measured": null,
+          "expected": 4.5,
+          "pass": true,
+          "skipped": true,
+          "reason": "not fully visible after scrolling (mid transition or hidden)"
+        },
+        {
+          "measurement": "contrast-on-imagery",
+          "selector": "#hero-content > div > a:nth-of-type(1)",
+          "width": 1440,
+          "fontSize": 15,
+          "fontWeight": 600,
+          "large": false,
+          "textLuminance": null,
+          "backgroundLuminance": null,
+          "measured": null,
+          "expected": 4.5,
+          "pass": true,
+          "skipped": true,
+          "reason": "not fully visible after scrolling (mid transition or hidden)"
+        },
+        {
+          "measurement": "contrast-on-imagery",
+          "selector": "#hero-content > div > a:nth-of-type(2)",
+          "width": 1440,
+          "fontSize": 15,
+          "fontWeight": 600,
+          "large": false,
+          "textLuminance": null,
+          "backgroundLuminance": null,
+          "measured": null,
+          "expected": 4.5,
+          "pass": true,
+          "skipped": true,
+          "reason": "not fully visible after scrolling (mid transition or hidden)"
+        },
+        {
+          "measurement": "contrast-on-imagery",
+          "selector": "#hero-content > div > a:nth-of-type(3)",
+          "width": 1440,
+          "fontSize": 15,
+          "fontWeight": 600,
+          "large": false,
+          "textLuminance": null,
+          "backgroundLuminance": null,
+          "measured": null,
+          "expected": 4.5,
+          "pass": true,
+          "skipped": true,
+          "reason": "not fully visible after scrolling (mid transition or hidden)"
+        }
+      ],
+      "layout": {
+        "elements": [
+          {
+            "selector": "#scene",
+            "top": 0,
+            "left": 0,
+            "width": 1440,
+            "clipped": false,
+            "overflowsViewport": false,
+            "orderIndex": 0
+          },
+          {
+            "selector": "#site-nav",
+            "top": 0,
+            "left": 0,
+            "width": 1440,
+            "clipped": false,
+            "overflowsViewport": false,
+            "orderIndex": 1
+          },
+          {
+            "selector": "#top",
+            "top": 0,
+            "left": 0,
+            "width": 1440,
+            "clipped": false,
+            "overflowsViewport": false,
+            "orderIndex": 2
+          },
+          {
+            "selector": "#hero",
+            "top": 0,
+            "left": 0,
+            "width": 1440,
+            "clipped": false,
+            "overflowsViewport": false,
+            "orderIndex": 3
+          },
+          {
+            "selector": "#hero-content",
+            "top": 0,
+            "left": 120,
+            "width": 1200,
+            "clipped": false,
+            "overflowsViewport": false,
+            "orderIndex": 4
+          },
+          {
+            "selector": "#hero-heading",
+            "top": 282,
+            "left": 255,
+            "width": 930,
+            "clipped": false,
+            "overflowsViewport": false,
+            "orderIndex": 5
+          },
+          {
+            "selector": "#console",
+            "top": 900,
+            "left": 0,
+            "width": 1440,
+            "clipped": false,
+            "overflowsViewport": false,
+            "orderIndex": 6
+          },
+          {
+            "selector": "#console-heading",
+            "top": 1060,
+            "left": 144,
+            "width": 446,
+            "clipped": false,
+            "overflowsViewport": false,
+            "orderIndex": 9
+          },
+          {
+            "selector": "#console-output",
+            "top": 986,
+            "left": 655,
+            "width": 640,
+            "clipped": false,
+            "overflowsViewport": false,
+            "orderIndex": 7
+          },
+          {
+            "selector": "#console-welcome",
+            "top": 1002,
+            "left": 671,
+            "width": 608,
+            "clipped": false,
+            "overflowsViewport": false,
+            "orderIndex": 8
+          },
+          {
+            "selector": "#console-input",
+            "top": 1276,
+            "left": 687,
+            "width": 592,
+            "clipped": false,
+            "overflowsViewport": false,
+            "orderIndex": 10
+          },
+          {
+            "selector": "#stats",
+            "top": 1436,
+            "left": 0,
+            "width": 1440,
+            "clipped": false,
+            "overflowsViewport": false,
+            "orderIndex": 11
+          },
+          {
+            "selector": "#work",
+            "top": 1639,
+            "left": 0,
+            "width": 1440,
+            "clipped": false,
+            "overflowsViewport": false,
+            "orderIndex": 12
+          },
+          {
+            "selector": "#work-heading",
+            "top": 1800,
+            "left": 244,
+            "width": 952,
+            "clipped": false,
+            "overflowsViewport": false,
+            "orderIndex": 13
+          },
+          {
+            "selector": "#contact",
+            "top": 3007,
+            "left": 0,
+            "width": 1440,
+            "clipped": false,
+            "overflowsViewport": false,
+            "orderIndex": 14
+          },
+          {
+            "selector": "#contact-heading",
+            "top": 3195,
+            "left": 244,
+            "width": 952,
+            "clipped": false,
+            "overflowsViewport": false,
+            "orderIndex": 15
+          },
+          {
+            "selector": "#year",
+            "top": 3767,
+            "left": 157,
+            "width": 30,
+            "clipped": false,
+            "overflowsViewport": false,
+            "orderIndex": 16
+          }
+        ],
+        "scrollWidth": 1440,
+        "horizontalOverflow": false,
+        "orderShift": []
+      }
+    }
+  },
+  "motion": {
+    "animatedElements": 23,
+    "longestMotionMs": 1400,
+    "hasScrollTrigger": false,
+    "animated": true
+  },
+  "reducedMotion": {
+    "ran": true,
+    "hidden": [
+      {
+        "selector": "div > div:nth-of-type(2) > div:nth-of-type(1) > span:nth-of-type(1) > button:nth-of-type(1) > span",
+        "reason": "opacity 0"
+      },
+      {
+        "selector": "div > div:nth-of-type(2) > div:nth-of-type(1) > span:nth-of-type(1) > button:nth-of-type(2) > span",
+        "reason": "opacity 0"
+      },
+      {
+        "selector": "div > div:nth-of-type(2) > div:nth-of-type(1) > span:nth-of-type(1) > button:nth-of-type(3) > span",
+        "reason": "opacity 0"
+      }
+    ]
+  },
+  "a11y": {
+    "tags": [
+      "wcag2a",
+      "wcag2aa"
+    ],
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "selector": ".btn-primary[href$=\"projects/\"]",
+        "nodes": 1
+      }
+    ],
+    "pass": false
+  },
+  "console": {
+    "width": 1440,
+    "messages": [],
+    "pass": true
+  },
+  "checks": [
+    {
+      "pass": true,
+      "group": "1440",
+      "measurement": "optical-centre",
+      "selector": "#hero-heading",
+      "width": 1440,
+      "measured": 0,
+      "expected": 4,
+      "defect": "centred box sits left of optical centre",
+      "expectedText": "within 4px",
+      "gotText": "0px"
+    },
+    {
+      "pass": true,
+      "group": "1440",
+      "measurement": "section-rhythm",
+      "selector": "main > section",
+      "width": 1440,
+      "measured": 0.8549,
+      "expected": 0.15,
+      "defect": "5 sections share the same vertical padding (0px, 176px, 0px, 256px, 288px)",
+      "expectedText": "padding variation of at least 0.15",
+      "gotText": "0.8549"
+    },
+    {
+      "pass": true,
+      "group": "1440",
+      "measurement": "type-step",
+      "selector": "h2",
+      "width": 1440,
+      "measured": 1.619,
+      "expected": 1.1,
+      "defect": "h2 is not distinguishable from h1 (42px against 68px)",
+      "expectedText": "step ratio of at least 1.1",
+      "gotText": "1.619"
+    },
+    {
+      "pass": true,
+      "group": "1440",
+      "measurement": "type-step",
+      "selector": "p",
+      "width": 1440,
+      "measured": 2.625,
+      "expected": 1.1,
+      "defect": "p is not distinguishable from h2 (16px against 42px)",
+      "expectedText": "step ratio of at least 1.1",
+      "gotText": "2.625"
+    },
+    {
+      "pass": true,
+      "group": "1440",
+      "measurement": "body-size",
+      "selector": "p",
+      "width": 1440,
+      "measured": 16,
+      "expected": 16,
+      "defect": "body copy is set below the readable floor",
+      "expectedText": "at least 16px",
+      "gotText": "16px"
+    },
+    {
+      "measurement": "contrast-on-imagery",
+      "selector": "#site-nav > div:nth-of-type(1) > a",
+      "width": 1440,
+      "fontSize": 15,
+      "fontWeight": 600,
+      "large": false,
+      "textLuminance": 0.0001,
+      "backgroundLuminance": 0.0031,
+      "measured": 1.06,
+      "expected": 4.5,
+      "pass": false,
+      "group": "1440",
+      "defect": "text over imagery is under the WCAG floor",
+      "expectedText": "4.5:1",
+      "gotText": "1.06:1"
+    },
+    {
+      "measurement": "contrast-on-imagery",
+      "selector": "#site-nav > div:nth-of-type(1) > nav > a:nth-of-type(1)",
+      "width": 1440,
+      "fontSize": 13,
+      "fontWeight": 500,
+      "large": false,
+      "textLuminance": 0.0001,
+      "backgroundLuminance": 0.0031,
+      "measured": 1.06,
+      "expected": 4.5,
+      "pass": false,
+      "group": "1440",
+      "defect": "text over imagery is under the WCAG floor",
+      "expectedText": "4.5:1",
+      "gotText": "1.06:1"
+    },
+    {
+      "measurement": "contrast-on-imagery",
+      "selector": "#site-nav > div:nth-of-type(1) > nav > a:nth-of-type(2)",
+      "width": 1440,
+      "fontSize": 13,
+      "fontWeight": 500,
+      "large": false,
+      "textLuminance": 0.0001,
+      "backgroundLuminance": 0.0033,
+      "measured": 1.06,
+      "expected": 4.5,
+      "pass": false,
+      "group": "1440",
+      "defect": "text over imagery is under the WCAG floor",
+      "expectedText": "4.5:1",
+      "gotText": "1.06:1"
+    },
+    {
+      "measurement": "contrast-on-imagery",
+      "selector": "#site-nav > div:nth-of-type(1) > nav > a:nth-of-type(3)",
+      "width": 1440,
+      "fontSize": 13,
+      "fontWeight": 500,
+      "large": false,
+      "textLuminance": 0.0001,
+      "backgroundLuminance": 0.0046,
+      "measured": 1.09,
+      "expected": 4.5,
+      "pass": false,
+      "group": "1440",
+      "defect": "text over imagery is under the WCAG floor",
+      "expectedText": "4.5:1",
+      "gotText": "1.09:1"
+    },
+    {
+      "measurement": "contrast-on-imagery",
+      "selector": "#site-nav > div:nth-of-type(1) > nav > a:nth-of-type(4)",
+      "width": 1440,
+      "fontSize": 13,
+      "fontWeight": 500,
+      "large": false,
+      "textLuminance": 0.9143,
+      "backgroundLuminance": 0.0031,
+      "measured": 18.17,
+      "expected": 4.5,
+      "pass": true,
+      "group": "1440",
+      "defect": "text over imagery is under the WCAG floor",
+      "expectedText": "4.5:1",
+      "gotText": "18.17:1"
+    },
+    {
+      "measurement": "contrast-on-imagery",
+      "selector": "#hero-content > p:nth-of-type(1)",
+      "width": 1440,
+      "fontSize": 13,
+      "fontWeight": 600,
+      "large": false,
+      "textLuminance": 0.2982,
+      "backgroundLuminance": 0.0041,
+      "measured": 6.43,
+      "expected": 4.5,
+      "pass": true,
+      "group": "1440",
+      "defect": "text over imagery is under the WCAG floor",
+      "expectedText": "4.5:1",
+      "gotText": "6.43:1"
+    },
+    {
+      "measurement": "contrast-on-imagery",
+      "selector": "#hero-heading",
+      "width": 1440,
+      "fontSize": 68,
+      "fontWeight": 700,
+      "large": true,
+      "textLuminance": 0.9143,
+      "backgroundLuminance": 0.0052,
+      "measured": 17.48,
+      "expected": 3,
+      "pass": true,
+      "group": "1440",
+      "defect": "text over imagery is under the WCAG floor for large text",
+      "expectedText": "3:1",
+      "gotText": "17.48:1"
+    },
+    {
+      "measurement": "contrast-on-imagery",
+      "selector": "#hero-heading > span",
+      "width": 1440,
+      "fontSize": 68,
+      "fontWeight": 700,
+      "large": true,
+      "textLuminance": null,
+      "backgroundLuminance": null,
+      "measured": null,
+      "expected": 3,
+      "pass": true,
+      "skipped": true,
+      "reason": "not fully visible after scrolling (mid transition or hidden)",
+      "group": "1440",
+      "defect": "text over imagery is under the WCAG floor for large text",
+      "expectedText": "3:1",
+      "gotText": "null:1"
+    },
+    {
+      "measurement": "contrast-on-imagery",
+      "selector": "#hero-content > p:nth-of-type(2)",
+      "width": 1440,
+      "fontSize": 18,
+      "fontWeight": 400,
+      "large": false,
+      "textLuminance": null,
+      "backgroundLuminance": null,
+      "measured": null,
+      "expected": 4.5,
+      "pass": true,
+      "skipped": true,
+      "reason": "not fully visible after scrolling (mid transition or hidden)",
+      "group": "1440",
+      "defect": "text over imagery is under the WCAG floor",
+      "expectedText": "4.5:1",
+      "gotText": "null:1"
+    },
+    {
+      "measurement": "contrast-on-imagery",
+      "selector": "#hero-content > div > a:nth-of-type(1)",
+      "width": 1440,
+      "fontSize": 15,
+      "fontWeight": 600,
+      "large": false,
+      "textLuminance": null,
+      "backgroundLuminance": null,
+      "measured": null,
+      "expected": 4.5,
+      "pass": true,
+      "skipped": true,
+      "reason": "not fully visible after scrolling (mid transition or hidden)",
+      "group": "1440",
+      "defect": "text over imagery is under the WCAG floor",
+      "expectedText": "4.5:1",
+      "gotText": "null:1"
+    },
+    {
+      "measurement": "contrast-on-imagery",
+      "selector": "#hero-content > div > a:nth-of-type(2)",
+      "width": 1440,
+      "fontSize": 15,
+      "fontWeight": 600,
+      "large": false,
+      "textLuminance": null,
+      "backgroundLuminance": null,
+      "measured": null,
+      "expected": 4.5,
+      "pass": true,
+      "skipped": true,
+      "reason": "not fully visible after scrolling (mid transition or hidden)",
+      "group": "1440",
+      "defect": "text over imagery is under the WCAG floor",
+      "expectedText": "4.5:1",
+      "gotText": "null:1"
+    },
+    {
+      "measurement": "contrast-on-imagery",
+      "selector": "#hero-content > div > a:nth-of-type(3)",
+      "width": 1440,
+      "fontSize": 15,
+      "fontWeight": 600,
+      "large": false,
+      "textLuminance": null,
+      "backgroundLuminance": null,
+      "measured": null,
+      "expected": 4.5,
+      "pass": true,
+      "skipped": true,
+      "reason": "not fully visible after scrolling (mid transition or hidden)",
+      "group": "1440",
+      "defect": "text over imagery is under the WCAG floor",
+      "expectedText": "4.5:1",
+      "gotText": "null:1"
+    },
+    {
+      "pass": true,
+      "group": "1440",
+      "measurement": "horizontal-overflow",
+      "selector": "html",
+      "width": 1440,
+      "measured": 1440,
+      "expected": 1440,
+      "defect": "the document scrolls sideways at this width",
+      "expectedText": "no wider than 1440px",
+      "gotText": "1440px"
+    },
+    {
+      "pass": true,
+      "group": "console",
+      "measurement": "console-error",
+      "selector": "console",
+      "width": 1440,
+      "measured": 0,
+      "expected": "none",
+      "defect": "nothing was logged as an error during load or the scroll walk",
+      "expectedText": "none",
+      "gotText": "0 errors"
+    },
+    {
+      "pass": true,
+      "group": "768",
+      "measurement": "optical-centre",
+      "selector": "#hero-heading",
+      "width": 768,
+      "measured": 0,
+      "expected": 4,
+      "defect": "centred box sits left of optical centre",
+      "expectedText": "within 4px",
+      "gotText": "0px"
+    },
+    {
+      "pass": true,
+      "group": "768",
+      "measurement": "section-rhythm",
+      "selector": "main > section",
+      "width": 768,
+      "measured": 0.8491,
+      "expected": 0.15,
+      "defect": "5 sections share the same vertical padding (0px, 150px, 0px, 204px, 236px)",
+      "expectedText": "padding variation of at least 0.15",
+      "gotText": "0.8491"
+    },
+    {
+      "pass": true,
+      "group": "768",
+      "measurement": "type-step",
+      "selector": "h2",
+      "width": 768,
+      "measured": 1.469,
+      "expected": 1.1,
+      "defect": "h2 is not distinguishable from h1 (32px against 47px)",
+      "expectedText": "step ratio of at least 1.1",
+      "gotText": "1.469"
+    },
+    {
+      "pass": true,
+      "group": "768",
+      "measurement": "type-step",
+      "selector": "p",
+      "width": 768,
+      "measured": 2,
+      "expected": 1.1,
+      "defect": "p is not distinguishable from h2 (16px against 32px)",
+      "expectedText": "step ratio of at least 1.1",
+      "gotText": "2"
+    },
+    {
+      "pass": true,
+      "group": "768",
+      "measurement": "body-size",
+      "selector": "p",
+      "width": 768,
+      "measured": 16,
+      "expected": 16,
+      "defect": "body copy is set below the readable floor",
+      "expectedText": "at least 16px",
+      "gotText": "16px"
+    },
+    {
+      "measurement": "contrast-on-imagery",
+      "selector": "#site-nav > div:nth-of-type(1) > a",
+      "width": 768,
+      "fontSize": 15,
+      "fontWeight": 600,
+      "large": false,
+      "textLuminance": 0.0001,
+      "backgroundLuminance": 0.0035,
+      "measured": 1.07,
+      "expected": 4.5,
+      "pass": false,
+      "group": "768",
+      "defect": "text over imagery is under the WCAG floor",
+      "expectedText": "4.5:1",
+      "gotText": "1.07:1"
+    },
+    {
+      "measurement": "contrast-on-imagery",
+      "selector": "#site-nav > div:nth-of-type(1) > nav > a:nth-of-type(1)",
+      "width": 768,
+      "fontSize": 13,
+      "fontWeight": 500,
+      "large": false,
+      "textLuminance": 0.0001,
+      "backgroundLuminance": 0.0036,
+      "measured": 1.07,
+      "expected": 4.5,
+      "pass": false,
+      "group": "768",
+      "defect": "text over imagery is under the WCAG floor",
+      "expectedText": "4.5:1",
+      "gotText": "1.07:1"
+    },
+    {
+      "measurement": "contrast-on-imagery",
+      "selector": "#site-nav > div:nth-of-type(1) > nav > a:nth-of-type(2)",
+      "width": 768,
+      "fontSize": 13,
+      "fontWeight": 500,
+      "large": false,
+      "textLuminance": 0.0001,
+      "backgroundLuminance": 0.0031,
+      "measured": 1.06,
+      "expected": 4.5,
+      "pass": false,
+      "group": "768",
+      "defect": "text over imagery is under the WCAG floor",
+      "expectedText": "4.5:1",
+      "gotText": "1.06:1"
+    },
+    {
+      "measurement": "contrast-on-imagery",
+      "selector": "#site-nav > div:nth-of-type(1) > nav > a:nth-of-type(3)",
+      "width": 768,
+      "fontSize": 13,
+      "fontWeight": 500,
+      "large": false,
+      "textLuminance": 0.0001,
+      "backgroundLuminance": 0.0067,
+      "measured": 1.13,
+      "expected": 4.5,
+      "pass": false,
+      "group": "768",
+      "defect": "text over imagery is under the WCAG floor",
+      "expectedText": "4.5:1",
+      "gotText": "1.13:1"
+    },
+    {
+      "measurement": "contrast-on-imagery",
+      "selector": "#site-nav > div:nth-of-type(1) > nav > a:nth-of-type(4)",
+      "width": 768,
+      "fontSize": 13,
+      "fontWeight": 500,
+      "large": false,
+      "textLuminance": 0.9143,
+      "backgroundLuminance": 0.0138,
+      "measured": 15.11,
+      "expected": 4.5,
+      "pass": true,
+      "group": "768",
+      "defect": "text over imagery is under the WCAG floor",
+      "expectedText": "4.5:1",
+      "gotText": "15.11:1"
+    },
+    {
+      "measurement": "contrast-on-imagery",
+      "selector": "#hero-content > p:nth-of-type(1)",
+      "width": 768,
+      "fontSize": 13,
+      "fontWeight": 600,
+      "large": false,
+      "textLuminance": 0.2982,
+      "backgroundLuminance": 0.004,
+      "measured": 6.45,
+      "expected": 4.5,
+      "pass": true,
+      "group": "768",
+      "defect": "text over imagery is under the WCAG floor",
+      "expectedText": "4.5:1",
+      "gotText": "6.45:1"
+    },
+    {
+      "measurement": "contrast-on-imagery",
+      "selector": "#hero-heading",
+      "width": 768,
+      "fontSize": 47,
+      "fontWeight": 700,
+      "large": true,
+      "textLuminance": 0.9143,
+      "backgroundLuminance": 0.0061,
+      "measured": 17.2,
+      "expected": 3,
+      "pass": true,
+      "group": "768",
+      "defect": "text over imagery is under the WCAG floor for large text",
+      "expectedText": "3:1",
+      "gotText": "17.2:1"
+    },
+    {
+      "measurement": "contrast-on-imagery",
+      "selector": "#hero-heading > span",
+      "width": 768,
+      "fontSize": 47,
+      "fontWeight": 700,
+      "large": true,
+      "textLuminance": 0.0001,
+      "backgroundLuminance": 0.0066,
+      "measured": 1.13,
+      "expected": 3,
+      "pass": false,
+      "group": "768",
+      "defect": "text over imagery is under the WCAG floor for large text",
+      "expectedText": "3:1",
+      "gotText": "1.13:1"
+    },
+    {
+      "measurement": "contrast-on-imagery",
+      "selector": "#hero-content > p:nth-of-type(2)",
+      "width": 768,
+      "fontSize": 17,
+      "fontWeight": 400,
+      "large": false,
+      "textLuminance": null,
+      "backgroundLuminance": null,
+      "measured": null,
+      "expected": 4.5,
+      "pass": true,
+      "skipped": true,
+      "reason": "not fully visible after scrolling (mid transition or hidden)",
+      "group": "768",
+      "defect": "text over imagery is under the WCAG floor",
+      "expectedText": "4.5:1",
+      "gotText": "null:1"
+    },
+    {
+      "measurement": "contrast-on-imagery",
+      "selector": "#hero-content > div > a:nth-of-type(1)",
+      "width": 768,
+      "fontSize": 15,
+      "fontWeight": 600,
+      "large": false,
+      "textLuminance": null,
+      "backgroundLuminance": null,
+      "measured": null,
+      "expected": 4.5,
+      "pass": true,
+      "skipped": true,
+      "reason": "not fully visible after scrolling (mid transition or hidden)",
+      "group": "768",
+      "defect": "text over imagery is under the WCAG floor",
+      "expectedText": "4.5:1",
+      "gotText": "null:1"
+    },
+    {
+      "measurement": "contrast-on-imagery",
+      "selector": "#hero-content > div > a:nth-of-type(2)",
+      "width": 768,
+      "fontSize": 15,
+      "fontWeight": 600,
+      "large": false,
+      "textLuminance": null,
+      "backgroundLuminance": null,
+      "measured": null,
+      "expected": 4.5,
+      "pass": true,
+      "skipped": true,
+      "reason": "not fully visible after scrolling (mid transition or hidden)",
+      "group": "768",
+      "defect": "text over imagery is under the WCAG floor",
+      "expectedText": "4.5:1",
+      "gotText": "null:1"
+    },
+    {
+      "measurement": "contrast-on-imagery",
+      "selector": "#hero-content > div > a:nth-of-type(3)",
+      "width": 768,
+      "fontSize": 15,
+      "fontWeight": 600,
+      "large": false,
+      "textLuminance": null,
+      "backgroundLuminance": null,
+      "measured": null,
+      "expected": 4.5,
+      "pass": true,
+      "skipped": true,
+      "reason": "not fully visible after scrolling (mid transition or hidden)",
+      "group": "768",
+      "defect": "text over imagery is under the WCAG floor",
+      "expectedText": "4.5:1",
+      "gotText": "null:1"
+    },
+    {
+      "pass": true,
+      "group": "768",
+      "measurement": "horizontal-overflow",
+      "selector": "html",
+      "width": 768,
+      "measured": 768,
+      "expected": 768,
+      "defect": "the document scrolls sideways at this width",
+      "expectedText": "no wider than 768px",
+      "gotText": "768px"
+    },
+    {
+      "pass": true,
+      "group": "390",
+      "measurement": "optical-centre",
+      "selector": "#hero-heading",
+      "width": 390,
+      "measured": 0,
+      "expected": 4,
+      "defect": "centred box sits right of optical centre",
+      "expectedText": "within 4px",
+      "gotText": "0px"
+    },
+    {
+      "pass": true,
+      "group": "390",
+      "measurement": "section-rhythm",
+      "selector": "main > section",
+      "width": 390,
+      "measured": 0.8376,
+      "expected": 0.15,
+      "defect": "5 sections share the same vertical padding (0px, 127px, 0px, 158px, 182px)",
+      "expectedText": "padding variation of at least 0.15",
+      "gotText": "0.8376"
+    },
+    {
+      "pass": true,
+      "group": "390",
+      "measurement": "type-step",
+      "selector": "h2",
+      "width": 390,
+      "measured": 1.308,
+      "expected": 1.1,
+      "defect": "h2 is not distinguishable from h1 (26px against 34px)",
+      "expectedText": "step ratio of at least 1.1",
+      "gotText": "1.308"
+    },
+    {
+      "pass": true,
+      "group": "390",
+      "measurement": "type-step",
+      "selector": "p",
+      "width": 390,
+      "measured": 1.625,
+      "expected": 1.1,
+      "defect": "p is not distinguishable from h2 (16px against 26px)",
+      "expectedText": "step ratio of at least 1.1",
+      "gotText": "1.625"
+    },
+    {
+      "pass": true,
+      "group": "390",
+      "measurement": "body-size",
+      "selector": "p",
+      "width": 390,
+      "measured": 16,
+      "expected": 16,
+      "defect": "body copy is set below the readable floor",
+      "expectedText": "at least 16px",
+      "gotText": "16px"
+    },
+    {
+      "measurement": "contrast-on-imagery",
+      "selector": "#site-nav > div:nth-of-type(1) > a",
+      "width": 390,
+      "fontSize": 15,
+      "fontWeight": 600,
+      "large": false,
+      "textLuminance": 0.0001,
+      "backgroundLuminance": 0.0039,
+      "measured": 1.08,
+      "expected": 4.5,
+      "pass": false,
+      "group": "390",
+      "defect": "text over imagery is under the WCAG floor",
+      "expectedText": "4.5:1",
+      "gotText": "1.08:1"
+    },
+    {
+      "measurement": "contrast-on-imagery",
+      "selector": "#hero-content > p:nth-of-type(1)",
+      "width": 390,
+      "fontSize": 13,
+      "fontWeight": 600,
+      "large": false,
+      "textLuminance": 0.2982,
+      "backgroundLuminance": 0.0033,
+      "measured": 6.54,
+      "expected": 4.5,
+      "pass": true,
+      "group": "390",
+      "defect": "text over imagery is under the WCAG floor",
+      "expectedText": "4.5:1",
+      "gotText": "6.54:1"
+    },
+    {
+      "measurement": "contrast-on-imagery",
+      "selector": "#hero-heading",
+      "width": 390,
+      "fontSize": 34,
+      "fontWeight": 700,
+      "large": true,
+      "textLuminance": 0.9143,
+      "backgroundLuminance": 0.0044,
+      "measured": 17.73,
+      "expected": 3,
+      "pass": true,
+      "group": "390",
+      "defect": "text over imagery is under the WCAG floor for large text",
+      "expectedText": "3:1",
+      "gotText": "17.73:1"
+    },
+    {
+      "measurement": "contrast-on-imagery",
+      "selector": "#hero-heading > span",
+      "width": 390,
+      "fontSize": 34,
+      "fontWeight": 700,
+      "large": true,
+      "textLuminance": 0.0001,
+      "backgroundLuminance": 0.0036,
+      "measured": 1.07,
+      "expected": 3,
+      "pass": false,
+      "group": "390",
+      "defect": "text over imagery is under the WCAG floor for large text",
+      "expectedText": "3:1",
+      "gotText": "1.07:1"
+    },
+    {
+      "measurement": "contrast-on-imagery",
+      "selector": "#hero-content > p:nth-of-type(2)",
+      "width": 390,
+      "fontSize": 15,
+      "fontWeight": 400,
+      "large": false,
+      "textLuminance": null,
+      "backgroundLuminance": null,
+      "measured": null,
+      "expected": 4.5,
+      "pass": true,
+      "skipped": true,
+      "reason": "not fully visible after scrolling (mid transition or hidden)",
+      "group": "390",
+      "defect": "text over imagery is under the WCAG floor",
+      "expectedText": "4.5:1",
+      "gotText": "null:1"
+    },
+    {
+      "measurement": "contrast-on-imagery",
+      "selector": "#hero-content > div > a:nth-of-type(1)",
+      "width": 390,
+      "fontSize": 15,
+      "fontWeight": 600,
+      "large": false,
+      "textLuminance": null,
+      "backgroundLuminance": null,
+      "measured": null,
+      "expected": 4.5,
+      "pass": true,
+      "skipped": true,
+      "reason": "not fully visible after scrolling (mid transition or hidden)",
+      "group": "390",
+      "defect": "text over imagery is under the WCAG floor",
+      "expectedText": "4.5:1",
+      "gotText": "null:1"
+    },
+    {
+      "measurement": "contrast-on-imagery",
+      "selector": "#hero-content > div > a:nth-of-type(2)",
+      "width": 390,
+      "fontSize": 15,
+      "fontWeight": 600,
+      "large": false,
+      "textLuminance": null,
+      "backgroundLuminance": null,
+      "measured": null,
+      "expected": 4.5,
+      "pass": true,
+      "skipped": true,
+      "reason": "not fully visible after scrolling (mid transition or hidden)",
+      "group": "390",
+      "defect": "text over imagery is under the WCAG floor",
+      "expectedText": "4.5:1",
+      "gotText": "null:1"
+    },
+    {
+      "measurement": "contrast-on-imagery",
+      "selector": "#hero-content > div > a:nth-of-type(3)",
+      "width": 390,
+      "fontSize": 15,
+      "fontWeight": 600,
+      "large": false,
+      "textLuminance": null,
+      "backgroundLuminance": null,
+      "measured": null,
+      "expected": 4.5,
+      "pass": true,
+      "skipped": true,
+      "reason": "not fully visible after scrolling (mid transition or hidden)",
+      "group": "390",
+      "defect": "text over imagery is under the WCAG floor",
+      "expectedText": "4.5:1",
+      "gotText": "null:1"
+    },
+    {
+      "pass": true,
+      "group": "390",
+      "measurement": "horizontal-overflow",
+      "selector": "html",
+      "width": 390,
+      "measured": 390,
+      "expected": 390,
+      "defect": "the document scrolls sideways at this width",
+      "expectedText": "no wider than 390px",
+      "gotText": "390px"
+    },
+    {
+      "pass": false,
+      "group": "reduced-motion",
+      "measurement": "reduced-motion-hidden",
+      "selector": "div > div:nth-of-type(2) > div:nth-of-type(1) > span:nth-of-type(1) > button:nth-of-type(1) > span",
+      "width": 1440,
+      "measured": "opacity 0",
+      "expected": "visible after load",
+      "defect": "left invisible once the animation is removed (opacity 0)",
+      "expectedText": "visible after load",
+      "gotText": "opacity 0"
+    },
+    {
+      "pass": false,
+      "group": "reduced-motion",
+      "measurement": "reduced-motion-hidden",
+      "selector": "div > div:nth-of-type(2) > div:nth-of-type(1) > span:nth-of-type(1) > button:nth-of-type(2) > span",
+      "width": 1440,
+      "measured": "opacity 0",
+      "expected": "visible after load",
+      "defect": "left invisible once the animation is removed (opacity 0)",
+      "expectedText": "visible after load",
+      "gotText": "opacity 0"
+    },
+    {
+      "pass": false,
+      "group": "reduced-motion",
+      "measurement": "reduced-motion-hidden",
+      "selector": "div > div:nth-of-type(2) > div:nth-of-type(1) > span:nth-of-type(1) > button:nth-of-type(3) > span",
+      "width": 1440,
+      "measured": "opacity 0",
+      "expected": "visible after load",
+      "defect": "left invisible once the animation is removed (opacity 0)",
+      "expectedText": "visible after load",
+      "gotText": "opacity 0"
+    },
+    {
+      "pass": false,
+      "group": "a11y",
+      "measurement": "axe",
+      "selector": ".btn-primary[href$=\"projects/\"]",
+      "width": 1440,
+      "measured": "serious",
+      "expected": "no serious or critical violations",
+      "defect": "color-contrast: Elements must meet minimum color contrast ratio thresholds",
+      "expectedText": "no serious or critical violations",
+      "gotText": "serious on 1 node"
+    }
+  ],
+  "failures": [
+    {
+      "group": "1440",
+      "measurement": "contrast-on-imagery",
+      "selector": "#site-nav > div:nth-of-type(1) > a",
+      "defect": "text over imagery is under the WCAG floor",
+      "expected": "4.5:1",
+      "got": "1.06:1"
+    },
+    {
+      "group": "1440",
+      "measurement": "contrast-on-imagery",
+      "selector": "#site-nav > div:nth-of-type(1) > nav > a:nth-of-type(1)",
+      "defect": "text over imagery is under the WCAG floor",
+      "expected": "4.5:1",
+      "got": "1.06:1"
+    },
+    {
+      "group": "1440",
+      "measurement": "contrast-on-imagery",
+      "selector": "#site-nav > div:nth-of-type(1) > nav > a:nth-of-type(2)",
+      "defect": "text over imagery is under the WCAG floor",
+      "expected": "4.5:1",
+      "got": "1.06:1"
+    },
+    {
+      "group": "1440",
+      "measurement": "contrast-on-imagery",
+      "selector": "#site-nav > div:nth-of-type(1) > nav > a:nth-of-type(3)",
+      "defect": "text over imagery is under the WCAG floor",
+      "expected": "4.5:1",
+      "got": "1.09:1"
+    },
+    {
+      "group": "768",
+      "measurement": "contrast-on-imagery",
+      "selector": "#site-nav > div:nth-of-type(1) > a",
+      "defect": "text over imagery is under the WCAG floor",
+      "expected": "4.5:1",
+      "got": "1.07:1"
+    },
+    {
+      "group": "768",
+      "measurement": "contrast-on-imagery",
+      "selector": "#site-nav > div:nth-of-type(1) > nav > a:nth-of-type(1)",
+      "defect": "text over imagery is under the WCAG floor",
+      "expected": "4.5:1",
+      "got": "1.07:1"
+    },
+    {
+      "group": "768",
+      "measurement": "contrast-on-imagery",
+      "selector": "#site-nav > div:nth-of-type(1) > nav > a:nth-of-type(2)",
+      "defect": "text over imagery is under the WCAG floor",
+      "expected": "4.5:1",
+      "got": "1.06:1"
+    },
+    {
+      "group": "768",
+      "measurement": "contrast-on-imagery",
+      "selector": "#site-nav > div:nth-of-type(1) > nav > a:nth-of-type(3)",
+      "defect": "text over imagery is under the WCAG floor",
+      "expected": "4.5:1",
+      "got": "1.13:1"
+    },
+    {
+      "group": "768",
+      "measurement": "contrast-on-imagery",
+      "selector": "#hero-heading > span",
+      "defect": "text over imagery is under the WCAG floor for large text",
+      "expected": "3:1",
+      "got": "1.13:1"
+    },
+    {
+      "group": "390",
+      "measurement": "contrast-on-imagery",
+      "selector": "#site-nav > div:nth-of-type(1) > a",
+      "defect": "text over imagery is under the WCAG floor",
+      "expected": "4.5:1",
+      "got": "1.08:1"
+    },
+    {
+      "group": "390",
+      "measurement": "contrast-on-imagery",
+      "selector": "#hero-heading > span",
+      "defect": "text over imagery is under the WCAG floor for large text",
+      "expected": "3:1",
+      "got": "1.07:1"
+    },
+    {
+      "group": "reduced-motion",
+      "measurement": "reduced-motion-hidden",
+      "selector": "div > div:nth-of-type(2) > div:nth-of-type(1) > span:nth-of-type(1) > button:nth-of-type(1) > span",
+      "defect": "left invisible once the animation is removed (opacity 0)",
+      "expected": "visible after load",
+      "got": "opacity 0"
+    },
+    {
+      "group": "reduced-motion",
+      "measurement": "reduced-motion-hidden",
+      "selector": "div > div:nth-of-type(2) > div:nth-of-type(1) > span:nth-of-type(1) > button:nth-of-type(2) > span",
+      "defect": "left invisible once the animation is removed (opacity 0)",
+      "expected": "visible after load",
+      "got": "opacity 0"
+    },
+    {
+      "group": "reduced-motion",
+      "measurement": "reduced-motion-hidden",
+      "selector": "div > div:nth-of-type(2) > div:nth-of-type(1) > span:nth-of-type(1) > button:nth-of-type(3) > span",
+      "defect": "left invisible once the animation is removed (opacity 0)",
+      "expected": "visible after load",
+      "got": "opacity 0"
+    },
+    {
+      "group": "a11y",
+      "measurement": "axe",
+      "selector": ".btn-primary[href$=\"projects/\"]",
+      "defect": "color-contrast: Elements must meet minimum color contrast ratio thresholds",
+      "expected": "no serious or critical violations",
+      "got": "serious on 1 node"
+    }
+  ],
+  "pass": false
+}
