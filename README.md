@@ -6,7 +6,7 @@ Hey, I'm Levi. This repo is the deploy target for my portfolio site: it holds th
 
 ## Features
 
-- **Three pages** — `index.html` (hero, work list, Main Street Sites business section, skills, contact), `about/index.html`, and `projects/index.html` (case studies for the featured projects plus an "also shipped" grid).
+- **Three pages** — `index.html` (hero, an inline terminal section, stat counters, contact), `about/index.html`, and `projects/index.html` (case studies for the featured projects, the Main Street Sites business section, an "also shipped" grid, and skills).
 - **WebGL hero scene** — a Three.js scene, lazy-loaded from a separate chunk (`assets/scene-*.js`) after scroll settles. Under Data Saver, `prefers-reduced-motion`, or a software/no WebGL renderer (SwiftShader, llvmpipe), it loads a lighter 2D canvas fallback (`assets/scene2d-*.js`) instead — a still sphere, not skipped. A footer control ("animations") lets visitors override their system's reduced-motion setting either direction.
 - **Scroll-driven UI** — GSAP with ScrollTrigger for reveals, a scrubbed project stage, and animated stat counters; Lenis for smooth scroll. Both fall back to instant, unanimated state under `prefers-reduced-motion`.
 - **Interactive terminal** — press `T` (outside form fields) or use the on-page terminal control to open a command shell; `Escape` closes it, focus is trapped while it's open.
@@ -48,7 +48,7 @@ Case studies on `/projects`, in the order they appear:
 | [FORGE](https://github.com/levimackay/forge) | A native iOS app turning long-term goals into adaptive daily missions. Phase 1 (core loop) in progress: Xcode project and package split in place, domain model and persistence next. | Swift 6, iOS 26 |
 | [Lydia](https://github.com/levimackay/lydia-cli) | A local coding agent that reads, edits, tests, and drives git through a local Ollama model, nothing sent to the cloud | Python, Ollama |
 
-Also shown on `/projects` under "Also shipped": [Canvas-Risk](https://github.com/levimackay/canvas-risk), a Serbo-Croatian dictionary project, [SwingOS](https://github.com/levimackay/swing-analyzer) (baseball swing pose tracking), leetcoach, flipper-lab, and microplastics-idaho. The homepage also has a section on Main Street Sites, a web design business for local small businesses.
+Also shown on `/projects` under "Also shipped": a Serbo-Croatian dictionary project, [SwingOS](https://github.com/levimackay/swing-analyzer) (baseball swing pose tracking), [AI Security Scanner](https://github.com/levimackay/SecurityScanner), [RepoAnalyzer](https://github.com/levimackay/RepoVisualizer), [Canvas-Risk](https://github.com/levimackay/canvas-risk), [canvas-ta-tool](https://github.com/levimackay/canvas-ta-tool), [Bug Lab](https://github.com/levimackay/bug-lab), [Bug Hunt](https://github.com/levimackay/bug-hunt), [Swift Academy](https://github.com/levimackay/swift-academy), [C# DSA Academy](https://github.com/levimackay/csharp-dsa-academy), and [microplastics-idaho](https://github.com/levimackay/microplastics-idaho). The projects page also has a section on Main Street Sites, a web design business for local small businesses.
 
 ## Repo layout
 
