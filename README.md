@@ -10,7 +10,7 @@ Hey, I'm Levi. This repo is the deploy target for my portfolio site: it holds th
 - **WebGL hero scene** — a Three.js scene, lazy-loaded from a separate chunk (`assets/scene-*.js`) after scroll settles. Under Data Saver, `prefers-reduced-motion`, or a software/no WebGL renderer (SwiftShader, llvmpipe), it loads a lighter 2D canvas fallback (`assets/scene2d-*.js`) instead — a still sphere, not skipped. A footer control ("animations") lets visitors override their system's reduced-motion setting either direction.
 - **Scroll-driven UI** — GSAP with ScrollTrigger for reveals, a scrubbed project stage, and animated stat counters; Lenis for smooth scroll. Both fall back to instant, unanimated state under `prefers-reduced-motion`.
 - **Interactive terminal** — press `T` (outside form fields) or use the on-page terminal control to open a command shell; `Escape` closes it, focus is trapped while it's open.
-- **Copy-to-clipboard contact** and a mobile nav menu with focus handling.
+- **Mailto contact button** and a mobile nav menu with focus handling.
 - **Project write-ups** — case studies for the featured projects live in `projects/index.html`.
 
 ## Tech stack
