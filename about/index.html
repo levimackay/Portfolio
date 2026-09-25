@@ -2,6 +2,8 @@
 <html lang="en">
 
 <head>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self'; font-src 'self'; connect-src 'self'; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'self'">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>About Levi Mackay</title>
@@ -20,22 +22,16 @@
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:type" content="image/png">
-  <meta property="og:image:alt" content="Levi Mackay. I build software people actually use. Not coursework.">
+  <meta property="og:image:alt" content="Levi Mackay. I build Lydia, a local coding agent, and izvor, a compiler.">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="About Levi Mackay">
   <meta name="twitter:description" content="CS student and TA at BYU-Idaho. Sandbox incubator. Two years across five Balkan countries.">
   <meta name="twitter:image" content="https://levimackay.com/assets/og-2.png">
   <link rel="canonical" href="https://levimackay.com/about/">
 
-  <!-- No Person JSON-LD here on purpose: it already lives on the home page
-       (the canonical URL for the "Levi Mackay" entity), and repeating an
-       identical schema block under a second URL adds nothing a search
-       engine needs. -->
+  
 
-  <!-- Same font setup as index.html — see its own head comment for the full
-       reasoning. Repeated verbatim rather than factored out because this is
-       a static multi-page build with no shared-partial system: Vite serves
-       each HTML file independently. -->
+  
   <link rel="preload" as="font" type="font/woff2" href="/fonts/archivo-var-latin.woff2" crossorigin>
   <link rel="preload" as="font" type="font/woff2" href="/fonts/martianmono-var-latin.woff2" crossorigin>
   <style>
@@ -69,8 +65,8 @@
   </style>
 
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-  <script type="module" crossorigin src="/assets/main-DtqaLUB1.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/main-BVRk_5vS.css">
+  <script type="module" crossorigin src="/assets/main-B9bX6tlq.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/style-BGzioELe.css">
 </head>
 
 <body class="bg-ink text-paper antialiased">
@@ -106,26 +102,18 @@
 
   <main id="top" class="relative z-[2]" tabindex="-1">
 
-    <!-- ============ ABOUT ============
-         Deliberately the quiet page of the three. Home is the scene and the
-         terminal, /projects/ is dense and pinned; this one is a reading column
-         with a portrait in the margin, closer to a magazine profile than to
-         either. Same DNA, different register. -->
+    
     <section id="about" class="page-lead section-pad-lg" tabindex="-1" aria-labelledby="about-heading">
       <div class="about-lead mx-auto max-w-[1100px] px-6">
         <div class="about-intro">
           <p class="eyebrow reveal-up">About</p>
           <h1 id="about-heading" class="display-lg reveal-up mt-4">The longer version.</h1>
           <p class="reveal-up mt-6 max-w-[42ch] text-fluid-lg text-paper/55">
-            Who is actually behind the four projects and the business on the work page.
+            Who's behind the work on the other page.
           </p>
         </div>
 
-        <!-- Kept small on purpose. The source is 380px wide and upscaling it
-             into a full-bleed hero would show; sized as an inset portrait it
-             stays sharp and reads as a considered choice rather than a
-             constraint. Caption is set in the mono voice the rest of the site
-             uses for metadata. -->
+        
         <figure class="about-portrait reveal-up">
           <picture>
             <source srcset="/assets/levi-portrait.webp" type="image/webp">
@@ -137,8 +125,8 @@
 
       <div class="mx-auto mt-20 max-w-[1100px] px-6" data-scrub-group>
         <p class="scrub-text max-w-[58ch] text-fluid-lg font-medium leading-relaxed" data-scrub>
-          I'm a CS student at BYU-Idaho, where I also TA programming courses and help
-          other students write code that actually works. Outside of class I build in
+          I'm a CS student at BYU-Idaho, where I also TA CSE 212 and help
+          other students write code that works. Outside of class I build in
           the Sandbox startup incubator, and I run Main Street Sites, a web design studio
           for small businesses in eastern Idaho: I built the product, set the pricing,
           and pitch it cold to real owners.
@@ -146,9 +134,9 @@
         <p class="scrub-text mt-8 max-w-[58ch] text-fluid-lg font-medium leading-relaxed" data-scrub>
           Before any of that I spent two years in the Balkans: Bosnia, Croatia, Serbia,
           Montenegro, and Slovenia. Learning new languages and cultures meant constantly
-          breaking unfamiliar problems into pieces I could actually work with, which is
+          breaking unfamiliar problems into pieces I could work with, which is
           the same skill I use daily now, reading code I didn't write and figuring out
-          what it's actually doing.
+          what it's doing.
         </p>
         <p class="scrub-text mt-8 max-w-[58ch] text-fluid-lg font-medium leading-relaxed" data-scrub>
           When I'm not at a keyboard I'm lifting, running, snowboarding, or on a dirt
@@ -156,10 +144,7 @@
         </p>
       </div>
 
-      <!-- Was three .fact-card boxes. The site already uses that card shape for
-           skills on /projects/, and a second identical grid here is the pattern
-           that makes a site read as assembled from parts. Same three facts, set
-           as a mono-labelled list instead. -->
+      
       <dl class="about-facts mx-auto mt-24 max-w-[1100px] px-6">
         <div class="reveal-up">
           <dt>Teaching &amp; mentoring</dt>
@@ -178,7 +163,7 @@
 
     <section class="section-pad-md border-t border-hairline" aria-label="Continue">
       <div class="mx-auto flex max-w-[1100px] flex-wrap items-center justify-between gap-6 px-6">
-        <p class="text-fluid-lg text-paper/55 max-w-[38ch]">The work itself is the better argument.</p>
+        <p class="text-fluid-lg text-paper/55 max-w-[38ch]">Here's more of it, and how to reach me.</p>
         <div class="flex flex-wrap gap-4">
           <a href="/projects/" class="btn-primary">See the work</a>
           <a href="/#contact" class="btn-ghost">Get in touch</a>
@@ -198,7 +183,7 @@
     </div>
   </footer>
 
-  <!-- ============ TERMINAL EASTER EGG (shared chrome, identical to index.html) ============ -->
+  
   <button class="terminal-toggle" id="terminal-toggle" title="Open terminal (T)" aria-label="Open interactive terminal">
     <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
       <polyline points="4 6 10 12 4 18"/>
@@ -216,12 +201,12 @@
       <span class="terminal-title">levi@portfolio · zsh</span>
       <button class="terminal-close" id="terminal-close" aria-label="Close terminal">&times;</button>
     </div>
-    <div class="terminal-body" id="terminal-output">
+    <div class="terminal-body" id="terminal-output" role="log" aria-live="polite">
       <div id="terminal-welcome"></div>
     </div>
     <div class="terminal-input-row">
       <span class="t-hl">&gt;</span>
-      <input type="text" id="terminal-input" autocomplete="off" spellcheck="false" placeholder="help" aria-label="Terminal command input">
+      <input type="text" id="terminal-input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" maxlength="200" placeholder="help" aria-label="Terminal command input">
     </div>
   </div>
 

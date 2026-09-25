@@ -2,6 +2,8 @@
 <html lang="en">
 
 <head>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self'; font-src 'self'; connect-src 'self'; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'self'">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Levi Mackay: Computer Science Student and Software Engineer</title>
@@ -17,16 +19,11 @@
   <meta property="og:locale" content="en_US">
   <meta property="og:url" content="https://levimackay.com/">
   <meta property="og:image" content="https://levimackay.com/assets/og-2.png">
-  <!-- Dimensions and type are declared so scrapers that do not fetch the image
-       before first render (LinkedIn and Slack both do this) reserve the right
-       box instead of falling back to a small square card. The filename is
-       og-2 rather than og because iMessage caches a link preview per URL more
-       or less permanently, so replacing the old file in place would never
-       reach anyone who had already been sent the link. -->
+  
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:type" content="image/png">
-  <meta property="og:image:alt" content="Levi Mackay. I build software people actually use. Not coursework.">
+  <meta property="og:image:alt" content="Levi Mackay. I build Lydia, a local coding agent, and izvor, a compiler.">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Levi Mackay: Computer Science Student and Software Engineer">
   <meta name="twitter:description" content="CS student and TA at BYU-Idaho. Maintainer of Lydia, an open source local coding agent. Seeking a Summer 2027 SWE internship.">
@@ -51,25 +48,7 @@
   }
   </script>
 
-  <!-- Two variable families replace the four static Inter weights.
-       Archivo carries display and body; its wdth axis (62-125) is the whole
-       point, since display type set wide is the one typographic move a
-       template never makes. Martian Mono carries the terminal and every
-       technical label, so the console's voice is the same voice used for
-       metadata everywhere else on the page.
-
-       Declaring the axis ranges on @font-face (font-weight: 100 900,
-       font-stretch: 62% 125%) is what lets plain `font-weight` and
-       `font-stretch` drive them from ordinary CSS, so the cascade still
-       works instead of every rule having to restate font-variation-settings.
-
-       Self-hosted from public/fonts rather than hotlinked from Google, so no
-       visitor IP leaves the page and there's no async swap mid-hero. Both
-       latin faces are preloaded: Archivo sets the headline and Martian Mono
-       sets the eyebrow directly above it, both above the fold. latin-ext is
-       declared but not preloaded — its unicode-range means it only downloads
-       if a character outside latin is ever rendered (Serbo-Croatian, say),
-       which no current copy does. -->
+  
   <link rel="preload" as="font" type="font/woff2" href="/fonts/archivo-var-latin.woff2" crossorigin>
   <link rel="preload" as="font" type="font/woff2" href="/fonts/martianmono-var-latin.woff2" crossorigin>
   <style>
@@ -103,18 +82,18 @@
   </style>
 
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-  <script type="module" crossorigin src="/assets/main-DtqaLUB1.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/main-BVRk_5vS.css">
+  <script type="module" crossorigin src="/assets/main-B9bX6tlq.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/style-BGzioELe.css">
 </head>
 
 <body class="bg-ink text-paper antialiased">
 
   <a href="#top" class="skip-link">Skip to content</a>
 
-  <!-- Hero 3D scene: shard sphere assembles on load, explodes on scroll -->
+  
   <canvas id="scene" class="pointer-events-none fixed inset-0 z-[1] h-full w-full" aria-hidden="true"></canvas>
 
-  <!-- ============ NAV ============ -->
+  
   <header id="site-nav" class="fixed top-0 inset-x-0 z-50 transition-colors duration-500">
     <div class="mx-auto max-w-[1200px] px-6 h-16 flex items-center justify-between">
       <a href="#top" class="text-[15px] font-semibold tracking-tight text-paper/90 hover:text-paper transition-colors">Levi Mackay</a>
@@ -144,15 +123,15 @@
 
   <main id="top" class="relative z-[2]" tabindex="-1">
 
-    <!-- ============ HERO ============ -->
+    
     <section id="hero" class="relative h-[100svh] overflow-hidden" aria-labelledby="hero-heading">
       <div class="hero-scrim" aria-hidden="true"></div>
       <div id="hero-content" class="relative z-10 mx-auto flex h-full max-w-[1200px] flex-col items-center justify-center px-6 text-center">
         <p class="hero-line mb-6 text-[13px] font-semibold uppercase tracking-[0.28em] text-accent">
           Computer Science · BYU-Idaho
         </p>
-        <h1 id="hero-heading" class="hero-line display-hero max-w-[19ch]">
-          I build software people actually use. <span class="text-paper/70">Not coursework.</span>
+        <h1 id="hero-heading" class="hero-line display-hero max-w-[26ch]">
+          I build Lydia, a local coding agent, and izvor, a compiler I'm writing in C.
         </h1>
         <p class="hero-line mt-6 max-w-[44ch] text-fluid-base leading-relaxed text-paper/75">
           Levi Mackay. CS student and TA at BYU-Idaho, looking for a Summer 2027
@@ -166,11 +145,7 @@
       </div>
 </section>
 
-    <!-- ============ CONSOLE: the terminal, promoted from a corner button to a
-         real section. Runs its own inline session (the #console-input block
-         wired up in terminal.js), built on the same command set and window
-         controls the dialog terminal uses on the other two pages — not a
-         second terminal, and no decorative terminal mockup here, on purpose. ============ -->
+    
     <section id="console" class="console-section" tabindex="-1" aria-labelledby="console-heading">
       <div class="console-grid mx-auto max-w-[1200px] px-6">
         <div class="console-copy">
@@ -195,58 +170,37 @@
             </span>
             <span class="terminal-title">levi@portfolio · zsh</span>
           </div>
-          <div class="terminal-body" id="console-output">
+          <div class="terminal-body" id="console-output" role="log" aria-live="polite">
             <div id="console-welcome"></div>
           </div>
           <div class="terminal-input-row">
             <span class="t-hl" aria-hidden="true">&gt;</span>
-            <input type="text" id="console-input" autocomplete="off" spellcheck="false" placeholder="help" aria-label="Terminal command input">
+            <input type="text" id="console-input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" maxlength="200" placeholder="help" aria-label="Terminal command input">
           </div>
         </div>
 
-        <!-- Shown only after the red window control closes the session above.
-             The scrollback is kept, not rebuilt, so reopening returns the
-             visitor to whatever they had already typed. -->
+        
         <button type="button" id="console-restore" class="console-restore" hidden>
           <span class="t-hl" aria-hidden="true">&gt;</span> reopen terminal
         </button>
       </div>
     </section>
 
-    <!-- ============ STATS ============ -->
-    <section id="stats" class="border-y border-hairline" aria-label="Key metrics">
-      <div class="mx-auto grid max-w-[1200px] grid-cols-2 gap-px sm:grid-cols-4">
-        <div class="stat px-6 py-12 text-center">
-          <span class="stat-num block text-fluid-3xl font-bold tracking-tighter" data-count="36" aria-hidden="true">36</span>
-          <span class="sr-only">36</span>
-          <span class="mt-1 block text-[13px] text-paper/50">GitHub stars on Lydia</span>
-        </div>
-        <div class="stat px-6 py-12 text-center">
-          <span class="stat-num block text-fluid-3xl font-bold tracking-tighter" data-count="475" aria-hidden="true">475</span>
-          <span class="sr-only">475</span>
-          <span class="mt-1 block text-[13px] text-paper/50">Tests passing in CI on Python 3.11 to 3.13</span>
-        </div>
-        <div class="stat px-6 py-12 text-center">
-          <span class="stat-num block text-fluid-3xl font-bold tracking-tighter" data-count="5709" aria-hidden="true">5709</span>
-          <span class="sr-only">5,709</span>
-          <span class="mt-1 block text-[13px] text-paper/50">Dictionary entries typeset</span>
-        </div>
-        <div class="stat px-6 py-12 text-center">
-          <span class="stat-num block text-fluid-3xl font-bold tracking-tighter" data-count="3.98" data-decimals="2" aria-hidden="true">3.98</span>
-          <span class="sr-only">3.98</span>
-          <span class="mt-1 block text-[13px] text-paper/50">GPA</span>
-        </div>
+    
+    <section id="lydia-note" class="border-y border-hairline" aria-label="Lydia">
+      <div class="mx-auto max-w-[720px] px-6 py-12 text-center">
+        <p class="text-fluid-base text-paper/60">Lydia, my local coding agent, is open source with 475 tests passing in CI and two pull requests merged from developers I've never met.</p>
       </div>
     </section>
 
-    <!-- ============ CONTACT ============ -->
+    
     <section id="contact" class="relative overflow-hidden border-t border-hairline section-pad-lg" tabindex="-1" aria-labelledby="contact-heading">
       <div class="relative z-10 mx-auto max-w-[1000px] px-6 text-center">
         <p class="eyebrow reveal-up">Contact</p>
         <h2 id="contact-heading" class="display-xl reveal-up mt-6">Let's build<br>something.</h2>
         <p class="reveal-up mx-auto mt-8 max-w-[44ch] text-fluid-lg text-paper/55">
           I'm looking for a Summer 2027 software engineering internship. Backend, AI,
-          tooling, baseball, or the Balkans, happy to talk about any of it.
+          tooling, or the Balkans, happy to talk about any of it.
         </p>
         <div class="reveal-up mt-10 flex flex-wrap items-center justify-center gap-4">
           <a href="mailto:levibmackay@gmail.com" class="btn-primary">levibmackay@gmail.com</a>
