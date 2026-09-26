@@ -1,6 +1,6 @@
 # Levi Mackay — Portfolio
 
-**Live site → [levimackay.com](https://levimackay.com/)**
+**Live site → [levimackay.com](https://levimackay.com/)** · **[Resume (PDF)](https://levimackay.com/resume.pdf)**
 
 Hey, I'm Levi. This repo is the deploy target for my portfolio site: it holds the built HTML/CSS/JS output plus the `CNAME` GitHub Pages serves from. It is not the buildable source — the source (and its build tooling) lives in a separate private repo. What's tracked here is three pages (home, about, projects) with a WebGL hero scene, GSAP/Lenis-driven scroll animations, and an interactive terminal.
 
@@ -43,9 +43,9 @@ Case studies on `/projects`, in the order they appear:
 
 | Project | What it is | Stack |
 |---|---|---|
-| [izvor](https://github.com/levimackay/izvor) | A programming language built from scratch: lexer, recursive-descent parser, tree-walking interpreter, then a bytecode compiler and stack VM. Lexer and parser done; the interpreter runs arithmetic end to end. | C |
-| [minidb](https://github.com/levimackay/minidb) | A single-file database engine: binary file formats, a pager, B-trees, cursors, a small SQL parser. Roadmap and Phase 0 scaffolding committed, implementation not started. | C |
-| [FORGE](https://github.com/levimackay/forge) | A native iOS app turning long-term goals into adaptive daily missions. Phase 1 (core loop) in progress: Xcode project and package split in place, domain model and persistence next. | Swift 6, iOS 26 |
+| [izvor](https://github.com/levimackay/izvor) | My own programming language and its compiler, built in C11 with no dependencies and no LLVM. Lexer, recursive descent parser, type checker, interpreter, and a C code generator that produces native binaries through clang. 36 golden programs match byte for byte interpreted and compiled. | C |
+| [minidb](https://github.com/levimackay/minidb) | A single-file database engine: binary file formats, a pager, B-trees, cursors, a small SQL parser. Roadmap done, Phases 0 and 1 scaffolded with tests. | C |
+| [FORGE](https://github.com/levimackay/forge) | A native iOS app for CS fundamentals: DSA practice for students prepping technical interviews. Xcode project and package split in place, domain model and persistence next. | Swift 6, iOS 26 |
 | [Lydia](https://github.com/levimackay/lydia-cli) | A local coding agent that reads, edits, tests, and drives git through a local Ollama model, nothing sent to the cloud | Python, Ollama |
 
 The projects page also has a section on Main Street Sites, a web design business for local small businesses.
