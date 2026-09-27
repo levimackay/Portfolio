@@ -6,18 +6,18 @@ Hey, I'm Levi. This repo is the deploy target for my portfolio site: it holds th
 
 ## Features
 
-- **Three pages** — `index.html` (hero, an inline terminal section, stat counters, contact), `about/index.html`, and `projects/index.html` (case studies for the featured projects, the Main Street Sites business section with three recorded loops of its concept sites, and skills).
+- **Three pages** — `index.html` (hero, an inline terminal section, a Lydia callout, contact), `about/index.html`, and `projects/index.html` (case studies for the featured projects, the Main Street Sites business section with three recorded loops of its concept sites, a Dev Dock summary, and skills).
 - **WebGL hero scene** — a Three.js scene, lazy-loaded from a separate chunk (`assets/scene-*.js`) after scroll settles. Under Data Saver, `prefers-reduced-motion`, or a software/no WebGL renderer (SwiftShader, llvmpipe), it loads a lighter 2D canvas fallback (`assets/scene2d-*.js`) instead — a still sphere, not skipped. A footer control ("animations") lets visitors override their system's reduced-motion setting either direction.
-- **Scroll-driven UI** — GSAP with ScrollTrigger for reveals, a scrubbed project stage, and animated stat counters; Lenis for smooth scroll. Both fall back to instant, unanimated state under `prefers-reduced-motion`.
+- **Scroll-driven UI** — GSAP with ScrollTrigger for reveals and a scrubbed project stage; Lenis for smooth scroll. Both fall back to instant, unanimated state under `prefers-reduced-motion`.
 - **Interactive terminal** — press `T` (outside form fields) or use the on-page terminal control to open a command shell; `Escape` closes it, focus is trapped while it's open.
 - **Mailto contact button** and a mobile nav menu with focus handling.
 - **Project write-ups** — case studies for the featured projects live in `projects/index.html`.
 
 ## Tech stack
 
-- Built HTML/CSS/JS — the JS/CSS bundles under `assets/` (`main-*.js`, `main-*.css`, `scene-*.js`) are hashed build output, not hand-authored files. There's no `package.json` or build step in this repo; whatever's committed here is what ships.
+- Built HTML/CSS/JS — the JS/CSS bundles under `assets/` (`main-*.js`, `style-*.css`, `scene-*.js`) are hashed build output, not hand-authored files. There's no `package.json` or build step in this repo; whatever's committed here is what ships.
 - **Three.js** for the hero scene, **GSAP + ScrollTrigger** for scroll animation, **Lenis** for smooth scrolling — all bundled into the built JS, not loaded from a CDN.
-- Fonts are self-hosted variable fonts (`fonts/`): Archivo for display and body text, Martian Mono for the terminal and technical labels. No Google Fonts.
+- Fonts are self-hosted variable fonts (`fonts/`): Source Serif 4 for display and body text, JetBrains Mono for the terminal and technical labels. No Google Fonts.
 
 ## Setup / running locally
 
@@ -43,12 +43,10 @@ Case studies on `/projects`, in the order they appear:
 
 | Project | What it is | Stack |
 |---|---|---|
-| [izvor](https://github.com/levimackay/izvor) | My own programming language and its compiler, built in C11 with no dependencies and no LLVM. Lexer, recursive descent parser, type checker, interpreter, and a C code generator that produces native binaries through clang. 36 golden programs match byte for byte interpreted and compiled. | C |
-| [minidb](https://github.com/levimackay/minidb) | A single-file database engine: binary file formats, a pager, B-trees, cursors, a small SQL parser. Roadmap done, Phases 0 and 1 scaffolded with tests. | C |
-| [FORGE](https://github.com/levimackay/forge) | A native iOS app for CS fundamentals: DSA practice for students prepping technical interviews. Xcode project and package split in place, domain model and persistence next. | Swift 6, iOS 26 |
 | [Lydia](https://github.com/levimackay/lydia-cli) | A local coding agent that reads, edits, tests, and drives git through a local Ollama model, nothing sent to the cloud | Python, Ollama |
+| [izvor](https://github.com/levimackay/izvor) | My own programming language and its compiler, built in C11 with no dependencies and no LLVM. Lexer, recursive descent parser, type checker, interpreter, and a C code generator that produces native binaries through clang. 36 golden programs match byte for byte interpreted and compiled. | C |
 
-The projects page also has a section on Main Street Sites, a web design business for local small businesses.
+The projects page also has sections on Main Street Sites, a web design business for local small businesses, and Dev Dock, a shipped browser-only developer tools app.
 
 ## Repo layout
 
