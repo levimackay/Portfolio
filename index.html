@@ -1,224 +1,142 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self'; font-src 'self'; connect-src 'self'; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'self'">
-    <meta name="referrer" content="strict-origin-when-cross-origin">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Levi Mackay: Computer Science Student and Software Engineer</title>
-  <meta name="description" content="Levi Mackay built izvor, his own programming language, and its compiler in C: typed source in, native binary out, with no dependencies and no LLVM.">
-  <meta name="author" content="Levi Mackay">
-  <meta name="robots" content="index, follow, max-image-preview:large">
-  <meta name="theme-color" content="#0a0a0c">
-
-  <meta property="og:title" content="Levi Mackay: Computer Science Student and Software Engineer">
-  <meta property="og:description" content="izvor: my own programming language and its compiler, built in C. Typed source in, native binary out.">
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Levi Mackay">
-  <meta property="og:locale" content="en_US">
-  <meta property="og:url" content="https://levimackay.com/">
-  <meta property="og:image" content="https://levimackay.com/assets/og-2.png">
-  
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:type" content="image/png">
-  <meta property="og:image:alt" content="Levi Mackay. I build Lydia, a local coding agent, and izvor, a compiler.">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Levi Mackay: Computer Science Student and Software Engineer">
-  <meta name="twitter:description" content="izvor: my own programming language and its compiler, built in C. Typed source in, native binary out.">
-  <meta name="twitter:image" content="https://levimackay.com/assets/og-2.png">
-  <link rel="canonical" href="https://levimackay.com/">
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Levi Mackay",
-    "url": "https://levimackay.com/",
-    "jobTitle": "Computer Science Student",
-    "alumniOf": {
-      "@type": "CollegeOrUniversity",
-      "name": "BYU-Idaho"
-    },
-    "sameAs": [
-      "https://github.com/levimackay",
-      "https://www.linkedin.com/in/levi-mackay-217380396/"
-    ]
-  }
-  </script>
-
-  
-  <link rel="preload" as="font" type="font/woff2" href="/fonts/sourceserif4-var-latin.woff2" crossorigin>
-  <link rel="preload" as="font" type="font/woff2" href="/fonts/jetbrainsmono-var-latin.woff2" crossorigin>
-  <style>
-    @font-face {
-      font-family: 'Source Serif 4';
-      font-style: normal;
-      font-weight: 200 900;
-      font-display: swap;
-      src: url(/fonts/sourceserif4-var-latin.woff2) format('woff2-variations');
-      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'wasm-unsafe-eval' 'sha256-XeBCzrl3UkXxVIB76+wBv6q8pJw2NshsnZ3hsRbqum0='; style-src 'self' 'unsafe-inline'; img-src 'self'; media-src 'self'; font-src 'self'; connect-src 'self'; worker-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#0a0a0c"><title>Levi Mackay | Software engineering portfolio</title><meta name="description" content="Levi Mackay builds compilers, developer tools and web apps and is looking for a software engineering internship for Summer 2027."><link rel="canonical" href="https://levimackay.com/"><meta property="og:type" content="website"><meta property="og:title" content="Levi Mackay | Software engineering portfolio"><meta property="og:description" content="Levi Mackay builds compilers, developer tools and web apps and is looking for a software engineering internship for Summer 2027."><meta property="og:url" content="https://levimackay.com/"><meta property="og:image" content="https://levimackay.com/og.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Levi Mackay. I wrote a programming language and its compiler in C. Beside it, a short izvor program and its output."><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Levi Mackay | Software engineering portfolio"><meta name="twitter:description" content="Levi Mackay builds compilers, developer tools and web apps and is looking for a software engineering internship for Summer 2027."><meta name="twitter:image" content="https://levimackay.com/og.png"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="preload" href="/fonts/anybody-latin-standard-normal.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="/fonts/atkinson-hyperlegible-next-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin><script>document.documentElement.classList.add("js");addEventListener("pagereveal",(e)=>{if(e.viewTransition)document.documentElement.classList.add("vt")});</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Levi Mackay","url":"https://levimackay.com","sameAs":["https://github.com/levimackay","https://www.linkedin.com/in/levi-mackay-217380396"]}</script><link rel="stylesheet" href="/assets/site-CGAWr-H9.css"><script type="module" src="/assets/Base.astro_astro_type_script_index_0_lang-CvmTb-gS.js"></script></head><body><a class="skip-link" href="#main">Skip to content</a><header class="site-header" id="top"><nav class="nav container" aria-label="Main navigation"><a class="brand" href="#top">Levi Mackay</a><div class="nav-links" id="nav-links"><a href="#work" data-nav="work">Work</a><a href="#about" data-nav="about">About</a><a href="/resume.pdf">Resume</a></div><a class="button button-primary nav-email" href="mailto:levibmackay@gmail.com?subject=Summer%202027%20internship">Email me</a><button class="menu-toggle" type="button" aria-controls="nav-links" aria-expanded="false">Menu</button></nav></header><main id="main" tabindex="-1"><section class="hero" aria-labelledby="hero-title"><div class="container hero-grid"><div class="hero-copy"><h1 id="hero-title">I wrote a programming language and its compiler in C.</h1><p class="lead" data-source="about: school and work">I'm Levi Mackay, a computer science student at <span class="nowrap">BYU-Idaho</span>. I build compilers, developer tools and web apps, and I'm looking for a software engineering internship for Summer 2027.</p><div class="actions"><a class="button button-primary" href="mailto:levibmackay@gmail.com?subject=Summer%202027%20internship">Email me</a><a class="button button-secondary" href="/resume.pdf">Resume (PDF)</a></div><div class="text-links"><a href="https://github.com/levimackay" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://www.linkedin.com/in/levi-mackay-217380396" target="_blank" rel="noopener noreferrer">LinkedIn</a></div></div><div class="hero-media"><div aria-label="izvor playground" data-file="fib.iz" class="playground"><div class="playground-header"><span>fib.iz</span><span class="live-label"><i class="live-dot" aria-hidden="true"></i>runs in your browser</span><button class="button button-primary run-button" type="button">Run</button></div><div class="playground-body"><label class="visually-hidden" for="source">Source code</label><textarea id="source" wrap="off" spellcheck="false" autocapitalize="off" autocomplete="off">fn fib(n: Int) -&gt; Int {
+    if n &lt; 2 {
+        return n;
     }
-    @font-face {
-      font-family: 'Source Serif 4';
-      font-style: normal;
-      font-weight: 200 900;
-      font-display: swap;
-      src: url(/fonts/sourceserif4-var-latin-ext.woff2) format('woff2-variations');
-      unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+    return fib(n - 1) + fib(n - 2);
+}
+
+var i = 0;
+while i &lt; 10 {
+    print(fib(i));
+    i = i + 1;
+}
+</textarea><div class="output-wrap"><span class="panel-label">Output</span><pre class="output" aria-live="polite" aria-label="Program output" tabindex="0">
+      </pre><p class="run-status" role="status"></p></div></div><video class="playground-fallback" src="/media/izvor-demo.mp4" data-poster="/media/izvor-poster.webp" muted loop playsinline preload="none" aria-label="izvor compiling and running"></video><noscript><img class="playground-still" src="/media/izvor-poster.webp" alt="A terminal where izvor compiles a program and runs it. The live editor needs JavaScript."></noscript></div><p class="media-caption">This is izvor, the language I wrote, running in your browser. Edit the program and press Run.</p></div></div></section><section class="statement" aria-labelledby="statement-title"><div class="container"><h2 id="statement-title">Systems I wrote from scratch. Products I shipped for other people.</h2></div></section><div id="work" class="work-stack" tabindex="-1"><section class="project project-izvor" data-project="izvor" aria-labelledby="izvor-title"><div class="container project-grid"><div class="project-copy"><h2 id="izvor-title" style="view-transition-name: title-izvor">izvor</h2><p class="lead">A typed programming language and its compiler, written from scratch in C. It interprets a program or compiles it through C to a native binary.</p><p class="evidence" data-source="izvor: home page line">41 golden programs have to produce byte for byte the same output from the interpreter and the compiled binary.</p><div class="text-links"><a class="case-link" href="/work/izvor/">How I built it</a><a href="https://github.com/levimackay/izvor" target="_blank" rel="noopener noreferrer">Source on GitHub</a><a href="https://tutorial.levimackay.com" target="_blank" rel="noopener noreferrer">The line by line course</a><a href="#top">Try it at the top</a></div></div><div class="project-media compiler-panel"><div class="compiler-header">fib.c, generated by the compiler</div><pre class="compiler-output" aria-live="polite" aria-label="Generated C" tabindex="0">#include &lt;limits.h&gt;
+#include &lt;stdbool.h&gt;
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+static void rt_fail(const char *message, const char *at) {
+    fflush(stdout);
+    fprintf(stderr, &quot;error: %s\n --&gt; %s\n&quot;, message, at);
+    exit(1);
+}
+
+static int rt_depth;
+
+static long rt_add(long a, long b, const char *at) {
+    long r;
+    if (__builtin_add_overflow(a, b, &amp;r)) rt_fail(&quot;integer overflow&quot;, at);
+    return r;
+}
+
+static long rt_sub(long a, long b, const char *at) {
+    long r;
+    if (__builtin_sub_overflow(a, b, &amp;r)) rt_fail(&quot;integer overflow&quot;, at);
+    return r;
+}
+
+static long rt_mul(long a, long b, const char *at) {
+    long r;
+    if (__builtin_mul_overflow(a, b, &amp;r)) rt_fail(&quot;integer overflow&quot;, at);
+    return r;
+}
+
+static long rt_div(long a, long b, const char *at) {
+    if (b == 0) rt_fail(&quot;division by zero&quot;, at);
+    if (a == LONG_MIN &amp;&amp; b == -1) rt_fail(&quot;integer overflow&quot;, at);
+    return a / b;
+}
+
+static long rt_mod(long a, long b, const char *at) {
+    if (b == 0) rt_fail(&quot;division by zero&quot;, at);
+    if (a == LONG_MIN &amp;&amp; b == -1) rt_fail(&quot;integer overflow&quot;, at);
+    return a % b;
+}
+
+static long rt_neg(long a, const char *at) {
+    if (a == LONG_MIN) rt_fail(&quot;integer overflow&quot;, at);
+    return -a;
+}
+
+static long rt_leave(long value) {
+    rt_depth--;
+    return value;
+}
+
+static void rt_print_int(long value) {
+    printf(&quot;%ld\n&quot;, value);
+}
+
+static void rt_print_bool(bool value) {
+    puts(value ? &quot;true&quot; : &quot;false&quot;);
+}
+
+static void rt_enter(const char *at) {
+    if (++rt_depth &gt; 10000) rt_fail(&quot;more than 10000 nested calls&quot;, at);
+}
+
+static long iz_fib(long iz_n);
+
+static long iz_fib(long iz_n) {
+    rt_enter(&quot;playground.iz:1:4&quot;);
+    if (iz_n &lt; 2) {
+        return rt_leave(iz_n);
     }
-    @font-face {
-      font-family: 'JetBrains Mono';
-      font-style: normal;
-      font-weight: 100 800;
-      font-display: swap;
-      src: url(/fonts/jetbrainsmono-var-latin.woff2) format('woff2-variations');
-      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    long t1 = iz_fib(rt_sub(iz_n, 1, &quot;playground.iz:5:18&quot;));
+    return rt_leave(rt_add(t1, iz_fib(rt_sub(iz_n, 2, &quot;playground.iz:5:31&quot;)), &quot;playground.iz:5:23&quot;));
+}
+
+int main(void) {
+    long iz_i = 0;
+    while (iz_i &lt; 10) {
+        rt_print_int(iz_fib(iz_i));
+        iz_i = rt_add(iz_i, 1, &quot;playground.iz:11:11&quot;);
     }
-  </style>
+    return 0;
+}
+</pre><div class="compiler-fallback laptop"><div class="laptop-screen"><video src="/media/izvor-demo.mp4" data-poster="/media/izvor-poster.webp" muted loop playsinline preload="none" aria-label="izvor compiling and running"></video></div><div class="laptop-base"></div></div></div></div></section><section class="project project-lydia light media-left" data-project="lydia" aria-labelledby="lydia-title"><div class="container project-grid"><div class="project-copy"><h2 id="lydia-title" style="view-transition-name: title-lydia">Lydia</h2><p class="lead">A terminal coding agent that reads, edits and tests code on local models. By default there are no API keys and nothing leaves the machine.</p><p class="evidence" data-source="lydia: home page line">Open source with 38 stars, and pull requests merged from developers who found it on their own.</p><div class="text-links"><a class="case-link" href="/work/lydia/">How I built it</a><a href="https://github.com/levimackay/lydia-cli" target="_blank" rel="noopener noreferrer">Source on GitHub</a></div></div><div class="project-media"><div class="laptop"><div class="laptop-screen zoom"><video src="/media/lydia-demo.mp4" data-poster="/media/lydia-poster.webp" muted loop playsinline preload="none" aria-label="Lydia in a terminal on a local model. It runs a failing test suite, finds the bug, fixes it and runs the tests again, which pass."></video><noscript><img class="video-still" src="/media/lydia-poster.webp" alt=""></noscript></div><div class="laptop-base"></div></div></div></div></section><section class="project project-proven-blue" data-project="proven-blue" aria-labelledby="proven-blue-title"><div class="container project-grid"><div class="project-copy"><h2 id="proven-blue-title" style="view-transition-name: title-proven-blue">Proven Blue</h2><p class="lead">Verified work portfolios for people in the trades. A contractor or teacher confirms the work someone posts. I built the backend and its security.</p><p class="evidence" data-source="proven-blue: home page line">57 database migrations, 110 row level security policies and 446 backend tests.</p><div class="text-links"><a class="case-link" href="/work/proven-blue/">How I built it</a></div></div><div class="project-media device-composition"><div class="laptop"><div class="laptop-screen"><img src="/assets/proven-blue-1440-D_n0z1Bm_Z2iOpNl.webp" srcset="/assets/proven-blue-1440-D_n0z1Bm_Z4XdAo.webp 640w, /assets/proven-blue-1440-D_n0z1Bm_1IAIGs.webp 960w, /assets/proven-blue-1440-D_n0z1Bm_ZdVG7g.webp 1280w" alt="Proven Blue desktop site" sizes="(min-width: 1000px) 640px, 90vw" loading="lazy" decoding="async" width="2880" height="1800"></div><div class="laptop-base"></div></div><div class="phone"><div class="phone-screen"><img src="/assets/proven-blue-390-D38QA6ty_ZoPtqP.webp" srcset="/assets/proven-blue-390-D38QA6ty_ZWyRg6.webp 300w, /assets/proven-blue-390-D38QA6ty_ZuPn3s.webp 600w" alt="Proven Blue mobile site" sizes="(min-width: 1000px) 160px, 24vw" loading="lazy" decoding="async" width="780" height="1688"></div></div></div></div></section><section class="project project-tieout media-left" data-project="tieout" aria-labelledby="tieout-title"><div class="container project-grid"><div class="project-copy"><h2 id="tieout-title" style="view-transition-name: title-tieout">tieout</h2><p class="lead">A tool for tax preparers. It ties a client&#39;s QuickBooks balances to last year&#39;s filed return and drafts the correcting entries.</p><p class="evidence" data-source="tieout: home page line">Early: so far it has only been run on sample files.</p><div class="text-links"><a class="case-link" href="/work/tieout/">How I built it</a><a href="https://tieout-site-opal.vercel.app" target="_blank" rel="noopener noreferrer">See the site</a></div></div><div class="project-media"><div class="laptop"><div class="laptop-screen"><video src="/media/tieout-walkthrough.mp4" data-poster="/media/tieout-poster.webp" muted loop playsinline preload="none" aria-label="tieout site demonstration"></video><noscript><img class="video-still" src="/media/tieout-poster.webp" alt=""></noscript></div><div class="laptop-base"></div></div></div></div></section><section class="project project-mckay-jewelers" data-project="mckay-jewelers" aria-labelledby="mckay-jewelers-title"><div class="container project-grid"><div class="project-copy"><h2 id="mckay-jewelers-title" style="view-transition-name: title-mckay-jewelers">McKay Jewelers</h2><p class="lead" data-source="mckay-jewelers: first paying client">My first paying client, a jewelry store in Twin Falls. I wrote the contract, then designed, built and launched the site.</p><p class="evidence" data-source="mckay-jewelers: home page line">Live on the store&#39;s own domain.</p><div class="text-links"><a class="case-link" href="/work/mckay-jewelers/">How I built it</a><a href="https://mckayjewelersmagicvalley.com" target="_blank" rel="noopener noreferrer">Visit the site</a></div></div><div class="project-media"><div class="laptop"><div class="laptop-screen"><video src="/media/mckay-jewelers-scroll-1440.mp4" data-poster="/media/mckay-jewelers-poster.webp" muted loop playsinline preload="none" aria-label="McKay Jewelers site demonstration"></video><noscript><img class="video-still" src="/media/mckay-jewelers-poster.webp" alt=""></noscript></div><div class="laptop-base"></div></div></div></div></section></div><section class="more-work light" aria-labelledby="more-title"><div class="container"><h2 id="more-title">More work</h2><div class="card-grid"><article class="work-card"><div class="card-image"><img src="/assets/vinsight-car-1440-DiZg9FKw_13RLqb.webp" srcset="/assets/vinsight-car-1440-DiZg9FKw_ZsAUHq.webp 480w, /assets/vinsight-car-1440-DiZg9FKw_Z2vnoT5.webp 720w" alt="Vinsight car view" sizes="(min-width: 1000px) 380px, (min-width: 700px) 45vw, 90vw" loading="lazy" decoding="async" width="2880" height="1800"></div><div class="card-content"><h3>Vinsight</h3><p>A repair shop&#39;s view of a car, built in 3D from its VIN. Built with a cofounder; the car bodies are generic models by other authors.</p></div></article><article class="work-card"><div class="card-image"><img src="/assets/dev-dock-1440-BSuf_gEU_Z1OuEtu.webp" srcset="/assets/dev-dock-1440-BSuf_gEU_1NSePL.webp 480w, /assets/dev-dock-1440-BSuf_gEU_LX4Eb.webp 720w" alt="Dev Dock application" sizes="(min-width: 1000px) 380px, (min-width: 700px) 45vw, 90vw" loading="lazy" decoding="async" width="2880" height="1800"></div><div class="card-content"><h3>Dev Dock</h3><p data-source="dev-dock: tool count">Twenty-two developer tools in one static React app. Your input never leaves the page.</p><a href="https://levimackay.github.io/dev-dock" target="_blank" rel="noopener noreferrer">Open it</a></div></article><article class="work-card"><div class="card-image"><img src="/assets/rexnest-1440-CdHQArGE_Z1805jy.webp" srcset="/assets/rexnest-1440-CdHQArGE_Z1SMPh6.webp 480w, /assets/rexnest-1440-CdHQArGE_Z1cOolw.webp 720w" alt="RexNest housing marketplace" sizes="(min-width: 1000px) 380px, (min-width: 700px) 45vw, 90vw" loading="lazy" decoding="async" width="2880" height="1800"></div><div class="card-content"><h3>RexNest</h3><p>An off campus housing marketplace on Next.js and Supabase.</p></div></article><article class="work-card"><div class="card-image"><img src="/assets/dictionary-poster-B0DzjpiW_Z1GufwH.webp" srcset="/assets/dictionary-poster-B0DzjpiW_26lX22.webp 480w, /assets/dictionary-poster-B0DzjpiW_Z8Bvo1.webp 720w" alt="The dictionary cover" sizes="(min-width: 1000px) 380px, (min-width: 700px) 45vw, 90vw" loading="lazy" decoding="async" width="1280" height="720"></div><div class="card-content"><h3>The dictionary</h3><p data-source="dictionary: page count">A 301 page Serbo-Croatian dictionary, typeset from my own field notes.</p></div></article><article class="work-card"><div class="card-image card-code" aria-hidden="true"><pre>#[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, Serialize, Deserialize)]
+#[serde(rename_all = &quot;snake_case&quot;)]
+pub enum EscalationLevel {
+    None,
+    Distracted,
+    Ignored,
+    Intervention,
+    NuclearOverlay,
+}
 
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-  <script type="module" crossorigin src="/assets/main-B9bX6tlq.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/style-CfjYNrzC.css">
-</head>
+impl EscalationLevel {
+    pub fn from_u8(value: u8) -&gt; Self {
+        match value {
+            0 =&gt; EscalationLevel::None,
+            1 =&gt; EscalationLevel::Distracted,
+            2 =&gt; EscalationLevel::Ignored,
+            3 =&gt; EscalationLevel::Intervention,
+            _ =&gt; EscalationLevel::NuclearOverlay,
+        }
+    }
+</pre></div><div class="card-content"><h3>Focus Frog</h3><p>A desktop app in Rust and React for focus sessions. It notices when you drift and escalates, gently at first. Early.</p><a href="https://github.com/levimackay/focus-frog" target="_blank" rel="noopener noreferrer">Source</a></div></article><article class="work-card"><div class="card-image card-code" aria-hidden="true"><pre>int main(void){
+    char *line = NULL;
+    size_t cap = 0;
+    while (1){
+        printf(&quot;lsh&gt; &quot;);
+        if (getline(&amp;line, &amp;cap, stdin) == -1){
+            break;
+        } else {
+            char *word = strtok(line, &quot; \t\n&quot;);
+            if (word != NULL &amp;&amp; strcmp(word, &quot;exit&quot;) == 0){
+                break;
+            }
+            char *args[64];
+            int count = 0;
 
-<body class="bg-ink text-paper antialiased">
-
-  <a href="#top" class="skip-link">Skip to content</a>
-
-  
-  <canvas id="scene" class="pointer-events-none fixed inset-0 z-[1] h-full w-full" aria-hidden="true"></canvas>
-
-  
-  <header id="site-nav" class="fixed top-0 inset-x-0 z-50 transition-colors duration-500">
-    <div class="mx-auto max-w-[1200px] px-6 h-16 flex items-center justify-between">
-      <a href="#top" class="text-[15px] font-semibold tracking-tight text-paper/90 hover:text-paper transition-colors">Levi Mackay</a>
-      <nav class="hidden sm:flex items-center gap-8 text-[13px] font-medium text-paper/60" aria-label="Primary">
-        <a href="/projects/" class="hover:text-paper transition-colors duration-300">Work</a>
-        <a href="/about/" class="hover:text-paper transition-colors duration-300">About</a>
-        <a href="/resume.pdf" target="_blank" rel="noopener" class="hover:text-paper transition-colors duration-300">Résumé</a>
-        <a href="#contact" class="rounded-full bg-paper/10 px-4 py-1.5 text-paper hover:bg-accent hover:text-white transition-colors duration-300">Contact</a>
-      </nav>
-      <button id="nav-toggle" type="button" class="sm:hidden inline-flex h-9 w-9 items-center justify-center rounded-full text-paper/70 hover:text-paper transition-colors" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle navigation menu">
-        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <line x1="4" y1="7" x2="20" y2="7"/>
-          <line x1="4" y1="12" x2="20" y2="12"/>
-          <line x1="4" y1="17" x2="20" y2="17"/>
-        </svg>
-      </button>
-    </div>
-    <div id="mobile-menu" class="sm:hidden border-t border-hairline bg-ink/95 backdrop-blur">
-      <nav class="flex flex-col gap-1 px-6 py-4 text-[15px] font-medium text-paper/70" aria-label="Primary">
-        <a href="/projects/" class="rounded-lg px-3 py-2 hover:bg-paper/5 hover:text-paper transition-colors">Work</a>
-        <a href="/about/" class="rounded-lg px-3 py-2 hover:bg-paper/5 hover:text-paper transition-colors">About</a>
-        <a href="/resume.pdf" target="_blank" rel="noopener" class="rounded-lg px-3 py-2 hover:bg-paper/5 hover:text-paper transition-colors">Résumé</a>
-        <a href="#contact" class="mt-2 rounded-full bg-paper/10 px-3 py-2 text-center text-paper hover:bg-accent hover:text-white transition-colors">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <main id="top" class="relative z-[2]" tabindex="-1">
-
-    
-    <section id="hero" class="relative h-[100svh] overflow-hidden" aria-labelledby="hero-heading">
-      <div class="hero-scrim" aria-hidden="true"></div>
-      <div id="hero-content" class="relative z-10 mx-auto flex h-full max-w-[1200px] flex-col items-center justify-center px-6 text-center">
-        <p class="hero-line mb-6 text-[13px] font-semibold uppercase tracking-[0.28em] text-accent">
-          Computer Science · BYU-Idaho
-        </p>
-        <h1 id="hero-heading" class="hero-line display-hero max-w-[26ch]">
-          I built my own programming language and its compiler in C.
-        </h1>
-        <p class="hero-line mt-6 max-w-[44ch] text-fluid-base leading-relaxed text-paper/75">
-          It's called izvor. Typed source goes through a lexer, parser, type
-          checker, and C code generator and comes out a native binary.
-        </p>
-        <div class="hero-line mt-8 flex flex-wrap items-center justify-center gap-4">
-          <a href="/projects/" class="btn-primary">See the work</a>
-          <a href="resume.pdf" target="_blank" rel="noopener" class="btn-ghost">Résumé</a>
-          <a href="https://github.com/levimackay" target="_blank" rel="noopener" class="btn-ghost">GitHub <span aria-hidden="true">↗</span></a>
-        </div>
-      </div>
-</section>
-
-    
-    <section id="console" class="console-section" tabindex="-1" aria-labelledby="console-heading">
-      <div class="console-grid mx-auto max-w-[1200px] px-6">
-        <div class="console-copy">
-          <p class="eyebrow reveal-up">Terminal</p>
-          <h2 id="console-heading" class="display-sm reveal-up mt-4">Ask me directly.</h2>
-          <p class="reveal-up mt-5 text-fluid-base text-paper/60">
-            This one runs. Type a command and it answers.
-            <span class="console-hint-key">Press <kbd class="console-key">t</kbd> from anywhere on the page to jump here.</span>
-            <span class="console-hint-tap">Tap the window to start typing.</span>
-          </p>
-          <p class="console-hints reveal-up mt-6">
-            <span>whoami</span><span>bio</span><span>projects</span><span>skills</span><span>contact</span><span>ls</span>
-          </p>
-        </div>
-
-        <div class="console-shell reveal-up">
-          <div class="terminal-bar">
-            <span class="terminal-dots">
-              <button type="button" class="dot-close" data-window="close" aria-label="Close terminal"></button>
-              <button type="button" class="dot-min" data-window="minimize" aria-label="Minimize terminal"></button>
-              <button type="button" class="dot-zoom" data-window="zoom" aria-label="Zoom terminal"></button>
-            </span>
-            <span class="terminal-title">levi@portfolio · zsh</span>
-          </div>
-          <div class="terminal-body" id="console-output" role="log" aria-live="polite">
-            <div id="console-welcome"></div>
-          </div>
-          <div class="terminal-input-row">
-            <span class="t-hl" aria-hidden="true">&gt;</span>
-            <input type="text" id="console-input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" maxlength="200" placeholder="help" aria-label="Terminal command input">
-          </div>
-        </div>
-
-        
-        <button type="button" id="console-restore" class="console-restore" hidden>
-          <span class="t-hl" aria-hidden="true">&gt;</span> reopen terminal
-        </button>
-      </div>
-    </section>
-
-    
-    <section id="lydia-note" class="border-y border-hairline" aria-label="Lydia">
-      <div class="mx-auto max-w-[720px] px-6 py-12 text-center">
-        <p class="text-fluid-base text-paper/60">Lydia, my local coding agent, is open source with 475 tests passing in CI and two pull requests merged from developers I've never met.</p>
-      </div>
-    </section>
-
-    
-    <section id="contact" class="relative overflow-hidden border-t border-hairline section-pad-lg" tabindex="-1" aria-labelledby="contact-heading">
-      <div class="relative z-10 mx-auto max-w-[1000px] px-6 text-center">
-        <p class="eyebrow reveal-up">Contact</p>
-        <h2 id="contact-heading" class="display-xl reveal-up mt-6">Let's build<br>something.</h2>
-        <p class="reveal-up mx-auto mt-8 max-w-[44ch] text-fluid-lg text-paper/55">
-          I'm looking for a Summer 2027 software engineering internship. Backend, AI,
-          tooling, or the Balkans, happy to talk about any of it.
-        </p>
-        <div class="reveal-up mt-10 flex flex-wrap items-center justify-center gap-4">
-          <a href="mailto:levibmackay@gmail.com" class="btn-primary">levibmackay@gmail.com</a>
-          <a href="resume.pdf" target="_blank" rel="noopener" class="btn-ghost">Résumé</a>
-          <a href="https://github.com/levimackay" target="_blank" rel="noopener" class="btn-ghost">GitHub</a>
-          <a href="https://www.linkedin.com/in/levi-mackay-217380396/" target="_blank" rel="noopener" class="btn-ghost">LinkedIn</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="relative z-[2] border-t border-hairline">
-    <div class="mx-auto flex max-w-[1200px] items-center justify-between px-6 py-8 text-[13px] text-paper/60">
-      <p>© <span id="year"></span> Levi Mackay</p>
-      <div class="flex items-center gap-6">
-        <button class="terminal-hint" id="motion-toggle" type="button" hidden>animations</button>
-        <a class="terminal-hint" href="#console">&gt;_ terminal</a>
-      </div>
-    </div>
-  </footer>
-
-</body>
-
-</html>
+            while(word != NULL &amp;&amp; count &lt; 63){
+                args[count] = word;
+                count++;
+                word = strtok(NULL, &quot; \t\n&quot;);
+            }
+            args[count] = NULL;
+            
+            if (word != NULL){
+                printf(&quot;lsh: too many arguments\n&quot;);
+</pre></div><div class="card-content"><h3>lsh</h3><p>A Unix shell in C.</p><a href="https://github.com/levimackay/lsh" target="_blank" rel="noopener noreferrer">Source</a></div></article></div></div></section><section class="about" id="about" aria-labelledby="about-title" tabindex="-1"><div class="container about-grid"><div class="portrait"><img src="/assets/levi-portrait-Cj9izM5X_13DbqW.webp" srcset="/assets/levi-portrait-Cj9izM5X_13DbqW.webp 380w" alt="Portrait of Levi Mackay" sizes="(min-width: 900px) 340px, 72vw" loading="lazy" decoding="async" width="380" height="535"></div><div class="about-copy"><h2 id="about-title">About</h2><p data-source="about: school and work">I'm a computer science student at <span class="nowrap">BYU-Idaho</span>, graduating in December 2027. I'm a teaching assistant for the programming courses and a fellow in Sandbox, the university's startup program.</p><p data-source="about: languages">Before school I spent two years in Bosnia, Croatia and Serbia, and I speak all three languages. That is where the dictionary came from.</p><p class="skills-line">I work in C, Python, TypeScript, JavaScript, SQL and C#.</p></div></div></section><section class="contact" id="contact" aria-labelledby="contact-title"><div class="container"><h2 id="contact-title">Hiring interns for Summer 2027?</h2><p class="lead">I'd like to hear about it. Email is the fastest way to reach me.</p><div class="actions"><a class="button button-primary" href="mailto:levibmackay@gmail.com?subject=Summer%202027%20internship">Email me</a><a class="button button-secondary" href="/resume.pdf">Resume (PDF)</a></div><div class="text-links"><a href="https://github.com/levimackay" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://www.linkedin.com/in/levi-mackay-217380396" target="_blank" rel="noopener noreferrer">LinkedIn</a></div></div></section></main><footer class="site-footer"><div class="container footer-row"><span>Levi Mackay, Rexburg, Idaho</span><div class="text-links"><a href="https://github.com/levimackay" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://www.linkedin.com/in/levi-mackay-217380396" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="mailto:levibmackay@gmail.com?subject=Summer%202027%20internship">Email</a><a href="/privacy/">Privacy</a></div></div></footer></body></html>

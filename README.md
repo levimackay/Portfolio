@@ -1,27 +1,29 @@
-# Levi Mackay — Portfolio
+# Levi Mackay: Portfolio
 
-**Live site → [levimackay.com](https://levimackay.com/)** · **[Resume (PDF)](https://levimackay.com/resume.pdf)**
+**Live site: [levimackay.com](https://levimackay.com/)** · **[Resume (PDF)](https://levimackay.com/resume.pdf)**
 
-Hey, I'm Levi. This repo is the deploy target for my portfolio site: it holds the built HTML/CSS/JS output plus the `CNAME` GitHub Pages serves from. It is not the buildable source — the source (and its build tooling) lives in a separate private repo. What's tracked here is three pages (home, about, projects) with a WebGL hero scene, GSAP/Lenis-driven scroll animations, and an interactive terminal.
+Hey, I'm Levi. This repo is the deploy target for my portfolio site. It holds the built HTML, CSS and JavaScript plus the `CNAME` GitHub Pages serves from. It is not the buildable source. The source and its build tooling live in a separate private repo.
 
-## Features
+## What's here
 
-- **Three pages** — `index.html` (hero, an inline terminal section, a Lydia callout, contact), `about/index.html`, and `projects/index.html` (case studies for the featured projects, the Main Street Sites business section with three recorded loops of its concept sites, a Dev Dock summary, and skills).
-- **WebGL hero scene** — a Three.js scene, lazy-loaded from a separate chunk (`assets/scene-*.js`) after scroll settles. Under Data Saver, `prefers-reduced-motion`, or a software/no WebGL renderer (SwiftShader, llvmpipe), it loads a lighter 2D canvas fallback (`assets/scene2d-*.js`) instead — a still sphere, not skipped. A footer control ("animations") lets visitors override their system's reduced-motion setting either direction.
-- **Scroll-driven UI** — GSAP with ScrollTrigger for reveals and a scrubbed project stage; Lenis for smooth scroll. Both fall back to instant, unanimated state under `prefers-reduced-motion`.
-- **Interactive terminal** — press `T` (outside form fields) or use the on-page terminal control to open a command shell; `Escape` closes it, focus is trapped while it's open.
-- **Mailto contact button** and a mobile nav menu with focus handling.
-- **Project write-ups** — case studies for the featured projects live in `projects/index.html`.
+- **Home** (`index.html`). A code editor that runs izvor, my own programming language, in the browser. Below it are five projects, more work, about and contact.
+- **Project pages** (`work/<name>/index.html`). One each for izvor, Lydia, Proven Blue, tieout and McKay Jewelers. Each page has a table that puts every number next to the command that counted it.
+- **Privacy** (`privacy/index.html`). The site collects nothing about visitors.
+- **Sources** (`SOURCES.md`). Every figure on the site, the command that produced it and the date it was run.
+- `projects/` and `about/` only forward to the home page. They were pages on the previous version of the site.
 
 ## Tech stack
 
-- Built HTML/CSS/JS — the JS/CSS bundles under `assets/` (`main-*.js`, `style-*.css`, `scene-*.js`) are hashed build output, not hand-authored files. There's no `package.json` or build step in this repo; whatever's committed here is what ships.
-- **Three.js** for the hero scene, **GSAP + ScrollTrigger** for scroll animation, **Lenis** for smooth scrolling — all bundled into the built JS, not loaded from a CDN.
-- Fonts are self-hosted variable fonts (`fonts/`): Source Serif 4 for display and body text, JetBrains Mono for the terminal and technical labels. No Google Fonts.
+- Static output from Astro. The JS and CSS bundles under `assets/` are hashed build output. There is no `package.json` or build step in this repo, so whatever is committed here is what ships.
+- GSAP with ScrollTrigger for the reveals and Lenis for smooth scrolling, bundled into the built JS. Under `prefers-reduced-motion` nothing animates.
+- The editor runs the izvor interpreter as WebAssembly in a worker (`izvor/`). The code you type stays in your browser.
+- Page changes use CSS view transitions.
+- Fonts are self hosted (`fonts/`): Anybody for headings, Atkinson Hyperlegible Next for text and Atkinson Hyperlegible Mono for code. No Google Fonts.
+- No cookies, no analytics and nothing loaded from another host.
 
 ## Setup / running locally
 
-This repo has no build step of its own — it's already-built static output. To view it locally, serve the repo root with any static file server (opening `index.html` directly also works, but a local server avoids `file://` restrictions on things like fetch/video):
+This repo has no build step of its own. It is already built static output. To view it locally, serve the repo root with any static file server:
 
 ```bash
 git clone https://github.com/levimackay/Portfolio.git
@@ -30,34 +32,32 @@ python3 -m http.server 8000
 # then open http://localhost:8000
 ```
 
-To change the site's actual content, layout, or styling, edit it in the private source repo and redeploy; editing the built files here directly will just get overwritten by the next deploy.
-
-## Usage
-
-- Browse the live site at the link above, or run it locally as described.
-- Press **`T`** to open the interactive terminal and type `help` for the list of commands.
+To change the site's content, layout or styling, edit it in the private source repo and redeploy. Editing the built files here directly will just get overwritten by the next deploy.
 
 ## Featured projects
 
-Case studies on `/projects`, in the order they appear:
+In the order they appear on the home page:
 
 | Project | What it is | Stack |
 |---|---|---|
-| [Lydia](https://github.com/levimackay/lydia-cli) | A local coding agent that reads, edits, tests, and drives git through a local Ollama model, nothing sent to the cloud | Python, Ollama |
-| [izvor](https://github.com/levimackay/izvor) | My own programming language and its compiler, built in C11 with no dependencies and no LLVM. Lexer, recursive descent parser, type checker, interpreter, and a C code generator that produces native binaries through clang. 36 golden programs match byte for byte interpreted and compiled. | C |
-
-The projects page also has sections on Main Street Sites, a web design business for local small businesses, and Dev Dock, a shipped browser-only developer tools app.
+| [izvor](https://github.com/levimackay/izvor) | A typed programming language and its compiler, written from scratch in C. It interprets a program or compiles it through C to a native binary. | C |
+| [Lydia](https://github.com/levimackay/lydia-cli) | A terminal coding agent that reads, edits and tests code on local models. By default nothing leaves the machine. | Python, Ollama |
+| Proven Blue | Verified work portfolios for people in the trades. A contractor or teacher confirms the work someone posts. I built the backend and its security. Team project, so the source is private. | TypeScript, Supabase, PostgreSQL |
+| [tieout](https://tieout-site-opal.vercel.app) | A tool for tax preparers that compares QuickBooks balances with a filed return and drafts correcting entries. Only run on sample files so far. | Python |
+| [McKay Jewelers](https://mckayjewelersmagicvalley.com) | My first paying client, a jewelry store in Twin Falls. I wrote the contract, then designed, built and launched the site. | Next.js, TinaCMS, Cloudflare Workers |
 
 ## Repo layout
 
-- **`index.html`, `about/index.html`, `projects/index.html`** — the three pages of the built site.
-- **`assets/`** — hashed JS/CSS bundles, demo videos, and screenshots. Not meant to be hand-edited; they're build output.
-- **`fonts/`** — self-hosted Archivo and Martian Mono variable font files.
-- **`projects/`** — holds `index.html`, the built projects page. All of its case-study content lives in that one file.
+- **`index.html`, `work/`, `privacy/`, `404.html`**: the pages of the built site.
+- **`assets/`**: hashed JS and CSS bundles and the processed images. Build output, not meant to be edited by hand.
+- **`media/`**: the screen recordings and their still frames.
+- **`izvor/`**: the WebAssembly build of izvor and the worker that runs it.
+- **`fonts/`**: the font files and their licenses.
+- **`.deploy-manifest`, `.deploy-kept`**: lists the deploy script keeps, so it only ever removes files it put here.
 
 ## Contributors
 
-- Levi B Mackay ([@levimackay](https://github.com/levimackay)) — sole author and maintainer.
+- Levi B Mackay ([@levimackay](https://github.com/levimackay)), sole author and maintainer.
 
 ## Connect
 
@@ -65,4 +65,4 @@ I'm always down to talk code, startups, or baseball. Find me on [LinkedIn](https
 
 ## License
 
-MIT — see [LICENSE](LICENSE).
+MIT. See [LICENSE](LICENSE).
