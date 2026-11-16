@@ -19,7 +19,7 @@ Hey, I'm Levi. This repo is the deploy target for my portfolio site. It holds th
 - The editor runs the izvor interpreter as WebAssembly in a worker (`izvor/`). The code you type stays in your browser.
 - Page changes use CSS view transitions.
 - Fonts are self hosted (`fonts/`): Anybody for headings, Atkinson Hyperlegible Next for text and Atkinson Hyperlegible Mono for code. No Google Fonts.
-- No cookies, no analytics and nothing loaded from another host.
+- No cookies, no analytics scripts and nothing loaded from another host.
 
 ## Setup / running locally
 
