@@ -15,10 +15,10 @@ Hey, I'm Levi. This repo is the deploy target for my portfolio site. It holds th
 ## Tech stack
 
 - Static output from Astro. The JS and CSS bundles under `assets/` are hashed build output. There is no `package.json` or build step in this repo, so whatever is committed here is what ships.
-- GSAP with ScrollTrigger for the reveals and Lenis for smooth scrolling, bundled into the built JS. Under `prefers-reduced-motion` nothing animates.
+- anime.js for the motion, plus a few React components for the headline, the large views of pictures and recordings, one chart and the pointer effects. On a phone they load only when the part that needs them is scrolled to. Under `prefers-reduced-motion` nothing animates.
 - The editor runs the izvor interpreter as WebAssembly in a worker (`izvor/`). The code you type stays in your browser.
 - Page changes use CSS view transitions.
-- Fonts are self hosted (`fonts/`): Anybody for headings, Atkinson Hyperlegible Next for text and Atkinson Hyperlegible Mono for code. No Google Fonts.
+- Fonts are self hosted: Mona Sans for headings and text and Monaspace Neon for labels and code. The font files are among the hashed files in `assets/` and their licenses are in `fonts/`. No Google Fonts.
 - No cookies, no analytics scripts and nothing loaded from another host.
 
 ## Setup / running locally
@@ -49,10 +49,10 @@ In the order they appear on the home page:
 ## Repo layout
 
 - **`index.html`, `work/`, `privacy/`, `404.html`**: the pages of the built site.
-- **`assets/`**: hashed JS and CSS bundles and the processed images. Build output, not meant to be edited by hand.
+- **`assets/`**: hashed JS and CSS bundles, the fonts and the processed images. Build output, not meant to be edited by hand.
 - **`media/`**: the screen recordings and their still frames.
 - **`izvor/`**: the WebAssembly build of izvor and the worker that runs it.
-- **`fonts/`**: the font files and their licenses.
+- **`fonts/`**: the licenses of the two font families.
 - **`.deploy-manifest`, `.deploy-kept`**: lists the deploy script keeps, so it only ever removes files it put here.
 
 ## Contributors
