@@ -51,8 +51,8 @@ assets/monaspace-neon-latin-400-normal-BZtV1wRa.woff2
 assets/monaspace-neon-latin-400-normal-DVFelWsN.woff
 assets/monaspace-neon-latin-700-normal-Dt0-VHyh.woff
 assets/monaspace-neon-latin-700-normal-liCHvTJ-.woff2
+assets/page-CNlCORxr.css
 assets/page-CaDlDilX.js
-assets/page-DtAbs7gM.css
 assets/playground-DFEwj1ge.js
 assets/preload-helper-DygEbaNj.js
 assets/proven-blue-1440-D_n0z1Bm_1IAIGs.webp
@@ -105,6 +105,8 @@ assets/vinsight-car-card-DbW__WLr_46ENU.webp
 favicon.svg
 fonts/LICENSE-mona-sans.txt
 fonts/LICENSE-monaspace-neon.txt
+honest-eta/index.html
+honest-eta/privacy/index.html
 index.html
 izvor/izvor.wasm
 izvor/wasi.js
