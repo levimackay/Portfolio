@@ -1,0 +1,2 @@
+const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/home-BCqSoFAo.js","assets/site-core-DxYt5K6F.js","assets/playground-DFEwj1ge.js"])))=>i.map(i=>d[i]);
+import{t as e}from"./preload-helper-DygEbaNj.js";var t=()=>e(()=>import(`./home-BCqSoFAo.js`),__vite__mapDeps([0,1,2]));window.matchMedia(`(max-width: 759px)`).matches?requestAnimationFrame(()=>setTimeout(t,300)):t();

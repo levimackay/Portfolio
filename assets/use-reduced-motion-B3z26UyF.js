@@ -1,0 +1,1 @@
+import{d as e,f as t,u as n}from"./react-VOTwe-xi.js";import{r,t as i}from"./react-DvXU6kJ2.js";var a=r(i(),1);function o(){!e.current&&n();let[r]=(0,a.useState)(t.current);return r}export{o as t};
